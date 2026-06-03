@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container footer-container">
         <div className="footer-brand">
           <div style={{ background: 'white', display: 'inline-block', borderRadius: '8px', padding: '10px', marginBottom: '1.5rem' }}>
-            <img src="/logo new.png" alt="DuneXplore" style={{ height: '80px', objectFit: 'contain', display: 'block' }} />
+            <img src="/logo.png" alt="DuneXplore" style={{ height: '80px', objectFit: 'contain', display: 'block', mixBlendMode: 'multiply', filter: 'brightness(1.1) contrast(1.2)' }} />
           </div>
           <p className="footer-tagline">Experience Rajasthan Beyond Tourism</p>
           <div className="footer-socials">
@@ -32,8 +32,9 @@ const Footer = () => {
             <h3>Support</h3>
             <Link to="/contact">Contact</Link>
             <Link to="/faq">FAQ</Link>
-            <Link to="/privacy">Privacy Policy</Link>
-            <Link to="/terms">Terms of Service</Link>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/terms-and-conditions">Terms & Conditions</Link>
+            <Link to="/payment-policy">Payment Policy</Link>
           </div>
         </div>
 

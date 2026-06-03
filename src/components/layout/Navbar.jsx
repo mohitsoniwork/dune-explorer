@@ -22,7 +22,7 @@ const Navbar = () => {
     <nav className={navClass}>
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo" style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="/logo new.png" alt="DuneXplore" style={{ height: '150px', objectFit: 'contain' }} />
+          <img src="/logo.png" alt="DuneXplore" style={{ height: '150px', objectFit: 'contain', mixBlendMode: 'multiply', filter: 'brightness(1.1) contrast(1.2)' }} />
         </Link>
         
         <div className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>

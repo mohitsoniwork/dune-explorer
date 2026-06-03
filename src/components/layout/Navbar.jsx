@@ -21,8 +21,8 @@ const Navbar = () => {
   return (
     <nav className={navClass}>
       <div className="container navbar-container">
-        <Link to="/" className="navbar-logo" style={{ display: 'flex', alignItems: 'center', background: 'white', padding: '10px 20px', borderRadius: '12px' }}>
-          <img src="/logo new.png" alt="DuneXplore" style={{ height: '100px', objectFit: 'contain', filter: 'drop-shadow(0px 2px 4px rgba(0,0,0,0.1))' }} />
+        <Link to="/" className="navbar-logo" style={{ display: 'flex', alignItems: 'center' }}>
+          <img src="/logo new.png" alt="DuneXplore" style={{ height: '150px', objectFit: 'contain' }} />
         </Link>
         
         <div className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>

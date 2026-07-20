@@ -6,7 +6,7 @@ import './TravelStyles.css';
 
 const styles = [
   { id: 'luxury', title: 'Luxury Escapes', icon: <Heart size={32} />, desc: 'Curated premium stays and exclusive services.' },
-  { id: 'budget', title: 'Budget Trips', icon: <Map size={32} />, desc: 'Smart itineraries without compromising experience.' },
+  { id: 'village', title: 'Village Exploration', icon: <Map size={32} />, desc: 'Experience the authentic rural life and local traditions.' },
   { id: 'local', title: 'Local Experiences', icon: <Camera size={32} />, desc: 'Immerse yourself in true Rajasthani culture.' },
   { id: 'heritage', title: 'Heritage Tours', icon: <Compass size={32} />, desc: 'Explore majestic forts and royal palaces.' },
   { id: 'desert', title: 'Desert Adventures', icon: <Palmtree size={32} />, desc: 'Camel safaris and night under the stars.' },

@@ -9,7 +9,7 @@ const MultiStepForm = () => {
   
   const [formData, setFormData] = useState({
     name: '', email: '', country: '', whatsapp: '',
-    travelDates: '', travelers: '', budget: '', accommodation: '',
+    travelDates: '', travelers: '', accommodation: '',
     interests: [], destinations: [], notes: ''
   });
 
@@ -104,15 +104,7 @@ const MultiStepForm = () => {
                   <label className="form-label">Number of Travelers</label>
                   <input type="number" className="form-control" min="1" name="travelers" value={formData.travelers} onChange={handleInputChange} />
                 </div>
-                <div className="form-group">
-                  <label className="form-label">Budget Range (Per Person)</label>
-                  <select className="form-control" name="budget" value={formData.budget} onChange={handleInputChange}>
-                    <option value="">Select Budget</option>
-                    <option value="premium">$150 - $300 / day</option>
-                    <option value="luxury">$300 - $600 / day</option>
-                    <option value="ultra-luxury">$600+ / day</option>
-                  </select>
-                </div>
+
                 <div className="form-group">
                   <label className="form-label">Accommodation Type</label>
                   <select className="form-control" name="accommodation" value={formData.accommodation} onChange={handleInputChange}>

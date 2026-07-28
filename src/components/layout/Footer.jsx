@@ -40,9 +40,9 @@ const Footer = () => {
 
         <div className="footer-contact">
           <h3>Contact Us</h3>
-          <p>Email: hello@duneexplorer.com</p>
-          <p>Phone: +91 98765 43210</p>
-          <a href="https://wa.me/919876543210" className="btn btn-outline whatsapp-btn">
+          <p>Email: info@dunexplore.com</p>
+          <p>Phone: +91 63750 60566</p>
+          <a href="https://wa.me/916375060566" className="btn btn-outline whatsapp-btn">
             <MessageCircle size={18} /> Chat on WhatsApp
           </a>
         </div>

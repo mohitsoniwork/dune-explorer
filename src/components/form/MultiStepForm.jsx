@@ -91,7 +91,10 @@ const MultiStepForm = () => {
       } else if (result.httpStatus === 429) {
         setSubmitError('Too many requests. Please wait a few minutes and try again.');
       } else {
-        setSubmitError(result.message || 'Something went wrong. Please try again or contact us directly.');
+        let debugMsg = result.message || 'Something went wrong.';
+        if (result.email && result.email.message) debugMsg += ` (Email Error: ${result.email.message})`;
+        if (result.sheets && result.sheets.message) debugMsg += ` (Sheets Error: ${result.sheets.message})`;
+        setSubmitError(debugMsg);
       }
     } catch (error) {
       console.error('Submission error:', error);

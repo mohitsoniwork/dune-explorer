@@ -1,0 +1,30 @@
+.error-boundary {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.error-boundary-inner {
+  max-width: 560px;
+}
+
+.error-boundary-icon {
+  color: var(--color-camel, #8c5a10);
+  margin-bottom: 1.25rem;
+}
+
+.error-boundary h1 {
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-size: var(--fs-h2, clamp(2rem, 4vw, 3.25rem));
+  color: var(--color-dark, #1a1a1a);
+  margin-bottom: 0.75rem;
+}
+
+.error-boundary p {
+  color: var(--color-text-secondary, #4a4a4a);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}

@@ -1,7 +1,13 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import { usePageMeta } from '../hooks/usePageMeta';
 import './Policy.css';
 
 const PrivacyPolicy = () => {
+  usePageMeta({
+    title: 'Privacy Policy | Dune Explorer',
+    description: 'How Dune Explorer collects, uses, and protects your personal information.',
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

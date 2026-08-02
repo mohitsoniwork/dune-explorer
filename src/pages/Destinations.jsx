@@ -1,10 +1,18 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { rajasthanOverview, destinationsList } from '../data/destinations';
+import { usePageMeta } from '../hooks/usePageMeta';
+import AutoImageSlider from '../components/ui/AutoImageSlider';
 import './Destinations.css';
 
 const Destinations = () => {
+  usePageMeta({
+    title: 'Destinations | Dune Explorer',
+    description:
+      'Explore the best of Rajasthan — Jaipur, Udaipur, Jodhpur, Jaisalmer, Ranthambore and Pushkar — with luxury tours by Dune Explorer.',
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -12,13 +20,13 @@ const Destinations = () => {
   return (
     <div className="destinations-page">
       <header className="destinations-header">
-        <img 
-          src="/Home page.jpg" 
-          alt="Rajasthan Architecture" 
+        <img
+          src="/images/home-hero.webp"
+          alt="Rajasthan Architecture"
           className="destinations-hero-img"
         />
         <div className="destinations-hero-overlay"></div>
-        <motion.div 
+        <motion.div
           className="destinations-header-content"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -42,7 +50,7 @@ const Destinations = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="destination-img-wrapper">
-                  <img src={dest.image} alt={dest.name} className="destination-img" />
+                  <AutoImageSlider images={dest.images} alt={dest.name} />
                 </div>
                 <div className="destination-content">
                   <span className="destination-subtitle">{dest.subtitle}</span>

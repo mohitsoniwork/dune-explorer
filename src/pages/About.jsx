@@ -1,8 +1,13 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';
+import { usePageMeta } from '../hooks/usePageMeta';
+import AutoImageSlider from '../components/ui/AutoImageSlider';
+import { imageManifest } from '../data/imageManifest';
 import './About.css';
+
+const jaipurImages = imageManifest['jaipur'];
 
 const whyChooseItems = [
   'Curated luxury journeys tailored to your travel style',
@@ -16,6 +21,12 @@ const whyChooseItems = [
 ];
 
 const About = () => {
+  usePageMeta({
+    title: 'About Us | Dune Explorer',
+    description:
+      'Dune Explorer is a luxury travel company curating extraordinary journeys across Rajasthan and India — heritage stays, desert adventures and cultural immersion.',
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -23,10 +34,10 @@ const About = () => {
   return (
     <div className="about-page">
       <header className="about-hero">
-        <img
-          src="https://images.unsplash.com/photo-1599661046289-e31897846e41?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-          alt="Rajasthan Heritage"
-          className="about-hero-img"
+        <AutoImageSlider 
+          images={jaipurImages} 
+          alt="Rajasthan Heritage" 
+          className="about-hero-img-slider" 
         />
         <div className="about-hero-overlay"></div>
         <motion.div

@@ -1,7 +1,13 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import { usePageMeta } from '../hooks/usePageMeta';
 import './Policy.css';
 
 const PaymentPolicy = () => {
+  usePageMeta({
+    title: 'Booking & Payment Policy | Dune Explorer',
+    description: 'Booking, payment, and cancellation policy for Dune Explorer luxury tours.',
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

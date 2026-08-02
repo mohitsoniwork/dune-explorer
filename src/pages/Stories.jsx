@@ -1,8 +1,15 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { usePageMeta } from '../hooks/usePageMeta';
 import './Stories.css';
 
 const Stories = () => {
+  usePageMeta({
+    title: 'Our Story | Dune Explorer',
+    description:
+      'The story behind Dune Explorer — why we create journeys, not just holidays, across Rajasthan and India.',
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -11,7 +18,7 @@ const Stories = () => {
     <div className="stories-page">
       <header className="stories-hero">
         <img
-          src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+          src="/images/india-village.webp"
           alt="India Journey"
           className="stories-hero-img"
         />

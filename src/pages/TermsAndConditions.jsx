@@ -1,7 +1,13 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import { usePageMeta } from '../hooks/usePageMeta';
 import './Policy.css';
 
 const TermsAndConditions = () => {
+  usePageMeta({
+    title: 'Terms & Conditions | Dune Explorer',
+    description: 'Read the terms and conditions that govern bookings and use of Dune Explorer travel services.',
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

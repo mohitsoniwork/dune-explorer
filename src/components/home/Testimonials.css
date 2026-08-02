@@ -1,0 +1,124 @@
+.testimonials-section {
+  background: var(--color-bg-dark);
+  color: var(--color-ivory);
+}
+
+.testimonials-section h2 {
+  color: var(--color-ivory);
+}
+
+.testimonials-section .section-subtitle {
+  color: var(--color-gold);
+}
+
+.testimonials-carousel {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial-quote-mark {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-gold);
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.testimonial-slide {
+  position: relative;
+  z-index: 1;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 0.2rem;
+  color: var(--color-gold);
+}
+
+.testimonial-quote {
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+  line-height: 1.6;
+  color: var(--color-ivory);
+  font-style: italic;
+  max-width: 660px;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.testimonial-author strong {
+  color: var(--color-gold);
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.testimonial-author span {
+  color: var(--color-beige);
+  font-size: var(--fs-micro);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.75;
+}
+
+.testimonial-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: var(--spacing-md);
+}
+
+.testimonial-nav {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(253, 251, 212, 0.3);
+  background: transparent;
+  color: var(--color-beige);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.testimonial-nav:hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-dark);
+}
+
+.testimonial-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.testimonial-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(253, 251, 212, 0.35);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  padding: 0;
+}
+
+.testimonial-dot.active {
+  background: var(--color-gold);
+  transform: scale(1.3);
+}

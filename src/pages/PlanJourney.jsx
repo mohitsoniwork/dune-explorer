@@ -1,7 +1,13 @@
-import React from 'react';
 import MultiStepForm from '../components/form/MultiStepForm';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const PlanJourney = () => {
+  usePageMeta({
+    title: 'Plan Your Journey | Dune Explorer',
+    description:
+      'Design your bespoke Rajasthan journey. Tell us your preferences and our experts will craft the perfect luxury travel experience.',
+  });
+
   return (
     <div className="section container" style={{ paddingTop: 'var(--header-height)', paddingBottom: '80px', minHeight: '80vh' }}>
       <div className="text-center" style={{ marginBottom: '3rem' }}>

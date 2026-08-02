@@ -1,7 +1,7 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Compass, Camera, Heart, Palmtree, Map, Leaf } from 'lucide-react';
+import TiltCard from '../ui/TiltCard';
 import './TravelStyles.css';
 
 const styles = [
@@ -18,15 +18,24 @@ const TravelStyles = () => {
     <section className="section travel-styles bg-light">
       <div className="container">
         <div className="section-header text-center">
-          <motion.h2 
+          <motion.span
+            className="section-subtitle"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
+            Travel Styles
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
             How Do You Want to Travel?
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="section-subtitle"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -39,18 +48,19 @@ const TravelStyles = () => {
 
         <div className="styles-grid">
           {styles.map((style, index) => (
-            <motion.div 
+            <motion.div
               key={style.id}
-              className="style-card"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="style-icon">{style.icon}</div>
-              <h3>{style.title}</h3>
-              <p>{style.desc}</p>
-              <Link to={`/styles/${style.id}`} className="style-link">Explore →</Link>
+              <TiltCard className="style-card">
+                <div className="style-icon">{style.icon}</div>
+                <h3>{style.title}</h3>
+                <p>{style.desc}</p>
+                <Link to={`/styles/${style.id}`} className="style-link">Explore →</Link>
+              </TiltCard>
             </motion.div>
           ))}
         </div>

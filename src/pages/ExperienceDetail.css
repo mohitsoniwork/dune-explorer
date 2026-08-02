@@ -10,7 +10,8 @@
   overflow: hidden;
 }
 
-.exp-detail-hero-img {
+.exp-detail-hero-img,
+.exp-detail-hero-img-slider {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -22,7 +23,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.7) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.75) 100%);
 }
 
 .exp-detail-hero-content {
@@ -54,6 +55,8 @@
   font-weight: 700;
   margin: 0.75rem 0;
   line-height: 1.15;
+  color: var(--color-ivory, #fffdf0);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
 }
 
 .exp-detail-subtitle {
@@ -63,6 +66,8 @@
   margin: 0 auto 1rem;
   line-height: 1.6;
   font-style: italic;
+  color: var(--color-ivory, #fffdf0);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
 }
 
 .exp-detail-duration {

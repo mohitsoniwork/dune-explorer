@@ -1,12 +1,18 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { travelStylesData } from '../data/travelStyles';
+import { usePageMeta } from '../hooks/usePageMeta';
 import './StyleDetail.css';
 
 const StyleDetail = () => {
   const { styleId } = useParams();
   const style = travelStylesData[styleId];
+
+  usePageMeta({
+    title: style ? `${style.title} | Dune Explorer` : 'Travel Style | Dune Explorer',
+    description: style ? style.subtitle : 'Travel style not found.',
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);

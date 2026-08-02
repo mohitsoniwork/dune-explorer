@@ -88,6 +88,18 @@
   margin-top: var(--spacing-lg);
 }
 
+fieldset.form-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+fieldset.form-group legend.form-label {
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
 .form-actions {
   display: flex;
   justify-content: space-between;
@@ -209,6 +221,48 @@
 .btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+/* ===== Consent & Turnstile ===== */
+.consent-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: var(--spacing-md);
+}
+
+.consent-row input[type="checkbox"] {
+  margin-top: 0.25rem;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-camel);
+  flex-shrink: 0;
+}
+
+.consent-label {
+  font-size: 0.9rem;
+  color: #3c3a33;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.consent-label a {
+  color: var(--color-camel);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.turnstile-wrap {
+  margin-top: var(--spacing-md);
+  min-height: 65px;
+}
+
+.submit-error {
+  margin-top: var(--spacing-sm);
+  color: #c53030;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 /* ===== Responsive ===== */

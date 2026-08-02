@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, ChevronLeft, Send, CheckCircle, Loader } from 'lucide-react';
-import { saveToGoogleSheets } from '../../services/sheetsService';
-import { sendInquiryEmail } from '../../services/emailService';
+import { submitInquiry } from '../../services/contactService';
+import Turnstile from './Turnstile';
 import './MultiStepForm.css';
 
 const MultiStepForm = () => {
@@ -12,7 +12,10 @@ const MultiStepForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isDuplicate, setIsDuplicate] = useState(false);
-  
+  const [turnstileToken, setTurnstileToken] = useState(null);
+  const [consent, setConsent] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+
   const [formData, setFormData] = useState({
     name: '', email: '', country: '', whatsapp: '',
     travelDates: '', travelers: '', accommodation: '',
@@ -70,21 +73,29 @@ const MultiStepForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setSubmitError('');
+
+    if (!consent) {
+      setErrors(prev => ({ ...prev, consent: 'Please agree to be contacted before submitting.' }));
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      // Save to Google Sheets and check for duplicates
-      const sheetsResult = await saveToGoogleSheets(formData);
-      const customerIsDuplicate = sheetsResult.status === 'duplicate';
-      setIsDuplicate(customerIsDuplicate);
+      const result = await submitInquiry(formData, turnstileToken);
 
-      // Send email notification
-      await sendInquiryEmail(formData, customerIsDuplicate);
-
-      setIsSubmitted(true);
+      if (result.status === 'success' || result.status === 'duplicate') {
+        setIsDuplicate(result.status === 'duplicate');
+        setIsSubmitted(true);
+      } else if (result.httpStatus === 429) {
+        setSubmitError('Too many requests. Please wait a few minutes and try again.');
+      } else {
+        setSubmitError(result.message || 'Something went wrong. Please try again or contact us directly.');
+      }
     } catch (error) {
       console.error('Submission error:', error);
-      alert('Something went wrong. Please try again or contact us directly.');
+      setSubmitError('Something went wrong. Please try again or contact us directly.');
     } finally {
       setIsSubmitting(false);
     }
@@ -100,6 +111,9 @@ const MultiStepForm = () => {
     setIsSubmitted(false);
     setIsDuplicate(false);
     setErrors({});
+    setConsent(false);
+    setTurnstileToken(null);
+    setSubmitError('');
   };
 
   const interestsOptions = ['Culture & History', 'Luxury', 'Adventure', 'Desert Safari', 'Wellness', 'Food Tours', 'Photography', 'Village Experiences', 'Festivals', 'Wildlife'];
@@ -127,9 +141,9 @@ const MultiStepForm = () => {
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
           >
-            <CheckCircle size={64} />
+            <CheckCircle size={64} aria-hidden="true" />
           </motion.div>
-          
+
           {isDuplicate && (
             <div className="duplicate-banner">
               Welcome back! We've updated your previous inquiry with the latest details.
@@ -153,16 +167,16 @@ const MultiStepForm = () => {
     <div className="multistep-form-container">
       {/* Loading overlay */}
       {isSubmitting && (
-        <div className="submit-loading">
-          <Loader size={40} className="spinner" />
+        <div className="submit-loading" role="status">
+          <Loader size={40} className="spinner" aria-hidden="true" />
           <p>Sending your inquiry...</p>
         </div>
       )}
 
-      <div className="progress-bar">
+      <div className="progress-bar" aria-hidden="true">
         <div className="progress-fill" style={{ width: `${(step / totalSteps) * 100}%` }}></div>
       </div>
-      
+
       <div className="form-header">
         <span className="step-indicator">Step {step} of {totalSteps}</span>
         <h2>
@@ -186,36 +200,46 @@ const MultiStepForm = () => {
             {step === 1 && (
               <div className="form-grid">
                 <div className="form-group">
-                  <label className="form-label">Full Name</label>
-                  <input type="text" className="form-control" name="name" value={formData.name} onChange={handleInputChange} />
+                  <label className="form-label" htmlFor="form-name">Full Name</label>
+                  <input type="text" className="form-control" id="form-name" name="name" value={formData.name} onChange={handleInputChange} />
                 </div>
                 <div className="form-group">
-                  <label className="form-label">Email Address <span className="mandatory-star">*</span></label>
+                  <label className="form-label" htmlFor="form-email">Email Address <span className="mandatory-star" aria-hidden="true">*</span></label>
                   <input
                     type="email"
                     className={`form-control ${errors.email ? 'input-error' : ''}`}
+                    id="form-email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="your@email.com"
+                    aria-invalid={errors.email ? 'true' : 'false'}
+                    aria-describedby={errors.email ? 'form-email-error' : undefined}
                   />
-                  {errors.email && <span className="field-error">{errors.email}</span>}
+                  {errors.email && (
+                    <span id="form-email-error" className="field-error" role="alert">{errors.email}</span>
+                  )}
                 </div>
                 <div className="form-group">
-                  <label className="form-label">Country</label>
-                  <input type="text" className="form-control" name="country" value={formData.country} onChange={handleInputChange} />
+                  <label className="form-label" htmlFor="form-country">Country</label>
+                  <input type="text" className="form-control" id="form-country" name="country" value={formData.country} onChange={handleInputChange} />
                 </div>
                 <div className="form-group">
-                  <label className="form-label">WhatsApp Number <span className="mandatory-star">*</span></label>
+                  <label className="form-label" htmlFor="form-whatsapp">WhatsApp Number <span className="mandatory-star" aria-hidden="true">*</span></label>
                   <input
                     type="tel"
                     className={`form-control ${errors.whatsapp ? 'input-error' : ''}`}
+                    id="form-whatsapp"
                     name="whatsapp"
                     value={formData.whatsapp}
                     onChange={handleInputChange}
                     placeholder="+91 98765 43210"
+                    aria-invalid={errors.whatsapp ? 'true' : 'false'}
+                    aria-describedby={errors.whatsapp ? 'form-whatsapp-error' : undefined}
                   />
-                  {errors.whatsapp && <span className="field-error">{errors.whatsapp}</span>}
+                  {errors.whatsapp && (
+                    <span id="form-whatsapp-error" className="field-error" role="alert">{errors.whatsapp}</span>
+                  )}
                 </div>
               </div>
             )}
@@ -223,17 +247,17 @@ const MultiStepForm = () => {
             {step === 2 && (
               <div className="form-grid">
                 <div className="form-group">
-                  <label className="form-label">Expected Travel Dates</label>
-                  <input type="text" className="form-control" placeholder="e.g. Nov 2026 or Exact Dates" name="travelDates" value={formData.travelDates} onChange={handleInputChange} />
+                  <label className="form-label" htmlFor="form-travel-dates">Expected Travel Dates</label>
+                  <input type="text" className="form-control" id="form-travel-dates" placeholder="e.g. Nov 2026 or Exact Dates" name="travelDates" value={formData.travelDates} onChange={handleInputChange} />
                 </div>
                 <div className="form-group">
-                  <label className="form-label">Number of Travelers</label>
-                  <input type="number" className="form-control" min="1" name="travelers" value={formData.travelers} onChange={handleInputChange} />
+                  <label className="form-label" htmlFor="form-travelers">Number of Travelers</label>
+                  <input type="number" className="form-control" id="form-travelers" min="1" name="travelers" value={formData.travelers} onChange={handleInputChange} />
                 </div>
 
                 <div className="form-group">
-                  <label className="form-label">Accommodation Type</label>
-                  <select className="form-control" name="accommodation" value={formData.accommodation} onChange={handleInputChange}>
+                  <label className="form-label" htmlFor="form-accommodation">Accommodation Type</label>
+                  <select className="form-control" id="form-accommodation" name="accommodation" value={formData.accommodation} onChange={handleInputChange}>
                     <option value="">Select Accommodation</option>
                     <option value="heritage">Heritage Hotels</option>
                     <option value="luxury-resorts">5-Star Luxury Resorts</option>
@@ -246,8 +270,8 @@ const MultiStepForm = () => {
 
             {step === 3 && (
               <div className="preferences-section">
-                <div className="form-group">
-                  <label className="form-label">Travel Interests (Select Multiple)</label>
+                <fieldset className="form-group">
+                  <legend className="form-label">Travel Interests (Select Multiple)</legend>
                   <div className="checkbox-grid">
                     {interestsOptions.map(interest => (
                       <label key={interest} className={`checkbox-card ${formData.interests.includes(interest) ? 'selected' : ''}`}>
@@ -256,10 +280,10 @@ const MultiStepForm = () => {
                       </label>
                     ))}
                   </div>
-                </div>
-                
-                <div className="form-group mt-lg">
-                  <label className="form-label">Preferred Destinations (Select Multiple)</label>
+                </fieldset>
+
+                <fieldset className="form-group mt-lg">
+                  <legend className="form-label">Preferred Destinations (Select Multiple)</legend>
                   <div className="checkbox-grid">
                     {destinationsOptions.map(dest => (
                       <label key={dest} className={`checkbox-card ${formData.destinations.includes(dest) ? 'selected' : ''}`}>
@@ -268,21 +292,61 @@ const MultiStepForm = () => {
                       </label>
                     ))}
                   </div>
-                </div>
+                </fieldset>
               </div>
             )}
 
             {step === 4 && (
               <div className="form-group">
-                <label className="form-label">Additional Notes or Special Requirements</label>
-                <textarea 
-                  className="form-control" 
-                  rows="6" 
+                <label className="form-label" htmlFor="form-notes">Additional Notes or Special Requirements</label>
+                <textarea
+                  className="form-control"
+                  id="form-notes"
+                  rows="6"
                   placeholder="Tell us about special occasions, dietary requirements, or specific experiences you're looking forward to..."
                   name="notes"
                   value={formData.notes}
                   onChange={handleInputChange}
                 ></textarea>
+
+                <div className="consent-row">
+                  <input
+                    type="checkbox"
+                    id="form-consent"
+                    name="consent"
+                    checked={consent}
+                    onChange={(e) => {
+                      setConsent(e.target.checked);
+                      if (errors.consent) setErrors(prev => ({ ...prev, consent: '' }));
+                    }}
+                    aria-invalid={errors.consent ? 'true' : 'false'}
+                  />
+                  <label className="consent-label" htmlFor="form-consent">
+                    I agree to be contacted about my travel inquiry and consent to Dune Explorer
+                    processing my details as described in the{' '}
+                    <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+                  </label>
+                </div>
+                {errors.consent && (
+                  <span id="form-consent-error" className="field-error" role="alert">{errors.consent}</span>
+                )}
+
+                <div className="turnstile-wrap">
+                  <Turnstile
+                    onToken={(token) => {
+                      setTurnstileToken(token);
+                      setSubmitError('');
+                    }}
+                    onError={() => {
+                      setTurnstileToken(null);
+                      setSubmitError('Security check unavailable. Please try again.');
+                    }}
+                  />
+                </div>
+
+                {submitError && (
+                  <p className="submit-error" role="alert">{submitError}</p>
+                )}
               </div>
             )}
           </motion.div>
@@ -291,17 +355,17 @@ const MultiStepForm = () => {
         <div className="form-actions">
           {step > 1 ? (
             <button type="button" className="btn btn-outline" onClick={prevStep}>
-              <ChevronLeft size={18} style={{ marginRight: '8px' }} /> Back
+              <ChevronLeft size={18} style={{ marginRight: '8px' }} aria-hidden="true" /> Back
             </button>
           ) : <div></div>}
-          
+
           {step < totalSteps ? (
             <button type="button" className="btn btn-primary" onClick={nextStep}>
-              Next Step <ChevronRight size={18} style={{ marginLeft: '8px' }} />
+              Next Step <ChevronRight size={18} style={{ marginLeft: '8px' }} aria-hidden="true" />
             </button>
           ) : (
             <button type="submit" className="btn btn-primary submit-btn" disabled={isSubmitting}>
-              Submit Inquiry <Send size={18} style={{ marginLeft: '8px' }} />
+              Submit Inquiry <Send size={18} style={{ marginLeft: '8px' }} aria-hidden="true" />
             </button>
           )}
         </div>

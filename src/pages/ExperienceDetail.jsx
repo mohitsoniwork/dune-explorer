@@ -1,12 +1,19 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { experiencesData } from '../data/experiences';
+import { usePageMeta } from '../hooks/usePageMeta';
+import AutoImageSlider from '../components/ui/AutoImageSlider';
 import './ExperienceDetail.css';
 
 const ExperienceDetail = () => {
   const { id } = useParams();
   const experience = experiencesData.find(exp => exp.id === parseInt(id));
+
+  usePageMeta({
+    title: experience ? `${experience.title} | Dune Explorer` : 'Experience | Dune Explorer',
+    description: experience ? experience.subtitle : 'Experience not found.',
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -27,7 +34,11 @@ const ExperienceDetail = () => {
   return (
     <div className="experience-detail-page">
       <header className="exp-detail-hero">
-        <img src={experience.heroImage} alt={experience.title} className="exp-detail-hero-img" />
+        <AutoImageSlider 
+          images={experience.images} 
+          alt={experience.title} 
+          className="exp-detail-hero-img-slider" 
+        />
         <div className="exp-detail-hero-overlay"></div>
         <motion.div
           className="exp-detail-hero-content"

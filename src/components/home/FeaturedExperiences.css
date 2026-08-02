@@ -17,14 +17,20 @@
 }
 
 .experience-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
+}
+
+.experience-card-link {
+  display: block;
+  height: 100%;
+  color: inherit;
 }
 
 .experience-image-wrapper {
   position: relative;
   height: 250px;
   overflow: hidden;
+  transform: translateZ(30px);
 }
 
 .experience-image {
@@ -82,6 +88,13 @@
 
 .experience-link:hover {
   color: var(--color-camel);
+}
+
+.experiences-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {

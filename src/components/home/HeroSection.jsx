@@ -1,48 +1,189 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { motion, useScroll, useTransform, useInView, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { imageManifest } from '../../data/imageManifest';
 import './HeroSection.css';
 
-const HeroSection = () => {
+const pickShuffledHeroImages = () => {
+  const picks = Object.values(imageManifest)
+    .filter((imgs) => imgs && imgs.length > 0)
+    .map((imgs) => imgs[Math.floor(Math.random() * imgs.length)]);
+
+  for (let i = picks.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [picks[i], picks[j]] = [picks[j], picks[i]];
+  }
+  return picks;
+};
+
+const AnimatedCounter = ({ value, suffix = '', duration = 1800 }) => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: '-40px' });
+  const [reducedMotion] = useState(
+    () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  );
+  const [display, setDisplay] = useState(reducedMotion ? value : 0);
+
+  useEffect(() => {
+    if (reducedMotion || !inView) return;
+    let start;
+    let rafId;
+    const step = (ts) => {
+      if (start === undefined) start = ts;
+      const progress = Math.min((ts - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setDisplay(Math.round(eased * value));
+      if (progress < 1) rafId = requestAnimationFrame(step);
+    };
+    rafId = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(rafId);
+  }, [inView, value, duration, reducedMotion]);
+
   return (
-    <section className="hero-section">
-      <div className="hero-background">
-        <img 
-          src="/Home page.jpg" 
-          alt="Rajasthan Desert Sand Dunes" 
-          className="hero-image"
-        />
+    <span ref={ref} className="stat-value">
+      {display.toLocaleString()}
+      {suffix}
+    </span>
+  );
+};
+
+const headline = ['Experience', 'Rajasthan', 'Beyond', 'Tourism'];
+
+const stats = [
+  { value: 10, suffix: '+', label: 'Years Crafting Journeys' },
+  { value: 25, suffix: '+', label: 'Destinations Explored' },
+  { value: 5000, suffix: '+', label: 'Happy Travelers' },
+  { value: 4.9, suffix: '★', label: 'Average Guest Rating' },
+];
+
+const HeroSection = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
+
+  const [heroImages] = useState(pickShuffledHeroImages);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (!heroImages || heroImages.length <= 1) return;
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [heroImages]);
+
+  const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '28%']);
+  const duneY = useTransform(scrollYProgress, [0, 1], ['0%', '-22%']);
+  const contentY = useTransform(scrollYProgress, [0, 1], ['0%', '45%']);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.65], [1, 0]);
+  const contentScale = useTransform(scrollYProgress, [0, 1], [1, 0.95]);
+
+  return (
+    <section className="hero-section" ref={ref}>
+      <motion.div className="hero-background" style={{ y: bgY }}>
+        <AnimatePresence mode="sync">
+          <motion.img
+            key={currentIndex}
+            src={heroImages[currentIndex]}
+            alt="Rajasthan destination showcase"
+            className="hero-image"
+            fetchPriority="high"
+            decoding="async"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: 'easeInOut' }}
+          />
+        </AnimatePresence>
         <div className="hero-overlay"></div>
-      </div>
-      
-      <div className="container hero-content">
-        <motion.span 
+        <div className="hero-dune-layer" aria-hidden="true"></div>
+        <motion.div className="hero-dune-shape" aria-hidden="true" style={{ y: duneY }}></motion.div>
+      </motion.div>
+
+      <motion.div className="container hero-content" style={{ y: contentY, opacity: contentOpacity, scale: contentScale }}>
+        <motion.span
           className="hero-subtitle"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.15 }}
         >
           Welcome to Dune Explorer
         </motion.span>
-        
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          Experience Rajasthan <br /> Beyond Tourism
-        </motion.h1>
-        
-        <motion.div
-          className="hero-actions"
+
+        <h1 className="hero-title" aria-label="Experience Rajasthan Beyond Tourism">
+          {headline.map((word, i) => (
+            <motion.span
+              key={word}
+              className="hero-word"
+              initial={{ opacity: 0, y: 40, filter: 'blur(8px)' }}
+              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              transition={{ duration: 0.7, delay: 0.35 + i * 0.12, ease: [0.16, 1, 0.3, 1] }}
+            >
+              {word}
+            </motion.span>
+          ))}
+        </h1>
+
+        <motion.p
+          className="hero-tagline"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
         >
+          Luxury tours, cultural experiences &amp; desert adventures in Rajasthan, India.
+        </motion.p>
+
+        <motion.div
+          className="hero-actions"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.05 }}
+        >
           <Link to="/plan-journey" className="btn btn-primary">Plan Your Journey</Link>
-          <Link to="/experiences" className="btn btn-light">Discover More</Link>
+          <Link to="/destinations" className="btn btn-light">Discover Destinations</Link>
         </motion.div>
-      </div>
+
+        <motion.div
+          className="hero-more"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+        >
+          <Link to="/experiences" className="hero-more-link">
+            Discover More
+            <span aria-hidden="true">→</span>
+          </Link>
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        className="hero-stats"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, delay: 1.3 }}
+      >
+        <div className="container hero-stats-inner">
+          {stats.map((stat) => (
+            <div className="hero-stat" key={stat.label}>
+              <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+              <span className="stat-label">{stat.label}</span>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+
+      <motion.a
+        href="#main-content"
+        className="scroll-indicator"
+        aria-label="Scroll down"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.6, duration: 0.8 }}
+      >
+        <span className="scroll-mouse">
+          <span className="scroll-wheel"></span>
+        </span>
+        <span className="scroll-text">Scroll</span>
+      </motion.a>
     </section>
   );
 };

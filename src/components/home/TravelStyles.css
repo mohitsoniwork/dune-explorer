@@ -16,7 +16,7 @@
 
 .styles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-md);
 }
 
@@ -31,9 +31,8 @@
 }
 
 .style-card:hover {
-  transform: translateY(-10px);
   border-color: var(--color-sand);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
 }
 
 .style-icon {
@@ -67,6 +66,10 @@
   color: var(--color-dark);
 }
 
+@media (max-width: 1024px) {
+  .styles-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 768px) {
-  .styles-grid { grid-template-columns: 1fr !important; }
+  .styles-grid { grid-template-columns: 1fr; }
 }

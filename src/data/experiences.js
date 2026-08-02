@@ -1,3 +1,5 @@
+import { imageManifest } from './imageManifest';
+
 export const experiencesData = [
   {
     id: 1,
@@ -6,8 +8,8 @@ export const experiencesData = [
     subtitle: 'Where every street echoes the legacy of kings and queens.',
     type: 'Heritage & Culture',
     duration: '3 Days',
-    image: 'https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    images: imageManifest['jaipur'],
+    heroImage: '/images/jaipur/LRM_EXPORT_20171026_084044-01.jpeg',
     paragraphs: [
       'Discover the timeless charm of Jaipur, the Pink City, where majestic forts, grand palaces, vibrant bazaars, and living traditions come together in perfect harmony. Wander through the magnificent Amber Fort, admire the iconic Hawa Mahal, explore the regal City Palace, marvel at the astronomical wonders of Jantar Mantar, and pause by the tranquil waters of Jal Mahal.',
       'Beyond its landmarks, Jaipur invites you to experience its soul through bustling markets, traditional crafts, authentic Rajasthani cuisine, heritage walks, and unforgettable cultural encounters.'
@@ -33,8 +35,8 @@ export const experiencesData = [
     subtitle: 'Experience the thrill of the Golden Desert in Jaisalmer.',
     type: 'Adventure',
     duration: '2 Days',
-    image: 'https://images.unsplash.com/photo-1533228876829-65c94e7b5025?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1533228876829-65c94e7b5025?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    images: imageManifest['jaisalmer'],
+    heroImage: '/images/jaisalmer-dunes.webp',
     paragraphs: [
       'Venture into the heart of the Thar Desert, where endless golden sand dunes, breathtaking sunsets, and timeless traditions create an adventure unlike any other. Jaisalmer offers the perfect blend of excitement, luxury, and authentic desert culture, making it one of India\'s most unforgettable destinations.',
       'Ride across the rolling dunes on a camel safari or an exhilarating 4×4 jeep safari, witness spectacular sunsets over the desert horizon, and spend an enchanting evening at a luxury desert camp. Enjoy traditional Rajasthani folk music, Kalbelia dance performances, authentic local cuisine, and a peaceful night beneath a sky illuminated by countless stars.',
@@ -61,8 +63,8 @@ export const experiencesData = [
     subtitle: 'Experience royal living amidst the timeless beauty of Udaipur.',
     type: 'Luxury & Wellness',
     duration: '4 Days',
-    image: '/udaipur.jpg',
-    heroImage: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    images: imageManifest['udaipur'],
+    heroImage: '/images/Udaipur/udaipur-palace.webp',
     paragraphs: [
       'Escape into the serenity of Udaipur, where majestic palaces, tranquil lakes, and world-class hospitality come together to create the perfect luxury retreat. Often known as the City of Lakes, Udaipur offers an elegant blend of royal heritage, refined comfort, and peaceful surroundings, making it an ideal destination for those seeking relaxation and indulgence.',
       'Stay in magnificent palace hotels overlooking the shimmering waters of Lake Pichola, wake up to breathtaking views, and enjoy personalized hospitality inspired by Rajasthan\'s royal traditions. Unwind with rejuvenating spa therapies, private lakeside dining, sunset boat cruises, and leisurely walks through grand courtyards and beautifully landscaped gardens.',

@@ -83,7 +83,7 @@ const MultiStepForm = () => {
     setIsSubmitting(true);
 
     try {
-      const result = await submitInquiry(formData, turnstileToken);
+      const result = await submitInquiry({ ...formData, consent }, turnstileToken);
 
       if (result.status === 'success' || result.status === 'duplicate') {
         setIsDuplicate(result.status === 'duplicate');

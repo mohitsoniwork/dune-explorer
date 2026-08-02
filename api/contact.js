@@ -139,6 +139,7 @@ async function forwardToEmail(isDuplicate, sanitized) {
   const serviceId = process.env.EMAILJS_SERVICE_ID;
   const templateId = process.env.EMAILJS_TEMPLATE_ID;
   const publicKey = process.env.EMAILJS_PUBLIC_KEY;
+  const privateKey = process.env.EMAILJS_PRIVATE_KEY;
   if (!serviceId || !templateId || !publicKey) return { status: 'skipped' };
 
   const name = sanitized.name || 'Not provided';
@@ -158,15 +159,21 @@ async function forwardToEmail(isDuplicate, sanitized) {
     timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
   };
 
+  const payload = {
+    service_id: serviceId,
+    template_id: templateId,
+    user_id: publicKey,
+    template_params: params,
+  };
+  
+  if (privateKey) {
+    payload.accessToken = privateKey;
+  }
+
   const resp = await fetch(EMAILJS_URL, {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({
-      service_id: serviceId,
-      template_id: templateId,
-      user_id: publicKey,
-      template_params: params,
-    }),
+    body: JSON.stringify(payload),
   });
   const text = await resp.text();
   try {

@@ -119,12 +119,22 @@ async function verifyTurnstile(token) {
 async function forwardToSheets(payload) {
   const url = process.env.GAS_SHEETS_URL;
   if (!url) return { status: 'skipped' };
-  const headers = { 'content-type': 'application/json' };
+  
+  // Format arrays to strings just like the old frontend code did
+  const sheetsPayload = {
+    ...payload,
+    interests: Array.isArray(payload.interests) ? payload.interests.join(', ') : payload.interests,
+    destinations: Array.isArray(payload.destinations) ? payload.destinations.join(', ') : payload.destinations,
+  };
+
+  const headers = { 'content-type': 'text/plain;charset=utf-8' }; // Apps Script prefers text/plain
   if (process.env.GAS_SHARED_TOKEN) headers['x-inquiry-token'] = process.env.GAS_SHARED_TOKEN;
+  
   const resp = await fetch(url, {
     method: 'POST',
     headers,
-    body: JSON.stringify(payload),
+    body: JSON.stringify(sheetsPayload),
+    redirect: 'follow',
   });
   const text = await resp.text();
   try {

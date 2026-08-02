@@ -53,6 +53,7 @@ function originAllowed(req) {
     .filter(Boolean);
   const origin = (req.headers.origin || '').toLowerCase();
   if (!origin) return true;
+  if (origin.endsWith('.vercel.app') || origin.startsWith('http://localhost:')) return true;
   return allowed.includes(origin);
 }
 

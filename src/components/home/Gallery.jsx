@@ -35,11 +35,17 @@ const galleryItems = [
     label: 'Ranthambore' 
   },
   { 
-    id: 'heritage',
-    images: ['/images/luxury-hotel.webp'], 
-    alt: 'Luxury heritage hotel stay', 
-    label: 'Heritage Stays' 
+    id: 'random',
+    images: Object.values(imageManifest).flat().sort(() => 0.5 - Math.random()).slice(0, 15), 
+    alt: 'Beautiful moments across Rajasthan', 
+    label: 'Explore Rajasthan' 
   },
+  {
+    id: 'pushkar',
+    images: imageManifest['pushkar'],
+    alt: 'Holy lake and ghats of Pushkar',
+    label: 'Pushkar'
+  }
 ];
 
 const Gallery = () => {

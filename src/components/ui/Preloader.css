@@ -22,6 +22,7 @@
   width: 120px; /* Adjust size based on logo dimensions */
   height: auto;
   object-fit: contain;
+  mix-blend-mode: multiply;
 }
 
 .preloader-text {

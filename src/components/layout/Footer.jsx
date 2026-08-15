@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="footer-logo-box">
             <img src="/logo.png" alt="Dune Explorer" className="footer-logo-img" />
           </div>
-          <p className="footer-tagline">Experience Rajasthan Beyond Tourism</p>
+          <p className="footer-tagline">Beyond Travel, Into Experience</p>
           <div className="footer-socials">
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <InstagramIcon />

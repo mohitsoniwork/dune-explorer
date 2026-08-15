@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { usePageMeta } from '../hooks/usePageMeta';
+import StoryForm from '../components/stories/StoryForm';
 import './Stories.css';
 
 const Stories = () => {
@@ -9,6 +10,12 @@ const Stories = () => {
     description:
       'The story behind Dune Explorer — why we create journeys, not just holidays, across Rajasthan and India.',
   });
+
+  const [explorerStories, setExplorerStories] = useState([]);
+
+  const handleAddStory = (newStory) => {
+    setExplorerStories([newStory, ...explorerStories]);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -85,6 +92,45 @@ const Stories = () => {
               We remember the people we met, the stories we heard, the places that touched our hearts, and the memories that changed us forever.
             </blockquote>
           </motion.div>
+        </div>
+      </section>
+
+      {/* NEW SECTION: Stories from the Explorer */}
+      <section className="explorer-stories-section">
+        <div className="container">
+          <motion.div
+            className="explorer-stories-header text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="section-subtitle">Community</span>
+            <h2>Stories from the Explorer</h2>
+            <p>Read about the experiences of those who have travelled with us.</p>
+          </motion.div>
+
+          <div className="explorer-stories-grid">
+            {explorerStories.map((story, idx) => (
+              <motion.div 
+                className="explorer-story-card" 
+                key={story.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+              >
+                <div className="story-card-quote">"</div>
+                <p className="story-card-text">{story.text}</p>
+                <div className="story-card-footer">
+                  <span className="story-card-author">{story.author}</span>
+                  <span className="story-card-date">{story.date}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <StoryForm onAddStory={handleAddStory} />
         </div>
       </section>
 

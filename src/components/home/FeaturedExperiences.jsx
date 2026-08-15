@@ -27,7 +27,7 @@ const FeaturedExperiences = () => {
                 <Link to={`/experience/${exp.id}`} className="experience-card-link">
                   <div className="experience-image-wrapper">
                     <img
-                      src={exp.image}
+                      src={exp.heroImage}
                       alt={exp.title}
                       className="experience-image"
                       loading="lazy"

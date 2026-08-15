@@ -62,9 +62,7 @@ export const imageManifest = {
     '/images/jaipur/_DSC0107.jpg'
   ],
   'jaisalmer': [
-    '/images/Jaisalmer/jaisalmer-dunes%20not.avif',
-    '/images/Jaisalmer/jaisalmer-dunes.jpg',
-    '/images/Jaisalmer/jaisalmer-dunes1.webp',
+    '/images/Jaisalmer/jaisalmer-dunes1.jpg',
     '/images/Jaisalmer/pexels-a-rc-622155260-17374447.jpg',
     '/images/Jaisalmer/pexels-anjali-paarol-59228898-29400426.jpg',
     '/images/Jaisalmer/pexels-axp-photography-500641970-19160074.jpg',

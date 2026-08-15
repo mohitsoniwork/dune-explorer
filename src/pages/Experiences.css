@@ -173,9 +173,10 @@
 .experiences-cta {
   margin-top: var(--spacing-lg, 4rem);
   padding: 3rem 1rem;
-  background: var(--color-bg-dark, #171410);
-  color: var(--color-ivory, #fffdf0);
+  background: var(--color-ivory, #fffdf0);
+  color: var(--color-dark, #1a1a1a);
   border-radius: var(--radius, 14px);
+  box-shadow: var(--shadow-sm);
 }
 
 .experiences-cta h2 {

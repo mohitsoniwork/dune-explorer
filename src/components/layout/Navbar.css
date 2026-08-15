@@ -39,6 +39,7 @@
   height: 56px;
   width: auto;
   object-fit: contain;
+  mix-blend-mode: multiply;
 }
 
 .navbar-links {

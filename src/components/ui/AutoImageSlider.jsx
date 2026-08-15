@@ -8,11 +8,25 @@ const AutoImageSlider = ({ images, alt, className = '' }) => {
   useEffect(() => {
     if (!images || images.length <= 1) return;
     
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000); // 4-second delay
+    let intervalTimer;
+    // Add a random delay between 0 and 3 seconds so multiple sliders change out of sync
+    const staggerDelay = Math.random() * 3000;
 
-    return () => clearInterval(timer);
+    const startTimer = () => {
+      intervalTimer = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % images.length);
+      }, 4000);
+    };
+
+    const initialTimer = setTimeout(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+      startTimer();
+    }, 4000 + staggerDelay);
+
+    return () => {
+      clearTimeout(initialTimer);
+      if (intervalTimer) clearInterval(intervalTimer);
+    };
   }, [images]);
 
   if (!images || images.length === 0) return null;

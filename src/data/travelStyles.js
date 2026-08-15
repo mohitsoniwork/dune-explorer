@@ -49,7 +49,7 @@ export const travelStylesData = {
     id: 'desert',
     title: 'Desert Adventures',
     subtitle: 'Experience the magic of the Thar Desert beneath endless golden skies.',
-    heroImage: '/images/jaisalmer-dunes.webp',
+    heroImage: '/images/jaisalmer-dunes.jpg',
     paragraphs: [
       'Embark on an unforgettable journey into the heart of Rajasthan\'s majestic Thar Desert, where rolling sand dunes, breathtaking sunsets, and timeless traditions create an experience unlike any other. From exhilarating camel safaris across the golden dunes to thrilling 4×4 desert excursions, every adventure is designed to immerse you in the region\'s natural beauty and rich cultural heritage.',
       'As the sun sets, unwind at a luxury desert camp with warm hospitality, traditional Rajasthani cuisine, captivating folk music, and vibrant cultural performances under a blanket of stars. Wake up to the peaceful silence of the desert and witness a spectacular sunrise that transforms the landscape into a sea of gold.',

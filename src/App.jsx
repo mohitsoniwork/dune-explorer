@@ -57,6 +57,24 @@ function App() {
 
   useEffect(() => {
     timerRef.current = setTimeout(() => setIsLoading(false), 1600);
+    
+    // Initialize ScrollReveal for smooth, elegant animations
+    import('scrollreveal').then((module) => {
+      const ScrollReveal = module.default;
+      const sr = ScrollReveal({
+        distance: '40px',
+        duration: 1000,
+        easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
+        opacity: 0,
+        reset: false,
+        mobile: true
+      });
+
+      // Target specific elements to animate smoothly without disturbing framer-motion
+      sr.reveal('.sr-smooth-reveal', { origin: 'bottom', interval: 150 });
+      sr.reveal('.testimonial-form-wrapper', { origin: 'bottom', distance: '60px', duration: 1200 });
+    });
+
     return () => clearTimeout(timerRef.current);
   }, []);
 

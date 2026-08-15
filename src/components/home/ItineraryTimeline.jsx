@@ -4,29 +4,32 @@ import './ItineraryTimeline.css';
 
 const itinerary = [
   {
-    day: 'Day 1',
-    title: 'Jaipur — The Pink City',
-    desc: 'Arrive and settle into a heritage palace. Evening welcome dinner with traditional Rajasthani performances.',
+    day: 'Destination 1',
+    title: 'New Delhi',
+    desc: 'As the nation\'s bustling capital, New Delhi boasts magnificent historic landmarks such as the Red Fort, Qutub Minar, and India Gate.',
   },
   {
-    day: 'Day 2',
-    title: 'Jodhpur — The Blue City',
-    desc: 'Explore Mehrangarh Fort at sunrise, wander the blue old town, and dine at a rooftop overlooking the city.',
+    day: 'Destination 2',
+    title: 'Agra',
+    desc: 'Situated in Uttar Pradesh, Agra is renowned worldwide as the home of the iconic Taj Mahal and the majestic Agra Fort.',
   },
   {
-    day: 'Day 3',
-    title: 'Jaisalmer — The Golden Desert',
-    desc: 'Sunset camel safari over the Sam Sand Dunes, luxury desert camp, folk music and a sky full of stars.',
+    day: 'Destination 3',
+    title: 'Jaipur',
+    desc: 'Known affectionately as the "Pink City" of Rajasthan, Jaipur captivates travelers with majestic structures like the Amber Fort, Hawa Mahal, and City Palace.',
   },
 ];
 
 const ItineraryTimeline = () => {
   return (
-    <section className="section itinerary-section">
+    <section className="section itinerary-section sr-smooth-reveal">
       <div className="container">
         <div className="section-header text-center">
-          <span className="section-subtitle">Signature Itinerary</span>
-          <h2>Three Days. One Golden Route.</h2>
+          <span className="section-subtitle">India's Tourism Circuit</span>
+          <h2>Golden Triangle</h2>
+          <p style={{ marginTop: '1rem', color: 'var(--color-text-secondary)' }}>
+            Best Time to Visit: October to March offers cool, pleasant weather ideal for sightseeing.
+          </p>
         </div>
 
         <div className="timeline">

@@ -13,9 +13,9 @@ const Preloader = ({ isLoading }) => {
         >
           <motion.div
             className="preloader-logo-container"
-            initial={{ opacity: 0, scale: 0.85 }}
+            initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.6 }}
           >
             <img src="/logo.png" alt="Dune Explorer" className="preloader-logo-img" />
           </motion.div>

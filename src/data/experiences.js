@@ -30,13 +30,14 @@ export const experiencesData = [
   },
   {
     id: 2,
-    slug: 'jaisalmer-adventure',
-    title: 'Adventure',
+    slug: 'jaisalmer-safari',
+    title: 'Jaisalmer Desert Safari',
     subtitle: 'Experience the thrill of the Golden Desert in Jaisalmer.',
+    location: 'Jaisalmer, Rajasthan',
     type: 'Adventure',
     duration: '2 Days',
-    images: imageManifest['jaisalmer'],
-    heroImage: '/images/jaisalmer-dunes.webp',
+    images: imageManifest['jaisalmer'] || ['/images/jaisalmer-dunes.jpg'],
+    heroImage: '/images/jaisalmer-dunes.jpg',
     paragraphs: [
       'Venture into the heart of the Thar Desert, where endless golden sand dunes, breathtaking sunsets, and timeless traditions create an adventure unlike any other. Jaisalmer offers the perfect blend of excitement, luxury, and authentic desert culture, making it one of India\'s most unforgettable destinations.',
       'Ride across the rolling dunes on a camel safari or an exhilarating 4×4 jeep safari, witness spectacular sunsets over the desert horizon, and spend an enchanting evening at a luxury desert camp. Enjoy traditional Rajasthani folk music, Kalbelia dance performances, authentic local cuisine, and a peaceful night beneath a sky illuminated by countless stars.',

@@ -47,7 +47,7 @@ const AnimatedCounter = ({ value, suffix = '', duration = 1800 }) => {
   );
 };
 
-const headline = ['Experience', 'Rajasthan', 'Beyond', 'Tourism'];
+const headline = ['Luxury', 'Rajasthan', 'Tours'];
 
 const stats = [
   { value: 10, suffix: '+', label: 'Years Crafting Journeys' },
@@ -109,7 +109,7 @@ const HeroSection = () => {
           Welcome to Dune Explorer
         </motion.span>
 
-        <h1 className="hero-title" aria-label="Experience Rajasthan Beyond Tourism">
+        <h1 className="hero-title" aria-label="Luxury Rajasthan Tours">
           {headline.map((word, i) => (
             <motion.span
               key={word}
@@ -129,7 +129,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
         >
-          Luxury tours, cultural experiences &amp; desert adventures in Rajasthan, India.
+          Bespoke journeys, private desert safaris &amp; heritage palace stays.
         </motion.p>
 
         <motion.div

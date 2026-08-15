@@ -15,13 +15,13 @@ const AutoImageSlider = ({ images, alt, className = '' }) => {
     const startTimer = () => {
       intervalTimer = setInterval(() => {
         setCurrentIndex((prev) => (prev + 1) % images.length);
-      }, 4000);
+      }, 2000); // 2-second interval after the first 8 seconds
     };
 
     const initialTimer = setTimeout(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
       startTimer();
-    }, 4000 + staggerDelay);
+    }, 8000 + staggerDelay); // Stay still for 8 secs initially
 
     return () => {
       clearTimeout(initialTimer);
@@ -33,7 +33,7 @@ const AutoImageSlider = ({ images, alt, className = '' }) => {
 
   return (
     <div className={`auto-slider-container ${className}`}>
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         <motion.img
           key={currentIndex}
           src={images[currentIndex]}

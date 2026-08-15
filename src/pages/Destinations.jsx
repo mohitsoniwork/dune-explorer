@@ -8,9 +8,9 @@ import './Destinations.css';
 
 const Destinations = () => {
   usePageMeta({
-    title: 'Destinations | Dune Explorer',
+    title: 'Custom Golden Triangle Tour Packages & Heritage Stays | Dune Explorer',
     description:
-      'Explore the best of Rajasthan — Jaipur, Udaipur, Jodhpur, Jaisalmer, Ranthambore and Pushkar — with luxury tours by Dune Explorer.',
+      'Explore boutique heritage hotels in Rajasthan. Custom Golden Triangle tour packages covering Jaipur, Udaipur, Jodhpur, and Ranthambore.',
   });
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const Destinations = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1>{rajasthanOverview.title}</h1>
+          <h1>Boutique Heritage Palaces & Rajasthan Destinations</h1>
           <p>{rajasthanOverview.description}</p>
         </motion.div>
       </header>

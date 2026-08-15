@@ -22,9 +22,9 @@ const whyChooseItems = [
 
 const About = () => {
   usePageMeta({
-    title: 'About Us | Dune Explorer',
+    title: 'About Dune Explorer | Luxury Rajasthan Tour Operator',
     description:
-      'Dune Explorer is a luxury travel company curating extraordinary journeys across Rajasthan and India — heritage stays, desert adventures and cultural immersion.',
+      'Learn about Dune Explorer, a premier luxury travel agency specializing in custom Golden Triangle tours, desert safaris, and heritage palace stays across Rajasthan.',
   });
 
   useEffect(() => {

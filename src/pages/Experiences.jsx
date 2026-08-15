@@ -8,9 +8,9 @@ import './Experiences.css';
 
 const Experiences = () => {
   usePageMeta({
-    title: 'Experiences | Dune Explorer',
+    title: 'Private Desert Safari & Luxury Camps in Rajasthan | Dune Explorer',
     description:
-      'Discover handcrafted Rajasthan experiences — royal heritage, desert adventures, and luxury escapes curated by Dune Explorer.',
+      'Discover authentic private desert safaris in Jaisalmer, tiger safaris in Ranthambore, and bespoke luxury experiences curated by Dune Explorer.',
   });
 
   useEffect(() => {
@@ -20,9 +20,15 @@ const Experiences = () => {
   return (
     <div className="experiences-page">
       <header className="experiences-hero">
-        <img
-          src="/images/jaisalmer-dunes.webp"
-          alt="Golden sand dunes of the Thar Desert"
+        <AutoImageSlider
+          images={[
+            '/images/jaisalmer-dunes.jpg',
+            '/images/jaipur/DSC_0449.jpg',
+            '/images/Jodhpur/jodhpur-fort.jpg',
+            '/images/Udaipur/pexels-shutterbugmini-36588398.jpg',
+            '/images/Pushkar/pexels-mrpixelwala-35457712.jpg'
+          ]}
+          alt="Rajasthan Experiences"
           className="experiences-hero-img"
         />
         <div className="experiences-hero-overlay"></div>
@@ -33,7 +39,7 @@ const Experiences = () => {
           transition={{ duration: 1 }}
         >
           <span className="experiences-label">Handcrafted Journeys</span>
-          <h1>Rajasthan Experiences</h1>
+          <h1>Private Desert Safaris & Authentic Experiences</h1>
           <p className="experiences-tagline">
             Every journey is a story — crafted around your pace, passions, and sense of wonder.
           </p>

@@ -1,5 +1,4 @@
 import HeroSection from '../components/home/HeroSection';
-import DestinationMarquee from '../components/home/DestinationMarquee';
 import TravelStyles from '../components/home/TravelStyles';
 import WhyChooseUs from '../components/home/WhyChooseUs';
 import FeaturedExperiences from '../components/home/FeaturedExperiences';
@@ -18,7 +17,6 @@ const Home = () => {
   return (
     <div className="home-page">
       <HeroSection />
-      <DestinationMarquee />
       <TravelStyles />
       <WhyChooseUs />
       <FeaturedExperiences />

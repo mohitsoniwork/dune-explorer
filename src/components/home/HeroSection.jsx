@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform, useInView, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { imageManifest } from '../../data/imageManifest';
+import DestinationMarquee from './DestinationMarquee';
 import './HeroSection.css';
 
 const pickShuffledHeroImages = () => {
@@ -16,45 +17,7 @@ const pickShuffledHeroImages = () => {
   return picks;
 };
 
-const AnimatedCounter = ({ value, suffix = '', duration = 1800 }) => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-40px' });
-  const [reducedMotion] = useState(
-    () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  );
-  const [display, setDisplay] = useState(reducedMotion ? value : 0);
-
-  useEffect(() => {
-    if (reducedMotion || !inView) return;
-    let start;
-    let rafId;
-    const step = (ts) => {
-      if (start === undefined) start = ts;
-      const progress = Math.min((ts - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setDisplay(Math.round(eased * value));
-      if (progress < 1) rafId = requestAnimationFrame(step);
-    };
-    rafId = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(rafId);
-  }, [inView, value, duration, reducedMotion]);
-
-  return (
-    <span ref={ref} className="stat-value">
-      {display.toLocaleString()}
-      {suffix}
-    </span>
-  );
-};
-
-const headline = ['Luxury', 'Rajasthan', 'Tours'];
-
-const stats = [
-  { value: 10, suffix: '+', label: 'Years Crafting Journeys' },
-  { value: 25, suffix: '+', label: 'Destinations Explored' },
-  { value: 5000, suffix: '+', label: 'Happy Travelers' },
-  { value: 4.9, suffix: '★', label: 'Average Guest Rating' },
-];
+const headline = ['Luxury', 'Tours'];
 
 const HeroSection = () => {
   const ref = useRef(null);
@@ -109,7 +72,7 @@ const HeroSection = () => {
           Welcome to Dune Explorer
         </motion.span>
 
-        <h1 className="hero-title" aria-label="Luxury Rajasthan Tours">
+        <h1 className="hero-title" aria-label="Luxury Tours">
           {headline.map((word, i) => (
             <motion.span
               key={word}
@@ -155,21 +118,6 @@ const HeroSection = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div
-        className="hero-stats"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, delay: 1.3 }}
-      >
-        <div className="container hero-stats-inner">
-          {stats.map((stat) => (
-            <div className="hero-stat" key={stat.label}>
-              <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-              <span className="stat-label">{stat.label}</span>
-            </div>
-          ))}
-        </div>
-      </motion.div>
 
       <motion.a
         href="#main-content"
@@ -184,6 +132,8 @@ const HeroSection = () => {
         </span>
         <span className="scroll-text">Scroll</span>
       </motion.a>
+
+      <DestinationMarquee />
     </section>
   );
 };

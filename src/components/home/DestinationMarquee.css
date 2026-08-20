@@ -1,7 +1,12 @@
 .dest-marquee-section {
-  padding: var(--spacing-lg) 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 0;
   overflow: hidden;
-  background: var(--color-beige);
+  background: transparent;
+  z-index: 5;
 }
 
 .dest-marquee {
@@ -32,15 +37,18 @@
   font-family: var(--font-heading);
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 600;
-  color: var(--color-dark);
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
 }
 
 .dest-marquee-sub {
   font-size: var(--fs-micro);
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--color-camel);
+  color: #ffffff !important;
+  opacity: 0.9;
   font-weight: 600;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
 }
 
 .dest-marquee-dot {

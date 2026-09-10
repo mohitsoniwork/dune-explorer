@@ -45,7 +45,7 @@ const PaymentPolicy = () => {
 
           <h2>Cancellation &amp; Refund Policy</h2>
           <p>
-            If you need to cancel your booking, please notify us in writing by emailing info@dunexplore.com.
+            If you need to cancel your booking, please notify us in writing by emailing info@duneexplorer.com.
           </p>
           <p>Refunds will be processed according to the following schedule:</p>
 
@@ -138,7 +138,7 @@ const PaymentPolicy = () => {
           </p>
           <div className="policy-contact">
             <p><strong>DuneXplore</strong></p>
-            <p>📧 info@dunexplore.com</p>
+            <p>📧 info@duneexplorer.com</p>
             <p>📞 +91 63750 60566</p>
           </div>
         </div>

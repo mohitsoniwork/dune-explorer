@@ -47,7 +47,7 @@ const TermsAndConditions = () => {
 
           <h2>4. Cancellation &amp; Refund Policy</h2>
           <p>
-            Cancellation requests must be submitted in writing by email to info@dunexplore.com.
+            Cancellation requests must be submitted in writing by email to info@duneexplorer.com.
           </p>
           <p>Refunds will be processed according to the following schedule:</p>
           <ul>
@@ -131,8 +131,8 @@ const TermsAndConditions = () => {
             <p>Founder &amp; Travel Experience Curator</p>
             <p>📍 Khatipura, Jaipur, Rajasthan, India</p>
             <p>📞 +91 63750 60566</p>
-            <p>📧 info@dunexplore.com</p>
-            <p>🌐 www.dunexplore.com</p>
+            <p>📧 info@duneexplorer.com</p>
+            <p>🌐 www.duneexplorer.com</p>
           </div>
         </div>
       </div>

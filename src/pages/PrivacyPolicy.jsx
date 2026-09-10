@@ -42,7 +42,7 @@ const PrivacyPolicy = () => {
             <p>Founder</p>
             <p>Khatipura, Jaipur, Rajasthan, India</p>
             <p>📞 +91 63750 60566</p>
-            <p>📧 info@dunexplore.com</p>
+            <p>📧 info@duneexplorer.com</p>
           </div>
         </div>
       </div>

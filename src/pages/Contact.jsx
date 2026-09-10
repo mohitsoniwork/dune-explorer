@@ -13,8 +13,8 @@ const contactMethods = [
   {
     icon: <Mail size={28} aria-hidden="true" />,
     title: 'Email Us',
-    lines: ['info@dunexplore.com'],
-    href: 'mailto:info@dunexplore.com',
+    lines: ['info@duneexplorer.com'],
+    href: 'mailto:info@duneexplorer.com',
   },
   {
     icon: <Phone size={28} aria-hidden="true" />,

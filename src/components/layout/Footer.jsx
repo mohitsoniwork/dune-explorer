@@ -10,18 +10,6 @@ const InstagramIcon = ({ size = 20 }) => (
   </svg>
 );
 
-const FacebookIcon = ({ size = 20 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-  </svg>
-);
-
-const XIcon = ({ size = 20 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-  </svg>
-);
-
 const Footer = () => {
   return (
     <footer className="footer">
@@ -32,14 +20,13 @@ const Footer = () => {
           </div>
           <p className="footer-tagline">Beyond Travel, Into Experience</p>
           <div className="footer-socials">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a
+              href="https://www.instagram.com/dune_explore?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
               <InstagramIcon />
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <FacebookIcon />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter (X)">
-              <XIcon />
             </a>
           </div>
         </div>
@@ -65,7 +52,7 @@ const Footer = () => {
 
         <div className="footer-contact">
           <h3>Contact Us</h3>
-          <p>Email: info@dunexplore.com</p>
+          <p>Email: <a href="mailto:info@duneexplorer.com" style={{ color: 'inherit', textDecoration: 'none' }}>info@duneexplorer.com</a></p>
           <p>Phone: +91 63750 60566</p>
           <a href="https://wa.me/916375060566" target="_blank" rel="noopener noreferrer" className="btn btn-outline whatsapp-btn">
             <MessageCircle size={18} aria-hidden="true" /> Chat on WhatsApp

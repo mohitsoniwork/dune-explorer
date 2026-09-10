@@ -36,7 +36,7 @@ const TravelStyles = () => {
             How Do You Want to Travel?
           </motion.h2>
           <motion.p
-            className="section-subtitle"
+            className="section-description"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -56,10 +56,12 @@ const TravelStyles = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <TiltCard className="style-card">
-                <div className="style-icon">{style.icon}</div>
-                <h3>{style.title}</h3>
-                <p>{style.desc}</p>
-                <Link to={`/styles/${style.id}`} className="style-link">Explore →</Link>
+                <Link to={`/styles/${style.id}`} className="style-card-link">
+                  <div className="style-icon">{style.icon}</div>
+                  <h3>{style.title}</h3>
+                  <p>{style.desc}</p>
+                  <span className="style-link">Explore →</span>
+                </Link>
               </TiltCard>
             </motion.div>
           ))}

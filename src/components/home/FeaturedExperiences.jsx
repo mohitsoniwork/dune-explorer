@@ -11,7 +11,7 @@ const FeaturedExperiences = () => {
         <div className="section-header text-center">
           <span className="section-subtitle">Handcrafted Journeys</span>
           <h2>Featured Experiences</h2>
-          <p className="section-subtitle">Journeys crafted to perfection</p>
+          <p className="section-description">Journeys crafted to perfection</p>
         </div>
 
         <div className="experiences-grid">

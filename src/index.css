@@ -170,6 +170,17 @@ textarea:focus-visible {
   font-weight: 600;
 }
 
+.section-description {
+  color: #666;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  max-width: 600px;
+  margin: 0.5rem auto 0;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1.6;
+}
+
 .text-center {
   text-align: center;
 }

@@ -26,21 +26,21 @@ const WhyChooseUs = () => {
               <div className="feature">
                 <ShieldCheck className="feature-icon" size={24} aria-hidden="true" />
                 <div>
-                  <h4>Secure &amp; Trusted</h4>
+                  <h3>Secure &amp; Trusted</h3>
                   <p>Certified guides and safe travels</p>
                 </div>
               </div>
               <div className="feature">
                 <Users className="feature-icon" size={24} aria-hidden="true" />
                 <div>
-                  <h4>Local Experts</h4>
+                  <h3>Local Experts</h3>
                   <p>Authentic stories from Rajasthan</p>
                 </div>
               </div>
               <div className="feature">
                 <Star className="feature-icon" size={24} aria-hidden="true" />
                 <div>
-                  <h4>Premium Service</h4>
+                  <h3>Premium Service</h3>
                   <p>24/7 concierge support on your trip</p>
                 </div>
               </div>

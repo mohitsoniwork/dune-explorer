@@ -104,18 +104,6 @@ const HeroSection = () => {
           <Link to="/plan-journey" className="btn btn-primary">Plan Your Journey</Link>
           <Link to="/destinations" className="btn btn-light">Discover Destinations</Link>
         </motion.div>
-
-        <motion.div
-          className="hero-more"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-        >
-          <Link to="/experiences" className="hero-more-link">
-            Discover More
-            <span aria-hidden="true">→</span>
-          </Link>
-        </motion.div>
       </motion.div>
 
 

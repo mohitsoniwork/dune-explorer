@@ -14,7 +14,7 @@ const WhyChooseUs = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="section-subtitle why-subtitle">Why DuneXplore?</span>
+            <span className="section-subtitle why-subtitle">Why Dune Explorer?</span>
             <h2 className="section-title">A heritage of hospitality</h2>
             <p className="why-desc">
               We don't just show you Rajasthan; we let you live it. Our team of local experts

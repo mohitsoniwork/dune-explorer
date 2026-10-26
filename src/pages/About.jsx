@@ -61,7 +61,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <p>
-              At DuneXplore, we believe that the most memorable journeys are not measured by the miles traveled, but by the experiences that stay with you long after you return home. We are a luxury travel company dedicated to curating extraordinary journeys across Rajasthan and India, where every itinerary is thoughtfully designed to reflect your unique interests, pace, and travel aspirations.
+              At Dune Explorer, we believe that the most memorable journeys are not measured by the miles traveled, but by the experiences that stay with you long after you return home. We are a luxury travel company dedicated to curating extraordinary journeys across Rajasthan and India, where every itinerary is thoughtfully designed to reflect your unique interests, pace, and travel aspirations.
             </p>
             <p>
               With extensive experience in the travel industry, our team is passionate about creating seamless, personalized, and immersive travel experiences. From the moment you arrive until your journey comes to an end, every detail is carefully planned to ensure exceptional comfort, authenticity, and peace of mind.
@@ -70,13 +70,13 @@ const About = () => {
               Our expertise lies in crafting bespoke itineraries that go beyond traditional sightseeing. Whether it's waking up in a centuries-old palace, enjoying a private sunset over the Thar Desert, exploring vibrant local markets with expert guides, tracking wildlife in Ranthambore and Jawai, or sharing a home-cooked meal in a traditional village, every experience is designed to connect you with the true spirit of India.
             </p>
             <p>
-              At DuneXplore, luxury is found in the details. We carefully select premium heritage hotels, boutique resorts, luxury camps, and trusted local partners to deliver world-class hospitality throughout your journey. From chauffeur-driven transportation and knowledgeable local guides to exclusive cultural experiences and personalized concierge services, we ensure that every moment is effortless, comfortable, and unforgettable.
+              At Dune Explorer, luxury is found in the details. We carefully select premium heritage hotels, boutique resorts, luxury camps, and trusted local partners to deliver world-class hospitality throughout your journey. From chauffeur-driven transportation and knowledgeable local guides to exclusive cultural experiences and personalized concierge services, we ensure that every moment is effortless, comfortable, and unforgettable.
             </p>
             <p>
               We are equally committed to responsible and sustainable tourism. By working closely with local communities, artisans, guides, and conservation initiatives, we strive to preserve India's rich cultural heritage while creating meaningful experiences that benefit both our guests and the destinations they visit.
             </p>
             <p>
-              Whether you are discovering Rajasthan's magnificent forts and royal palaces, sailing across the tranquil lakes of Udaipur, wandering through the colourful streets of Jaipur, experiencing the magic of the Thar Desert, or embarking on an unforgettable wildlife safari, DuneXplore transforms every destination into a story worth remembering.
+              Whether you are discovering Rajasthan's magnificent forts and royal palaces, sailing across the tranquil lakes of Udaipur, wandering through the colourful streets of Jaipur, experiencing the magic of the Thar Desert, or embarking on an unforgettable wildlife safari, Dune Explorer transforms every destination into a story worth remembering.
             </p>
             <p className="about-mission">
               Our mission is simple—to create exceptional travel experiences that inspire exploration, celebrate culture, and create memories that last a lifetime.
@@ -94,7 +94,7 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2>Why Choose DuneXplore?</h2>
+            <h2>Why Choose Dune Explorer?</h2>
             <ul className="about-why-list">
               {whyChooseItems.map((item, index) => (
                 <motion.li
@@ -123,10 +123,10 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <p className="about-closing-text">
-              At DuneXplore, we don't simply plan holidays—we craft unforgettable journeys that celebrate the beauty, heritage, and soul of India.
+              At Dune Explorer, we don't simply plan holidays—we craft unforgettable journeys that celebrate the beauty, heritage, and soul of India.
             </p>
             <div className="about-closing-brand">
-              <strong>DuneXplore</strong>
+              <strong>Dune Explorer</strong>
               <span>Beyond Travel, Into Experience.</span>
             </div>
             <Link to="/plan-journey" className="btn btn-primary">Start Your Journey</Link>

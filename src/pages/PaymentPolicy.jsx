@@ -18,12 +18,12 @@ const PaymentPolicy = () => {
         <h1>Booking &amp; Cancellation Policy</h1>
         <div className="policy-content">
           <p>
-            At DuneXplore, we believe in providing a seamless and transparent booking experience. Please read our booking and cancellation policy carefully before confirming your journey.
+            At Dune Explorer, we believe in providing a seamless and transparent booking experience. Please read our booking and cancellation policy carefully before confirming your journey.
           </p>
 
           <h2>Booking Policy</h2>
           <p>
-            To secure your reservation, an advance payment of 30% of the total tour cost is required at the time of booking. Your booking will be confirmed once the advance payment has been received and acknowledged by DuneXplore.
+            To secure your reservation, an advance payment of 30% of the total tour cost is required at the time of booking. Your booking will be confirmed once the advance payment has been received and acknowledged by Dune Explorer.
           </p>
           <p>
             The remaining 70% balance must be paid at least 30 days prior to your scheduled arrival or travel date. For bookings made within 30 days of departure, full payment may be required at the time of confirmation.
@@ -86,7 +86,7 @@ const PaymentPolicy = () => {
           <p>
             If your reservation has been made through an online travel agency, travel advisor, or any third-party booking platform, the cancellation and refund policy of the respective provider may apply.
           </p>
-          <p>Where DuneXplore's policy is applicable, the following refund schedule will be followed:</p>
+          <p>Where Dune Explorer's policy is applicable, the following refund schedule will be followed:</p>
 
           <table className="policy-table">
             <thead>
@@ -116,7 +116,7 @@ const PaymentPolicy = () => {
           </table>
 
           <p>
-            Refunds for third-party bookings are subject to the respective booking partner's processing timelines and terms. DuneXplore cannot guarantee refund timelines where payments have been collected by a third-party platform.
+            Refunds for third-party bookings are subject to the respective booking partner's processing timelines and terms. Dune Explorer cannot guarantee refund timelines where payments have been collected by a third-party platform.
           </p>
 
           <hr className="policy-divider" />
@@ -127,7 +127,7 @@ const PaymentPolicy = () => {
             <li>Bookings made during Christmas, New Year, festival periods, or other designated peak travel dates may be non-refundable or subject to special cancellation terms communicated at the time of booking.</li>
             <li>Domestic flight tickets, train tickets, and certain hotel reservations are subject to the cancellation policies of the respective airline, railway, hotel, or service provider. Applicable supplier charges will be deducted from any eligible refund.</li>
             <li>Any amendment to a confirmed itinerary, including changes to travel dates, destinations, accommodation, or services, will be subject to availability and may incur additional charges.</li>
-            <li>In the event of unforeseen circumstances such as extreme weather, natural disasters, government restrictions, political unrest, or other force majeure events, DuneXplore will make every reasonable effort to offer suitable alternatives; however, additional costs incurred due to such events may be the responsibility of the traveler.</li>
+            <li>In the event of unforeseen circumstances such as extreme weather, natural disasters, government restrictions, political unrest, or other force majeure events, Dune Explorer will make every reasonable effort to offer suitable alternatives; however, additional costs incurred due to such events may be the responsibility of the traveler.</li>
           </ul>
 
           <hr className="policy-divider" />
@@ -137,7 +137,7 @@ const PaymentPolicy = () => {
             If you have any questions regarding your booking or cancellation, our team will be happy to assist you.
           </p>
           <div className="policy-contact">
-            <p><strong>DuneXplore</strong></p>
+            <p><strong>Dune Explorer</strong></p>
             <p>📧 info@duneexplorer.com</p>
             <p>📞 +91 63750 60566</p>
           </div>

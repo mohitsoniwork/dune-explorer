@@ -55,7 +55,7 @@ export const experiencesData = [
       'Explore the Golden Jaisalmer Fort (UNESCO World Heritage Site)',
       'Visit Patwon Ki Haveli & Gadisar Lake'
     ],
-    closingLine: 'From golden dunes to unforgettable nights beneath the stars, every desert adventure with DuneXplore is crafted to inspire, excite, and create memories that last a lifetime.'
+    closingLine: 'From golden dunes to unforgettable nights beneath the stars, every desert adventure with Dune Explorer is crafted to inspire, excite, and create memories that last a lifetime.'
   },
   {
     id: 3,

@@ -41,7 +41,7 @@ const StyleDetail = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <span className="style-detail-label">DuneXplore</span>
+          <span className="style-detail-label">Dune Explorer</span>
           <h1>{style.title}</h1>
           <p className="style-detail-subtitle">{style.subtitle}</p>
         </motion.div>

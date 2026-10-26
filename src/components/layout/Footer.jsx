@@ -37,8 +37,20 @@ const Footer = () => {
             <Link to="/destinations">Destinations</Link>
             <Link to="/experiences">Experiences</Link>
             <Link to="/about">About Us</Link>
-            <Link to="/stories">Stories</Link>
             <Link to="/plan-journey">Plan Your Journey</Link>
+          </div>
+          <div className="footer-column">
+            <h3>Guides</h3>
+            <Link to="/luxury-rajasthan-tour-packages-uk">UK Tour Packages</Link>
+            <Link to="/10-day-luxury-rajasthan-itinerary">10-Day Luxury Route</Link>
+            <Link to="/rajasthan-palace-hotel-itinerary">Palace Hotels Guide</Link>
+            <Link to="/luxury-jaisalmer-desert-camps">Desert Camps Guide</Link>
+            <Link to="/luxury-ranthambore-tiger-safari">Tiger Safari Guide</Link>
+            <Link to="/rajasthan-luxury-honeymoon">Honeymoon Tours</Link>
+            <Link to="/palace-on-wheels-vs-royal-rajasthan">Luxury Trains Guide</Link>
+            <Link to="/private-rajasthan-tour-driver-guide">Driver &amp; Guide Info</Link>
+            <Link to="/luxury-rajasthan-tour-cost">Tour Cost Guide</Link>
+            <Link to="/best-time-to-visit-rajasthan">Best Time to Visit</Link>
           </div>
           <div className="footer-column">
             <h3>Support</h3>

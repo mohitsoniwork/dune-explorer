@@ -9,9 +9,9 @@ import { usePageMeta } from '../hooks/usePageMeta';
 
 const Home = () => {
   usePageMeta({
-    title: 'Dune Explorer | Luxury Rajasthan Tours & Experiences',
+    title: 'Luxury Rajasthan Tours & Tailored Holidays | Dune Explorer',
     description:
-      'Experience Rajasthan beyond tourism with Dune Explorer. Luxury tours, cultural experiences, and desert adventures in Rajasthan, India.',
+      'Bespoke luxury Rajasthan tours for discerning UK & European travellers. Private palace stays, royal desert camps, and chauffeured itineraries. Plan your journey today.',
   });
 
   return (

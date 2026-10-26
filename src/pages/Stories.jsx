@@ -37,7 +37,7 @@ const Stories = () => {
           transition={{ duration: 1 }}
         >
           <span className="stories-label">Stories</span>
-          <h1>The Story Behind DuneXplore</h1>
+          <h1>The Story Behind Dune Explorer</h1>
           <p className="stories-tagline">Beyond Travel, Into Experience</p>
         </motion.div>
       </header>
@@ -52,7 +52,7 @@ const Stories = () => {
             transition={{ duration: 0.8 }}
           >
             <p>
-              There are journeys that take you to new places, and then there are journeys that change the way you see the world. DuneXplore was born from the second kind.
+              There are journeys that take you to new places, and then there are journeys that change the way you see the world. Dune Explorer was born from the second kind.
             </p>
             <p>
               Growing up in Rajasthan, I was surrounded by magnificent forts, timeless palaces, vibrant markets, colourful festivals, and stories that had been passed down through generations. To me, these weren't just tourist attractions—they were part of everyday life. As I travelled across different parts of India, I realized that every destination had its own soul, its own people, and its own story waiting to be discovered.
@@ -62,7 +62,7 @@ const Stories = () => {
             </p>
 
             <blockquote className="stories-quote">
-              That's why I created DuneXplore.
+              That's why I created Dune Explorer.
               <br />
               Not to sell holidays, but to create journeys that people remember for the rest of their lives.
             </blockquote>
@@ -77,10 +77,10 @@ const Stories = () => {
               These are the experiences that become lifelong memories.
             </p>
             <p>
-              But DuneXplore is about more than our story—it is about yours.
+              But Dune Explorer is about more than our story—it is about yours.
             </p>
             <p>
-              Every traveller who joins us brings a different dream, a different perspective, and a different reason for exploring India. Whether you're celebrating a honeymoon, travelling with family, seeking adventure, or simply fulfilling a lifelong dream, your journey becomes part of the DuneXplore story.
+              Every traveller who joins us brings a different dream, a different perspective, and a different reason for exploring India. Whether you're celebrating a honeymoon, travelling with family, seeking adventure, or simply fulfilling a lifelong dream, your journey becomes part of the Dune Explorer story.
             </p>
             <p>
               This space is where we'll share those moments—our experiences, your experiences, travel inspiration, hidden discoveries, and the unforgettable memories created along the way. We hope these stories inspire others to explore with curiosity, travel with purpose, and appreciate the beauty of meaningful experiences.
@@ -143,12 +143,12 @@ const Stories = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p>Welcome to the DuneXplore family.</p>
+            <p>Welcome to the Dune Explorer family.</p>
             <p className="stories-closing-cta">
               Let's build a community of travellers who believe that the best journeys aren't measured by destinations, but by the experiences they create.
             </p>
             <div className="stories-closing-brand">
-              <strong>DuneXplore</strong>
+              <strong>Dune Explorer</strong>
               <span>Beyond Travel, Into Experience.</span>
             </div>
           </motion.div>

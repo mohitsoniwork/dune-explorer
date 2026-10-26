@@ -18,12 +18,12 @@ const TermsAndConditions = () => {
         <h1>Terms &amp; Conditions</h1>
         <div className="policy-content">
           <p>
-            Welcome to DuneXplore. By accessing our website, requesting a quotation, making a booking, or using any of our services, you acknowledge that you have read, understood, and agreed to these Terms &amp; Conditions. These terms govern the relationship between DuneXplore ("we," "our," or "us") and every customer ("you" or "traveler") using our website or travel services.
+            Welcome to Dune Explorer. By accessing our website, requesting a quotation, making a booking, or using any of our services, you acknowledge that you have read, understood, and agreed to these Terms &amp; Conditions. These terms govern the relationship between Dune Explorer ("we," "our," or "us") and every customer ("you" or "traveler") using our website or travel services.
           </p>
 
           <h2>1. Our Services</h2>
           <p>
-            DuneXplore specializes in creating bespoke travel experiences across Rajasthan and India. Our services include customized itineraries, luxury holidays, heritage tours, wildlife safaris, transportation, hotel reservations, guided sightseeing, cultural experiences, destination management, and other travel-related services. All bookings are subject to availability and confirmation from our travel partners.
+            Dune Explorer specializes in creating bespoke travel experiences across Rajasthan and India. Our services include customized itineraries, luxury holidays, heritage tours, wildlife safaris, transportation, hotel reservations, guided sightseeing, cultural experiences, destination management, and other travel-related services. All bookings are subject to availability and confirmation from our travel partners.
           </p>
 
           <h2>2. Booking &amp; Confirmation</h2>
@@ -31,7 +31,7 @@ const TermsAndConditions = () => {
             A booking is considered confirmed only after we receive the required advance payment and issue a written booking confirmation. Any itinerary shared before confirmation is a proposed itinerary and may be modified due to availability, operational requirements, weather conditions, government regulations, or other circumstances beyond our control.
           </p>
           <p>
-            Customized itineraries may require additional planning and pricing. DuneXplore reserves the right to accept or decline any booking request without assigning a reason.
+            Customized itineraries may require additional planning and pricing. Dune Explorer reserves the right to accept or decline any booking request without assigning a reason.
           </p>
 
           <h2>3. Payment Policy</h2>
@@ -68,7 +68,7 @@ const TermsAndConditions = () => {
             If you wish to modify your itinerary after confirmation, we will make every reasonable effort to accommodate your request. However, changes are subject to availability and may incur additional charges.
           </p>
           <p>
-            DuneXplore reserves the right to make reasonable changes to itineraries where necessary due to weather, road conditions, government regulations, operational requirements, or unforeseen circumstances while ensuring a comparable travel experience whenever possible.
+            Dune Explorer reserves the right to make reasonable changes to itineraries where necessary due to weather, road conditions, government regulations, operational requirements, or unforeseen circumstances while ensuring a comparable travel experience whenever possible.
           </p>
 
           <h2>6. Traveler Responsibilities</h2>
@@ -84,7 +84,7 @@ const TermsAndConditions = () => {
 
           <h2>7. Third-Party Services</h2>
           <p>
-            DuneXplore works with carefully selected hotels, airlines, transportation providers, activity operators, guides, and other travel partners. While we carefully choose our partners, these services are operated independently.
+            Dune Explorer works with carefully selected hotels, airlines, transportation providers, activity operators, guides, and other travel partners. While we carefully choose our partners, these services are operated independently.
           </p>
           <p>
             We are not responsible for delays, cancellations, schedule changes, service interruptions, overbooking, strikes, technical failures, or any acts or omissions of third-party suppliers.
@@ -92,7 +92,7 @@ const TermsAndConditions = () => {
 
           <h2>8. Force Majeure</h2>
           <p>
-            DuneXplore shall not be held liable for delays, modifications, or cancellation of services resulting from events beyond our reasonable control, including but not limited to natural disasters, floods, earthquakes, pandemics, political unrest, war, government restrictions, airline disruptions, road closures, extreme weather, strikes, or other unforeseen events.
+            Dune Explorer shall not be held liable for delays, modifications, or cancellation of services resulting from events beyond our reasonable control, including but not limited to natural disasters, floods, earthquakes, pandemics, political unrest, war, government restrictions, airline disruptions, road closures, extreme weather, strikes, or other unforeseen events.
           </p>
           <p>
             In such situations, we will make every reasonable effort to provide suitable alternatives; however, additional costs arising from such circumstances may be payable by the traveler.
@@ -100,7 +100,7 @@ const TermsAndConditions = () => {
 
           <h2>9. Limitation of Liability</h2>
           <p>
-            DuneXplore acts as a travel planner and facilitator. Our liability is limited to the travel arrangements directly organized by us.
+            Dune Explorer acts as a travel planner and facilitator. Our liability is limited to the travel arrangements directly organized by us.
           </p>
           <p>
             We shall not be liable for any indirect, incidental, consequential, or special loss, including loss of enjoyment, missed flights, delays, personal injury, illness, theft, loss of baggage, or damage arising from the actions of third-party suppliers or events beyond our control.
@@ -108,7 +108,7 @@ const TermsAndConditions = () => {
 
           <h2>10. Intellectual Property</h2>
           <p>
-            All content displayed on this website, including our logo, branding, photographs, videos, itineraries, designs, graphics, written content, and other materials, is the intellectual property of DuneXplore unless otherwise stated.
+            All content displayed on this website, including our logo, branding, photographs, videos, itineraries, designs, graphics, written content, and other materials, is the intellectual property of Dune Explorer unless otherwise stated.
           </p>
           <p>
             No content may be copied, reproduced, modified, distributed, or used for commercial purposes without prior written permission.
@@ -126,7 +126,7 @@ const TermsAndConditions = () => {
 
           <h2>13. Contact Us</h2>
           <div className="policy-contact">
-            <p><strong>DuneXplore</strong></p>
+            <p><strong>Dune Explorer</strong></p>
             <p>Aditya Vikram Singh</p>
             <p>Founder &amp; Travel Experience Curator</p>
             <p>📍 Khatipura, Jaipur, Rajasthan, India</p>

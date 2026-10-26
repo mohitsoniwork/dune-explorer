@@ -24,6 +24,16 @@ const PaymentPolicy = lazy(() => import('./pages/PaymentPolicy'));
 const Experiences = lazy(() => import('./pages/Experiences'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Faq = lazy(() => import('./pages/Faq'));
+const LuxuryTourCost = lazy(() => import('./pages/guides/LuxuryTourCost'));
+const BestTimeToVisit = lazy(() => import('./pages/guides/BestTimeToVisit'));
+const TenDayItinerary = lazy(() => import('./pages/guides/TenDayItinerary'));
+const PrivateDriverGuide = lazy(() => import('./pages/guides/PrivateDriverGuide'));
+const LuxuryTrains = lazy(() => import('./pages/guides/LuxuryTrains'));
+const PalaceHotels = lazy(() => import('./pages/guides/PalaceHotels'));
+const DesertCamps = lazy(() => import('./pages/guides/DesertCamps'));
+const TigerSafari = lazy(() => import('./pages/guides/TigerSafari'));
+const HoneymoonTour = lazy(() => import('./pages/guides/HoneymoonTour'));
+const UkPackages = lazy(() => import('./pages/guides/UkPackages'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function AnimatedRoutes() {
@@ -39,6 +49,16 @@ function AnimatedRoutes() {
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Stories />} />
         <Route path="/stories" element={<Stories />} />
+        <Route path="/luxury-rajasthan-tour-cost" element={<LuxuryTourCost />} />
+        <Route path="/best-time-to-visit-rajasthan" element={<BestTimeToVisit />} />
+        <Route path="/10-day-luxury-rajasthan-itinerary" element={<TenDayItinerary />} />
+        <Route path="/private-rajasthan-tour-driver-guide" element={<PrivateDriverGuide />} />
+        <Route path="/palace-on-wheels-vs-royal-rajasthan" element={<LuxuryTrains />} />
+        <Route path="/rajasthan-palace-hotel-itinerary" element={<PalaceHotels />} />
+        <Route path="/luxury-jaisalmer-desert-camps" element={<DesertCamps />} />
+        <Route path="/luxury-ranthambore-tiger-safari" element={<TigerSafari />} />
+        <Route path="/rajasthan-luxury-honeymoon" element={<HoneymoonTour />} />
+        <Route path="/luxury-rajasthan-tour-packages-uk" element={<UkPackages />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/payment-policy" element={<PaymentPolicy />} />

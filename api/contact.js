@@ -21,7 +21,7 @@ const RATE_LIMIT = 5;
 const RATE_WINDOW_MS = 10 * 60 * 1000;
 const rateBuckets = new Map();
 
-const DEFAULT_ALLOWED_ORIGINS = 'https://duneexplorer.com,https://www.duneexplorer.com,https://dunexplore.com,https://www.dunexplore.com';
+const DEFAULT_ALLOWED_ORIGINS = 'https://duneexplorer.com,https://www.duneexplorer.com';
 
 function json(res, status, body) {
   res.statusCode = status;

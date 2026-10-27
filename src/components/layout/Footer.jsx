@@ -41,6 +41,7 @@ const Footer = () => {
           </div>
           <div className="footer-column">
             <h3>Guides</h3>
+            <Link to="/guides">All Travel Guides Hub</Link>
             <Link to="/luxury-rajasthan-tour-packages-uk">UK Tour Packages</Link>
             <Link to="/10-day-luxury-rajasthan-itinerary">10-Day Luxury Route</Link>
             <Link to="/rajasthan-palace-hotel-itinerary">Palace Hotels Guide</Link>

@@ -34,6 +34,7 @@ const DesertCamps = lazy(() => import('./pages/guides/DesertCamps'));
 const TigerSafari = lazy(() => import('./pages/guides/TigerSafari'));
 const HoneymoonTour = lazy(() => import('./pages/guides/HoneymoonTour'));
 const UkPackages = lazy(() => import('./pages/guides/UkPackages'));
+const GuidesHub = lazy(() => import('./pages/GuidesHub'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function AnimatedRoutes() {
@@ -49,6 +50,7 @@ function AnimatedRoutes() {
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Stories />} />
         <Route path="/stories" element={<Stories />} />
+        <Route path="/guides" element={<GuidesHub />} />
         <Route path="/luxury-rajasthan-tour-cost" element={<LuxuryTourCost />} />
         <Route path="/best-time-to-visit-rajasthan" element={<BestTimeToVisit />} />
         <Route path="/10-day-luxury-rajasthan-itinerary" element={<TenDayItinerary />} />

@@ -14,7 +14,7 @@ export const guidesData = [
     readTime: '8 min read',
     summary: 'The definitive circuit: Delhi, Agra (Taj Mahal), Jaipur (Pink City), Jodhpur (Blue City), and Udaipur (City of Lakes) with handpicked 5-star palace accommodations.',
     highlights: ['Oberoi Amarvilas Agra view', 'Private Amber Fort guided exploration', 'Udaipur Lake Pichola sunset boat'],
-    image: '/images/Jaipur/pexels-axp-photography-500641970-19160085.jpg',
+    image: '/images/jaipur/DSC_0038-01.jpeg',
   },
   {
     slug: 'rajasthan-palace-hotel-itinerary',
@@ -34,7 +34,7 @@ export const guidesData = [
     readTime: '7 min read',
     summary: 'Transparent breakdown of 5-star heritage vs ultra-luxury tier pricing, private driver costs, monument VIP entries, and seasonal rate fluctuations.',
     highlights: ['$3,500 – $14,000+ budget tiers', 'Peak season vs shoulder rates', 'Hidden luxury cost insights'],
-    image: '/images/Jaipur/pexels-axp-photography-500641970-19160074.jpg',
+    image: '/images/jaipur/DSC_5623-01.jpeg',
   },
   {
     slug: 'best-time-to-visit-rajasthan',
@@ -44,7 +44,7 @@ export const guidesData = [
     readTime: '6 min read',
     summary: 'Detailed climate analysis for winter palace touring (Oct–Mar), wildlife safari prime months, monsoon romance in Udaipur, and avoiding extreme heat.',
     highlights: ['Month-by-month temperature guide', 'Desert Festival & Pushkar timing', 'Monsoon lake retreat guide'],
-    image: '/images/Jodhpur/jodhpur-fort.jpg',
+    image: '/images/jodhpur-fort.webp',
   },
   {
     slug: 'luxury-jaisalmer-desert-camps',
@@ -54,7 +54,7 @@ export const guidesData = [
     readTime: '7 min read',
     summary: 'Comparing Serai by SUJÁN vs Damodra Desert Camp: private dune dinners, stargazing, camel safaris, and high-end desert glamping.',
     highlights: ['SUJÁN The Serai luxury tents', 'Private sunset camel expeditions', 'Live Rajasthani folk music under the stars'],
-    image: '/images/Jaisalmer/jaisalmer-dunes1.jpg',
+    image: '/images/jaisalmer-dunes.jpg',
   },
   {
     slug: 'luxury-ranthambore-tiger-safari',
@@ -84,7 +84,7 @@ export const guidesData = [
     readTime: '8 min read',
     summary: 'Direct comparison of India’s top luxury heritage trains: cabins, onboard dining, included excursions, routes, and presidential suites.',
     highlights: ['Palace on Wheels 7-night classic route', 'Maharajas\' Express Heritage of India', 'Butler service & bespoke cabins'],
-    image: '/images/Jaipur/pexels-axp-photography-500641970-19160088.jpg',
+    image: '/images/Jaisalmer/pexels-axp-photography-500641970-19160088.jpg',
   },
   {
     slug: 'private-rajasthan-tour-driver-guide',
@@ -104,7 +104,7 @@ export const guidesData = [
     readTime: '8 min read',
     summary: 'Tailor-made planning for travelers arriving from London Heathrow, Manchester, and North America: direct flight connections, visas, and VIP airport meet & greet.',
     highlights: ['Heathrow to Delhi direct connections', 'VIP expedited airport arrival', 'Dedicated 24/7 UK-friendly concierge'],
-    image: '/images/Jaipur/pexels-harsh-kukadiya-244412142-37415378.jpg',
+    image: '/images/Jaisalmer/pexels-harsh-kukadiya-244412142-37415378.jpg',
   },
 ];
 
@@ -131,6 +131,12 @@ const GuidesHub = () => {
     <div className="guides-hub-page">
       {/* Hero Header */}
       <header className="guides-hub-hero">
+        <img
+          src="/images/jaipur/DSC_0038-01.jpeg"
+          alt="Luxury Rajasthan Travel Guides"
+          className="guides-hub-hero-img"
+        />
+        <div className="guides-hub-hero-overlay"></div>
         <div className="container guides-hub-hero-container">
           <motion.div
             initial={{ opacity: 0, y: 25 }}
@@ -185,7 +191,7 @@ const GuidesHub = () => {
                     className="guide-card-image"
                     loading="lazy"
                     onError={(e) => {
-                      e.currentTarget.src = '/images/Jaipur/pexels-axp-photography-500641970-19160085.jpg';
+                      e.currentTarget.src = '/images/jaipur/DSC_0038-01.jpeg';
                     }}
                   />
                   <span className="guide-card-badge">{guide.badge}</span>

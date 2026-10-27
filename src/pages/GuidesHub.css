@@ -5,39 +5,49 @@
   background-color: var(--color-light);
 }
 
+/* Hero Section */
 .guides-hub-hero {
   position: relative;
-  background: linear-gradient(180deg, var(--color-charcoal) 0%, var(--color-dark) 50%, var(--color-primary) 100%);
-  padding: 8.5rem 0 4.5rem;
-  border-bottom: 1px solid var(--color-border-card-subtle);
+  height: 55vh;
+  min-height: 400px;
+  max-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   text-align: center;
-  color: var(--color-cream);
+  color: #fff;
+}
+
+.guides-hub-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.guides-hub-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14, 11, 8, 0.45) 0%, rgba(14, 11, 8, 0.82) 100%);
+  z-index: 2;
 }
 
 .guides-hub-hero-container {
+  position: relative;
+  z-index: 3;
   max-width: 900px;
   margin: 0 auto;
-}
-
-.guides-hub-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.35rem 0.95rem;
-  background: var(--color-cream);
-  border: 1px solid var(--color-border-card);
-  border-radius: 9999px;
-  font-size: var(--fs-small);
-  color: var(--color-sand);
-  font-weight: 500;
-  margin-bottom: 1.25rem;
+  padding: 0 1.5rem;
 }
 
 .guides-hub-hero-content h1 {
   font-size: var(--fs-h2);
   font-family: var(--font-heading);
   margin-bottom: 1.2rem;
-  color: var(--color-cream);
+  color: #FFFFFF;
   line-height: 1.2;
   text-wrap: balance;
   overflow-wrap: break-word;
@@ -45,19 +55,17 @@
 
 .guides-hub-hero-desc {
   font-size: 1.1rem;
-  color: var(--color-sand-light);
+  color: #E2DBD0;
   line-height: 1.7;
   max-width: 720px;
   margin: 0 auto;
 }
 
-/* Category Filter Tabs */
+/* Category Filter Tabs - In-flow, not floating/sticky */
 .guides-hub-filters-section {
-  padding: 2rem 0 1rem;
-  position: sticky;
-  top: var(--navbar-height);
-  z-index: 50;
-  background: var(--color-background);
+  padding: 2.5rem 0 1.5rem;
+  position: relative;
+  background: var(--color-light);
   border-bottom: 1px solid var(--color-border-card-subtle);
 }
 
@@ -153,6 +161,7 @@
   height: 220px;
   overflow: hidden;
   display: block;
+  background-color: var(--color-cream);
 }
 
 .guide-card-image {
@@ -170,8 +179,8 @@
   position: absolute;
   top: 1rem;
   left: 1rem;
-  background: var(--color-charcoal);
-  color: var(--color-sand-light);
+  background: var(--color-dark);
+  color: var(--color-cream);
   font-size: 0.75rem;
   font-weight: 500;
   padding: 0.3rem 0.75rem;
@@ -292,7 +301,7 @@
 }
 
 .guides-hub-cta-card {
-  background: var(--color-charcoal);
+  background: linear-gradient(135deg, #1A1510 0%, #221C12 100%);
   color: var(--color-cream);
   border-radius: 20px;
   padding: 3.5rem 2.5rem;
@@ -300,6 +309,7 @@
   max-width: 960px;
   margin: 0 auto;
   border: 1px solid var(--color-border-card);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
 }
 
 .guides-hub-cta-icon {
@@ -308,7 +318,7 @@
   border-radius: 50%;
   background: var(--color-border-card-subtle);
   border: 1px solid var(--color-border-card);
-  color: var(--color-sand-light);
+  color: var(--color-gold);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -318,14 +328,14 @@
 .guides-hub-cta-card h2 {
   font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-family: var(--font-heading);
-  color: var(--color-cream);
+  color: #FFFFFF;
   margin-bottom: 1rem;
   text-wrap: balance;
   overflow-wrap: break-word;
 }
 
 .guides-hub-cta-card p {
-  color: var(--color-sand-light);
+  color: #E2DBD0;
   font-size: 1.08rem;
   max-width: 680px;
   margin: 0 auto 2rem;

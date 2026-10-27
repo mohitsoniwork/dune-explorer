@@ -38,10 +38,9 @@ const Experiences = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <span className="experiences-label">Handcrafted Journeys</span>
           <h1>Private Desert Safaris & Authentic Experiences</h1>
           <p className="experiences-tagline">
-            Every journey is a story — crafted around your pace, passions, and sense of wonder.
+            Every journey is an immersive story, crafted around your pace, passions, and sense of wonder.
           </p>
         </motion.div>
       </header>
@@ -72,7 +71,7 @@ const Experiences = () => {
                         <li key={i}>{item}</li>
                       ))}
                     </ul>
-                    <span className="experience-link">View Details →</span>
+                    <span className="experience-link">View details</span>
                   </div>
                 </Link>
               </motion.article>

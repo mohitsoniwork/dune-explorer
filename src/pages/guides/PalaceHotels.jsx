@@ -117,10 +117,9 @@ const PalaceHotels = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
         >
-          <span className="guide-badge">Heritage Hospitality</span>
           <h1>Stay Like Royalty: The Best Palace Hotels on a Rajasthan Tour</h1>
           <p className="guide-hero-sub">
-            From floating lake palaces to sprawling desert bastions — an insider guide to the iconic properties worth the splurge, with room recommendations and route blueprints.
+            From floating lake palaces to sprawling desert bastions: an insider guide to the iconic properties worth the splurge, with room recommendations and route blueprints.
           </p>
         </motion.div>
       </header>
@@ -148,7 +147,7 @@ const PalaceHotels = () => {
           <div className="guide-layout">
             <article className="guide-article">
               <p className="guide-lead">
-                Rajasthan has what no other destination in the world can replicate: genuine living palaces converted into world-class luxury hotels. Sleeping in suites where Maharajas once held court, walked by courtiers and honored guests, is the very essence of luxury travel in India.
+                Rajasthan has what no other destination in the world can replicate: genuine living palaces converted into renowned luxury hotels. Sleeping in suites where Maharajas once held court, walked by courtiers and honored guests, is the very essence of luxury travel in India.
               </p>
 
               <h2>The 'Big Four' Grand Palaces Worth the Splurge</h2>
@@ -167,7 +166,7 @@ const PalaceHotels = () => {
                       <div className="property-price-hint">
                         {palace.tag} · <span style={{ color: 'var(--color-sand)' }}>{palace.price}</span>
                       </div>
-                      <p style={{ fontSize: '0.94rem', color: '#444', lineHeight: 1.65 }}>
+                      <p style={{ fontSize: '0.94rem', color: 'var(--color-text-deep)', lineHeight: 1.65 }}>
                         {palace.description}
                       </p>
 
@@ -193,12 +192,12 @@ const PalaceHotels = () => {
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '1.2rem', margin: '1.5rem 0' }}>
                 {boutiqueForts.map((fort, idx) => (
-                  <div key={idx} style={{ background: '#fff', border: '1px solid rgba(141, 90, 43, 0.16)', borderRadius: '10px', padding: '1.3rem' }}>
+                  <div key={idx} style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.3rem' }}>
                     <h4 style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-dark)', marginBottom: '0.2rem' }}>
                       {fort.name}
                     </h4>
                     <span style={{ fontSize: '0.8rem', color: 'var(--color-sand)', fontWeight: 600 }}>{fort.city} · {fort.price}</span>
-                    <p style={{ fontSize: '0.88rem', color: '#555', marginTop: '0.6rem', marginBottom: 0 }}>
+                    <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginTop: '0.6rem', marginBottom: 0 }}>
                       {fort.desc}
                     </p>
                   </div>
@@ -218,13 +217,13 @@ const PalaceHotels = () => {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Nights 1–3</td>
+                      <td>Nights 1 to 3</td>
                       <td>Jaipur</td>
                       <td><strong>Rambagh Palace</strong></td>
                       <td>Vintage car welcome & private dinner in gold-leaf Suvarna Mahal</td>
                     </tr>
                     <tr>
-                      <td>Nights 4–5</td>
+                      <td>Nights 4 to 5</td>
                       <td>Jodhpur</td>
                       <td><strong>Umaid Bhawan Palace</strong></td>
                       <td>Private tour of royal family museum & sunset drinks over Mehrangarh Fort</td>
@@ -236,7 +235,7 @@ const PalaceHotels = () => {
                       <td>1,000-lamp private stepwell banquet beneath the night sky</td>
                     </tr>
                     <tr>
-                      <td>Nights 7–8</td>
+                      <td>Nights 7 to 8</td>
                       <td>Udaipur</td>
                       <td><strong>Taj Lake Palace</strong></td>
                       <td>Private sunset solar-boat charter with champagne on Lake Pichola</td>
@@ -303,13 +302,10 @@ const PalaceHotels = () => {
               </div>
 
               <div className="sidebar-card">
-                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)' }}>
-                  Total Trip Budget
-                </span>
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: '0.6rem', marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
                   Cost Breakdown Guide
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: '#666', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
                   Explore how palace suite costs combine with private chauffeurs and guides.
                 </p>
                 <Link to="/luxury-rajasthan-tour-cost" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -318,13 +314,10 @@ const PalaceHotels = () => {
               </div>
 
               <div className="sidebar-card">
-                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)' }}>
-                  Complete Circuit
-                </span>
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: '0.6rem', marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
                   10-Day Royal Route
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: '#666', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
                   Follow the step-by-step route between Jaipur, Jodhpur, and Udaipur.
                 </p>
                 <Link to="/10-day-luxury-rajasthan-itinerary" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -346,8 +339,8 @@ const PalaceHotels = () => {
             <Link to="/luxury-jaisalmer-desert-camps" className="related-card">
               <img src="/images/jaisalmer-dunes.jpg" alt="Luxury Jaisalmer Desert Camps" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Desert Glamping</span>
                 <h3 className="related-card-title">Luxury Jaisalmer Desert Camp Stay</h3>
+                <span className="related-card-tag">Desert Glamping</span>
                 <p className="related-card-desc">Where to sleep under the dunes with private luxury tents and starlit banquets.</p>
                 <span className="related-card-link">Explore Camps <ArrowRight size={15} /></span>
               </div>
@@ -356,8 +349,8 @@ const PalaceHotels = () => {
             <Link to="/palace-on-wheels-vs-royal-rajasthan" className="related-card">
               <img src="/images/jaipur/DSC_0449.jpg" alt="Luxury Trains Rajasthan" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Luxury Rail</span>
                 <h3 className="related-card-title">Palace on Wheels vs Royal Rajasthan</h3>
+                <span className="related-card-tag">Luxury Rail</span>
                 <p className="related-card-desc">Side-by-side comparison of cabins, routes, dining, and pricing.</p>
                 <span className="related-card-link">Compare Trains <ArrowRight size={15} /></span>
               </div>
@@ -366,8 +359,8 @@ const PalaceHotels = () => {
             <Link to="/luxury-rajasthan-tour-cost" className="related-card">
               <img src="/images/jaipur/DSC_0038-01.jpeg" alt="Rajasthan Tour Cost" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Pricing Guide</span>
                 <h3 className="related-card-title">How Much Does a Luxury Rajasthan Tour Cost?</h3>
+                <span className="related-card-tag">Pricing Guide</span>
                 <p className="related-card-desc">Real price ranges for palace hotels, chauffeur cars, and licensed guides.</p>
                 <span className="related-card-link">Read Cost Breakdown <ArrowRight size={15} /></span>
               </div>

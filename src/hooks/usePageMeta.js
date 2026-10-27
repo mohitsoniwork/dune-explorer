@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export const usePageMeta = ({ title, description }) => {
+export const usePageMeta = ({ title, description, canonical }) => {
   useEffect(() => {
     if (title) {
       document.title = title;
@@ -12,7 +12,20 @@ export const usePageMeta = ({ title, description }) => {
       updateMetaTag('property="og:description"', description);
       updateMetaTag('name="twitter:description"', description);
     }
-  }, [title, description]);
+
+    // Dynamic canonical URL update for Googlebot & SEO
+    const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+    const canonicalUrl = canonical || (currentPath === '/' ? 'https://duneexplorer.com/' : `https://duneexplorer.com${currentPath}`);
+
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute('href', canonicalUrl);
+    updateMetaTag('property="og:url"', canonicalUrl);
+  }, [title, description, canonical]);
 
   function updateMetaTag(selector, content) {
     let meta = document.querySelector(`meta[${selector}]`);

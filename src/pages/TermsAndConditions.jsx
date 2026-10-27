@@ -52,15 +52,15 @@ const TermsAndConditions = () => {
           <p>Refunds will be processed according to the following schedule:</p>
           <ul>
             <li><strong>More than 60 days before arrival:</strong> 80% refund (20% cancellation fee or deposit amount, whichever is higher)</li>
-            <li><strong>59–28 days before arrival:</strong> 60% refund</li>
-            <li><strong>27–15 days before arrival:</strong> 30% refund</li>
+            <li><strong>59 to 28 days before arrival:</strong> 60% refund</li>
+            <li><strong>27 to 15 days before arrival:</strong> 30% refund</li>
             <li><strong>Within 14 days of arrival or No Show:</strong> No refund</li>
           </ul>
           <p>
             Refunds, where applicable, will normally be processed within 20 business days after approval.
           </p>
           <p>
-            Please note that flights, train tickets, hotels, permits, safaris, and other third-party services may have separate cancellation policies. In such cases, the respective supplier's cancellation charges will apply and may be non-refundable.
+            Please note that flights, train tickets, hotels, permits, safaris, and other third-party services may have separate cancellation policies. In such cases, the respective supplier’s cancellation charges will apply and may be non-refundable.
           </p>
 
           <h2>5. Changes to Bookings</h2>
@@ -128,11 +128,10 @@ const TermsAndConditions = () => {
           <div className="policy-contact">
             <p><strong>Dune Explorer</strong></p>
             <p>Aditya Vikram Singh</p>
-            <p>Founder &amp; Travel Experience Curator</p>
-            <p>📍 Khatipura, Jaipur, Rajasthan, India</p>
-            <p>📞 +91 63750 60566</p>
-            <p>📧 info@duneexplorer.com</p>
-            <p>🌐 www.duneexplorer.com</p>
+            <p><strong>Address:</strong> Khatipura, Jaipur, Rajasthan, India</p>
+            <p><strong>Direct:</strong> +91 63750 60566</p>
+            <p><strong>Email:</strong> info@duneexplorer.com</p>
+            <p><strong>Website:</strong> www.duneexplorer.com</p>
           </div>
         </div>
       </div>

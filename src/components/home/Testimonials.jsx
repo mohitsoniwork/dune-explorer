@@ -77,7 +77,6 @@ const Testimonials = () => {
     <section className="section testimonials-section">
       <div className="container">
         <div className="section-header text-center">
-          <span className="section-subtitle">Traveler Love</span>
           <h2>Stories From Our Explorers</h2>
         </div>
 

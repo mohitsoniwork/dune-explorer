@@ -1,42 +1,56 @@
+/* Hallmark · v2.0.0 · theme: editorial · genre: editorial */
+
 .story-form {
-  background: var(--color-bg-dark, #171410);
-  border: 1px solid var(--color-gold, #d9a441);
+  background: var(--color-bg-dark);
+  border: 1px solid var(--color-gold);
   padding: 3rem;
-  border-radius: var(--radius, 14px);
+  border-radius: var(--radius);
   margin-top: 3rem;
   box-shadow: var(--shadow-md);
 }
 
 .story-form h3 {
-  color: var(--color-gold, #d9a441);
+  color: var(--color-gold);
   margin-bottom: 0.5rem;
   font-size: var(--fs-h3);
 }
 
 .story-form-subtitle {
-  color: var(--color-ivory, #fffdf0);
+  color: var(--color-ivory);
   opacity: 0.8;
   margin-bottom: 2rem;
 }
 
 .story-form .form-label {
-  color: var(--color-ivory, #fffdf0);
+  color: var(--color-ivory);
 }
 
 .story-form .form-control {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(217, 164, 65, 0.3);
-  color: var(--color-ivory, #fffdf0);
+  border: 1px solid var(--color-border-subtle);
+  color: var(--color-ivory);
 }
 
-.story-form .form-control:focus {
+.story-form .form-control:focus,
+.story-form .form-control:focus-visible {
   background: rgba(255, 255, 255, 0.08);
-  border-color: var(--color-gold, #d9a441);
-  box-shadow: 0 0 0 3px rgba(217, 164, 65, 0.15);
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px var(--color-focus-ring);
+  outline: none;
 }
 
 .story-form .form-control::placeholder {
-  color: rgba(255, 253, 240, 0.4);
+  color: var(--color-ivory);
+  opacity: 0.4;
+}
+
+.story-form .btn:active {
+  transform: scale(0.98);
+}
+
+.story-form .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .story-textarea {

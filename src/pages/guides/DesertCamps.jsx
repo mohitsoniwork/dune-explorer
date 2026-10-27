@@ -84,10 +84,9 @@ const DesertCamps = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
         >
-          <span className="guide-badge">Desert Glamping Guide</span>
           <h1>Luxury Jaisalmer Desert Camp Stay: Where to Sleep Under the Dunes</h1>
           <p className="guide-hero-sub">
-            How to experience the timeless magic of the Thar Desert in absolute luxury — comparing private camps, tent styles, sunset camel safaris, and dining under the stars.
+            How to experience the timeless magic of the Thar Desert in absolute luxury: comparing private camps, tent styles, sunset camel safaris, and dining under the stars.
           </p>
         </motion.div>
       </header>
@@ -122,7 +121,7 @@ const DesertCamps = () => {
               <p>
                 The most important decision when planning your desert stay is <strong>location</strong>. Many generic tour operators book visitors into the crowded Sam Sand Dunes strip, which is overwhelmed by noisy quad bikes, loudspeakers, and endless rows of identical commercial tents.
               </p>
-              <div className="guide-callout" style={{ borderLeftColor: '#b5532a' }}>
+              <div className="guide-callout" style={{ borderLeftColor: 'var(--color-sand)' }}>
                 <h4>The Dune Explorer Standard: True Desert Seclusion</h4>
                 <p>
                   We position our guests in exclusive private desert reserves or pristine secluded dune pockets. You enjoy untouched sand ripples, undisturbed silence, private camel treks to secret viewpoints, and personal folk musicians without a crowd in sight.
@@ -142,7 +141,7 @@ const DesertCamps = () => {
                       <div className="property-price-hint">
                         {camp.tag} · <span style={{ color: 'var(--color-sand)' }}>{camp.price}</span>
                       </div>
-                      <p style={{ fontSize: '0.94rem', color: '#444', lineHeight: 1.65 }}>
+                      <p style={{ fontSize: '0.94rem', color: 'var(--color-text-deep)', lineHeight: 1.65 }}>
                         {camp.description}
                       </p>
 
@@ -160,7 +159,7 @@ const DesertCamps = () => {
               <p>
                 Modern desert glamping does not sacrifice comfort. In our handpicked camps, your canvas suite features:
               </p>
-              <ul style={{ paddingLeft: '1.2rem', marginBottom: '1.5rem', color: '#444' }}>
+              <ul style={{ paddingLeft: '1.2rem', marginBottom: '1.5rem', color: 'var(--color-text-deep)' }}>
                 <li style={{ marginBottom: '0.5rem' }}><strong>King-Size Teak Beds:</strong> High thread-count Egyptian cotton linens, feather duvets, and electric warming blankets.</li>
                 <li style={{ marginBottom: '0.5rem' }}><strong>En-suite Stone Bathrooms:</strong> Running hot and cold water, ceramic flushes, hand-carved stone basins, and premium botanical toiletries.</li>
                 <li style={{ marginBottom: '0.5rem' }}><strong>Private Verandahs:</strong> Shaded deck seating overlooking rolling sand dunes for morning espresso or evening sundowners.</li>
@@ -169,32 +168,32 @@ const DesertCamps = () => {
 
               <h2>Signature Experiences to Include in Your Desert Stay</h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.2rem', margin: '1.5rem 0' }}>
-                <div style={{ background: '#fff', border: '1px solid rgba(141, 90, 43, 0.15)', borderRadius: '10px', padding: '1.2rem' }}>
+                <div style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.2rem' }}>
                   <h4 style={{ color: 'var(--color-maroon)', marginBottom: '0.4rem', fontSize: '1.05rem' }}>
                     <Sun size={15} style={{ verticalAlign: 'middle', marginRight: 4, color: 'var(--color-sand)' }} />
                     Private Camel Trek
                   </h4>
-                  <p style={{ fontSize: '0.88rem', color: '#555', margin: 0 }}>
+                  <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', margin: 0 }}>
                     Ride gentle, beautifully draped camels into isolated dunes away from tourist tracks as the evening sun turns the sands deep ochre.
                   </p>
                 </div>
 
-                <div style={{ background: '#fff', border: '1px solid rgba(141, 90, 43, 0.15)', borderRadius: '10px', padding: '1.2rem' }}>
+                <div style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.2rem' }}>
                   <h4 style={{ color: 'var(--color-maroon)', marginBottom: '0.4rem', fontSize: '1.05rem' }}>
                     <Sparkles size={15} style={{ verticalAlign: 'middle', marginRight: 4, color: 'var(--color-sand)' }} />
                     Dune Crest Dinner
                   </h4>
-                  <p style={{ fontSize: '0.88rem', color: '#555', margin: 0 }}>
+                  <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', margin: 0 }}>
                     A private table surrounded by hundreds of glowing hurricane lamps, served a multi-course Rajasthani feast prepared over hot embers.
                   </p>
                 </div>
 
-                <div style={{ background: '#fff', border: '1px solid rgba(141, 90, 43, 0.15)', borderRadius: '10px', padding: '1.2rem' }}>
+                <div style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.2rem' }}>
                   <h4 style={{ color: 'var(--color-maroon)', marginBottom: '0.4rem', fontSize: '1.05rem' }}>
                     <Moon size={15} style={{ verticalAlign: 'middle', marginRight: 4, color: 'var(--color-sand)' }} />
                     Acoustic Folk Melodies
                   </h4>
-                  <p style={{ fontSize: '0.88rem', color: '#555', margin: 0 }}>
+                  <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', margin: 0 }}>
                     Listen to multi-generational Manganiyar musicians singing soulful desert folk ballads by the warmth of a crackling bonfire.
                   </p>
                 </div>
@@ -258,14 +257,11 @@ const DesertCamps = () => {
               </div>
 
               <div className="sidebar-card">
-                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)' }}>
-                  Complete Circuit
-                </span>
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: '0.6rem', marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
                   10-Day Royal Route
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: '#666', marginBottom: '1rem' }}>
-                  See how the Jaisalmer desert seamlessly connects with Jodhpur and Jaipur.
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
+                  See how the Jaisalmer desert connects smoothly with Jodhpur and Jaipur.
                 </p>
                 <Link to="/10-day-luxury-rajasthan-itinerary" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
                   View 10-Day Itinerary <ArrowRight size={15} />
@@ -273,13 +269,10 @@ const DesertCamps = () => {
               </div>
 
               <div className="sidebar-card">
-                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)' }}>
-                  Seasonal Advice
-                </span>
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: '0.6rem', marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
                   Best Time to Visit
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: '#666', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
                   Check month-by-month desert temperatures and Jaisalmer Desert Festival dates.
                 </p>
                 <Link to="/best-time-to-visit-rajasthan" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -301,8 +294,8 @@ const DesertCamps = () => {
             <Link to="/rajasthan-palace-hotel-itinerary" className="related-card">
               <img src="/images/jaipur/DSC_0038-01.jpeg" alt="Palace Hotels Rajasthan" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Palace Stays</span>
                 <h3 className="related-card-title">Stay Like Royalty: Best Palace Hotels</h3>
+                <span className="related-card-tag">Palace Stays</span>
                 <p className="related-card-desc">Taj Lake Palace, Rambagh, and Umaid Bhawan ranked and reviewed.</p>
                 <span className="related-card-link">Read Guide <ArrowRight size={15} /></span>
               </div>
@@ -311,8 +304,8 @@ const DesertCamps = () => {
             <Link to="/10-day-luxury-rajasthan-itinerary" className="related-card">
               <img src="/images/jaipur/DSC_8425-01-02.jpeg" alt="10 Day Luxury Rajasthan Itinerary" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Itineraries</span>
                 <h3 className="related-card-title">10 Day Luxury Rajasthan Itinerary</h3>
+                <span className="related-card-tag">Itineraries</span>
                 <p className="related-card-desc">Full circuit blueprint with palace stays, desert camps, and timings.</p>
                 <span className="related-card-link">Explore Route <ArrowRight size={15} /></span>
               </div>
@@ -321,8 +314,8 @@ const DesertCamps = () => {
             <Link to="/luxury-rajasthan-tour-cost" className="related-card">
               <img src="/images/jaipur/DSC_5623-01.jpeg" alt="Rajasthan Tour Cost" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Pricing Guide</span>
                 <h3 className="related-card-title">How Much Does a Luxury Rajasthan Tour Cost?</h3>
+                <span className="related-card-tag">Pricing Guide</span>
                 <p className="related-card-desc">Detailed price ranges for palace hotels, chauffeur cars, and desert camps.</p>
                 <span className="related-card-link">View Costs <ArrowRight size={15} /></span>
               </div>

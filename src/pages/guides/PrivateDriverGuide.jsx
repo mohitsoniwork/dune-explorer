@@ -118,10 +118,9 @@ const PrivateDriverGuide = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
         >
-          <span className="guide-badge">Travel Logistics & Freedom</span>
           <h1>Private Rajasthan Tour With Driver and Guide: Is It Worth It?</h1>
           <p className="guide-hero-sub">
-            Everything you need to know about chauffeured luxury travel across Rajasthan — vehicle fleet standards, safety, licensed guides, and honest costs.
+            A practical guide to chauffeured luxury travel across Rajasthan: vehicle fleet standards, safety, licensed guides, and honest costs.
           </p>
         </motion.div>
       </header>
@@ -149,7 +148,7 @@ const PrivateDriverGuide = () => {
           <div className="guide-layout">
             <article className="guide-article">
               <p className="guide-lead">
-                When planning a journey across royal India, one question always arises: <em>Is hiring a private chauffeur and local guide truly worth the investment, or are trains and domestic flights better?</em> The short answer is that a dedicated private driver is the single biggest factor in elevating a Rajasthan trip from exhausting to effortless.
+                When planning a journey across royal India, one question always arises: <em>Is hiring a private chauffeur and local guide truly worth the investment, or are trains and domestic flights better?</em> The short answer is that a dedicated private driver is the single biggest factor in elevating a Rajasthan trip from exhausting to deeply relaxing.
               </p>
 
               <h2>The Verdict: Why 95% of Luxury Travelers Choose a Private Driver</h2>
@@ -162,11 +161,11 @@ const PrivateDriverGuide = () => {
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.2rem', margin: '2rem 0' }}>
                 {benefitsList.map((item, idx) => (
-                  <div key={idx} style={{ background: '#fff', border: '1px solid rgba(141, 90, 43, 0.15)', borderRadius: '10px', padding: '1.3rem' }}>
+                  <div key={idx} style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.3rem' }}>
                     <h4 style={{ color: 'var(--color-maroon)', marginBottom: '0.4rem', fontSize: '1.05rem' }}>
                       {item.title}
                     </h4>
-                    <p style={{ fontSize: '0.9rem', color: '#555', margin: 0 }}>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--color-text-dim)', margin: 0 }}>
                       {item.desc}
                     </p>
                   </div>
@@ -213,7 +212,7 @@ const PrivateDriverGuide = () => {
                   Accompanies you across all cities and highways. Handles luggage, navigates traffic, coordinates with hotels, and recommends clean culinary stops.
                 </p>
               </div>
-              <div className="guide-callout" style={{ borderLeftColor: '#2f6f4f' }}>
+              <div className="guide-callout" style={{ borderLeftColor: 'var(--color-forest)' }}>
                 <h4>Your Certified City Historians & Guides</h4>
                 <p>
                   Join you in Jaipur, Jodhpur, Udaipur, or Jaisalmer for deep architectural walkthroughs, royal genealogy stories, and VIP monument entrance bypassing long visitor queues.
@@ -287,13 +286,10 @@ const PrivateDriverGuide = () => {
 
               {/* Route Blueprint Cross-Link */}
               <div className="sidebar-card">
-                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)' }}>
-                  Recommended Circuit
-                </span>
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: '0.6rem', marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
                   10-Day Luxury Itinerary
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: '#666', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
                   Explore the classic driving route connecting Jaipur, Jodhpur, the desert, and Udaipur.
                 </p>
                 <Link to="/10-day-luxury-rajasthan-itinerary" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -303,13 +299,10 @@ const PrivateDriverGuide = () => {
 
               {/* Cost Guide Cross-Link */}
               <div className="sidebar-card">
-                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)' }}>
-                  Transparent Pricing
-                </span>
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: '0.6rem', marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
                   Total Trip Cost Breakdown
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: '#666', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
                   See how private vehicle and hotel costs combine into full package pricing.
                 </p>
                 <Link to="/luxury-rajasthan-tour-cost" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -331,8 +324,8 @@ const PrivateDriverGuide = () => {
             <Link to="/10-day-luxury-rajasthan-itinerary" className="related-card">
               <img src="/images/jaipur/DSC_8425-01-02.jpeg" alt="10 Day Luxury Rajasthan Itinerary" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Itineraries</span>
                 <h3 className="related-card-title">10 Day Luxury Rajasthan Itinerary</h3>
+                <span className="related-card-tag">Itineraries</span>
                 <p className="related-card-desc">Day-by-day route with palace stays, desert camps, and timings.</p>
                 <span className="related-card-link">View Route <ArrowRight size={15} /></span>
               </div>
@@ -341,8 +334,8 @@ const PrivateDriverGuide = () => {
             <Link to="/best-time-to-visit-rajasthan" className="related-card">
               <img src="/images/jodhpur-fort.webp" alt="Best Time to Visit" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Seasonal Planning</span>
                 <h3 className="related-card-title">Best Time to Visit Rajasthan for Luxury Travel</h3>
+                <span className="related-card-tag">Seasonal Planning</span>
                 <p className="related-card-desc">Month-by-month temperature, festival, and palace hotel rate guide.</p>
                 <span className="related-card-link">Explore Seasons <ArrowRight size={15} /></span>
               </div>
@@ -351,8 +344,8 @@ const PrivateDriverGuide = () => {
             <Link to="/luxury-rajasthan-tour-cost" className="related-card">
               <img src="/images/jaipur/DSC_0038-01.jpeg" alt="Tour Cost Breakdown" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Pricing Guide</span>
                 <h3 className="related-card-title">Rajasthan Tour Cost Per Person</h3>
+                <span className="related-card-tag">Pricing Guide</span>
                 <p className="related-card-desc">Comprehensive price tiers for luxury palace tours.</p>
                 <span className="related-card-link">View Pricing <ArrowRight size={15} /></span>
               </div>

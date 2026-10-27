@@ -66,6 +66,26 @@ const guidesList = [
   },
 ];
 
+const transparentHeroRoutes = [
+  '/',
+  '/destinations',
+  '/experiences',
+  '/stories',
+  '/blog',
+  '/about',
+  '/guides',
+  '/10-day-luxury-rajasthan-itinerary',
+  '/rajasthan-palace-hotel-itinerary',
+  '/luxury-rajasthan-tour-cost',
+  '/best-time-to-visit-rajasthan',
+  '/luxury-jaisalmer-desert-camps',
+  '/luxury-ranthambore-tiger-safari',
+  '/rajasthan-luxury-honeymoon',
+  '/palace-on-wheels-vs-royal-rajasthan',
+  '/private-rajasthan-tour-driver-guide',
+  '/luxury-rajasthan-tour-packages-uk',
+];
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -109,12 +129,23 @@ const Navbar = () => {
     }, 180);
   };
 
+  const hasHero =
+    transparentHeroRoutes.includes(location.pathname) ||
+    location.pathname.startsWith('/styles/') ||
+    location.pathname.startsWith('/experience/');
+
+  // When on top of hero pages: transparent blended navbar. When scrolled: solid luxury dark navbar.
+  const isTransparent = !isScrolled && hasHero && !isOpen;
   const isGuidesActive =
     location.pathname === '/guides' ||
     guidesList.some((g) => location.pathname === g.to);
 
   return (
-    <header className={`navbar ${isScrolled || isOpen ? 'scrolled' : ''}`}>
+    <header
+      className={`navbar ${isTransparent ? 'navbar-transparent' : 'navbar-scrolled'} ${
+        isOpen ? 'mobile-open' : ''
+      }`}
+    >
       <div className="container navbar-container">
         {/* Left: Brand Logo */}
         <div className="navbar-logo-col">
@@ -123,7 +154,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Center: Main Navigation Tabs (Perfect Middle Alignment) */}
+        {/* Center: Main Navigation Tabs (Perfect Middle Centering) */}
         <nav className={`navbar-center-col ${isOpen ? 'active' : ''}`} id="main-nav" aria-label="Main navigation">
           <div className="navbar-nav-list">
             <NavLink
@@ -205,7 +236,7 @@ const Navbar = () => {
                       className="dropdown-view-all-link"
                       onClick={() => setIsGuidesOpen(false)}
                     >
-                      View All Guides →
+                      Explore all guides
                     </Link>
                   </div>
 

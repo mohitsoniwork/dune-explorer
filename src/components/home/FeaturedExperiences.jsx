@@ -9,9 +9,8 @@ const FeaturedExperiences = () => {
     <section className="section experiences-section bg-light">
       <div className="container">
         <div className="section-header text-center">
-          <span className="section-subtitle">Handcrafted Journeys</span>
-          <h2>Featured Experiences</h2>
-          <p className="section-description">Journeys crafted to perfection</p>
+          <h2>Handcrafted Luxury Experiences</h2>
+          <p className="section-description">Curated private journeys through Rajasthan's palaces, dunes, and wilderness.</p>
         </div>
 
         <div className="experiences-grid">

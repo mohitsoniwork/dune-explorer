@@ -1,3 +1,5 @@
+/* Hallmark · v2.0.0 · theme: editorial · genre: editorial */
+
 .preloader {
   position: fixed;
   inset: 0;
@@ -19,7 +21,7 @@
 }
 
 .preloader-logo-img {
-  width: 120px; /* Adjust size based on logo dimensions */
+  width: 120px;
   height: auto;
   object-fit: contain;
   mix-blend-mode: multiply;
@@ -28,15 +30,15 @@
 .preloader-text {
   font-family: var(--font-heading);
   font-size: 1.4rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
 }
 
 .preloader-bar {
   width: 180px;
   height: 3px;
   border-radius: 3px;
-  background: rgba(26, 26, 26, 0.15);
+  background: var(--color-border-card);
   overflow: hidden;
 }
 

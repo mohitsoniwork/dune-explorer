@@ -53,7 +53,6 @@ const Gallery = () => {
     <section className="section gallery-section">
       <div className="container">
         <div className="section-header text-center">
-          <span className="section-subtitle">The Gallery</span>
           <h2>Moments That Feel Like Gold</h2>
         </div>
 

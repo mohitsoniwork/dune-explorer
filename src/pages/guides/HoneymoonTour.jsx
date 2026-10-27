@@ -101,10 +101,9 @@ const HoneymoonTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
         >
-          <span className="guide-badge">Romance & Royal Escapes</span>
           <h1>Rajasthan Honeymoon Luxury Tour: Romantic Palaces and Private Dinners</h1>
           <p className="guide-hero-sub">
-            The definitive honeymoon guide to royal India — floating marble palaces, private desert sundowners, and unforgettable candlelight dining.
+            The definitive honeymoon guide to royal India: floating marble palaces, private desert sundowners, and unforgettable candlelight dining.
           </p>
         </motion.div>
       </header>
@@ -138,14 +137,14 @@ const HoneymoonTour = () => {
               <h2>Signature Romantic Experiences for Couples</h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.2rem', margin: '2rem 0' }}>
                 {romanticExperiences.map((exp, idx) => (
-                  <div key={idx} style={{ background: '#fff', border: '1px solid rgba(141, 90, 43, 0.16)', borderRadius: '10px', padding: '1.4rem' }}>
+                  <div key={idx} style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.4rem' }}>
                     <div style={{ color: 'var(--color-sand)', fontSize: '0.8rem', fontWeight: 600, textTransform: 'uppercase', marginBottom: '0.3rem' }}>
                       {exp.location}
                     </div>
                     <h4 style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-dark)', marginBottom: '0.5rem', fontSize: '1.15rem' }}>
                       {exp.title}
                     </h4>
-                    <p style={{ fontSize: '0.9rem', color: '#555', margin: 0, lineHeight: 1.6 }}>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--color-text-dim)', margin: 0, lineHeight: 1.6 }}>
                       {exp.desc}
                     </p>
                   </div>
@@ -171,7 +170,7 @@ const HoneymoonTour = () => {
                     <div className="day-hotel-callout">
                       <strong>Recommended Palace Suite:</strong> {leg.stay}
                     </div>
-                    <p style={{ fontSize: '0.94rem', color: '#444', lineHeight: 1.65, margin: 0 }}>
+                    <p style={{ fontSize: '0.94rem', color: 'var(--color-text-deep)', lineHeight: 1.65, margin: 0 }}>
                       {leg.vibe}
                     </p>
                   </div>
@@ -179,7 +178,7 @@ const HoneymoonTour = () => {
               </div>
 
               <h2>The Dune Explorer Honeymoon Advantage</h2>
-              <div className="guide-callout" style={{ borderLeftColor: '#b5532a' }}>
+              <div className="guide-callout" style={{ borderLeftColor: 'var(--color-sand)' }}>
                 <h4>Discreet, Tailored & Completely Private</h4>
                 <p>
                   Your journey includes a dedicated private chauffeur who understands discretion, pre-booked private excursions where you never join group tour crowds, and 24/7 concierge support handling every detail from candlelit dining reservations to luggage transfers.
@@ -244,13 +243,10 @@ const HoneymoonTour = () => {
               </div>
 
               <div className="sidebar-card">
-                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)' }}>
-                  Palace Reviews
-                </span>
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: '0.6rem', marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
                   Best Palace Hotels
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: '#666', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
                   Explore suite recommendations for Taj Lake Palace, Rambagh, and Umaid Bhawan.
                 </p>
                 <Link to="/rajasthan-palace-hotel-itinerary" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -259,13 +255,10 @@ const HoneymoonTour = () => {
               </div>
 
               <div className="sidebar-card">
-                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)' }}>
-                  Cost Breakdown
-                </span>
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: '0.6rem', marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
                   Tour Cost Per Person
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: '#666', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
                   See typical price ranges for luxury couples itineraries in US Dollars ($).
                 </p>
                 <Link to="/luxury-rajasthan-tour-cost" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -287,8 +280,8 @@ const HoneymoonTour = () => {
             <Link to="/rajasthan-palace-hotel-itinerary" className="related-card">
               <img src="/images/jaipur/DSC_0038-01.jpeg" alt="Palace Hotels Rajasthan" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Palace Stays</span>
                 <h3 className="related-card-title">Stay Like Royalty: Best Palace Hotels</h3>
+                <span className="related-card-tag">Palace Stays</span>
                 <p className="related-card-desc">Taj Lake Palace, Rambagh, and Umaid Bhawan ranked and reviewed.</p>
                 <span className="related-card-link">Explore Palaces <ArrowRight size={15} /></span>
               </div>
@@ -297,8 +290,8 @@ const HoneymoonTour = () => {
             <Link to="/luxury-jaisalmer-desert-camps" className="related-card">
               <img src="/images/jaisalmer-dunes.jpg" alt="Desert Camps" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Desert Glamping</span>
                 <h3 className="related-card-title">Luxury Jaisalmer Desert Camp Stay</h3>
+                <span className="related-card-tag">Desert Glamping</span>
                 <p className="related-card-desc">Where to sleep under the dunes with private tents and sunset dinners.</p>
                 <span className="related-card-link">Explore Camps <ArrowRight size={15} /></span>
               </div>
@@ -307,8 +300,8 @@ const HoneymoonTour = () => {
             <Link to="/best-time-to-visit-rajasthan" className="related-card">
               <img src="/images/jodhpur-fort.webp" alt="Best Time to Visit" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Seasonal Planning</span>
                 <h3 className="related-card-title">Best Time to Visit Rajasthan for Luxury Travel</h3>
+                <span className="related-card-tag">Seasonal Planning</span>
                 <p className="related-card-desc">Month-by-month weather, romantic festival dates, and palace rates.</p>
                 <span className="related-card-link">Explore Seasons <ArrowRight size={15} /></span>
               </div>

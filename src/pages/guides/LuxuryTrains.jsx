@@ -94,10 +94,9 @@ const LuxuryTrains = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
         >
-          <span className="guide-badge">Luxury Rail Guide</span>
           <h1>Palace on Wheels vs Royal Rajasthan on Wheels: Which Luxury Train Wins?</h1>
           <p className="guide-hero-sub">
-            A side-by-side comparison of cabins, routes, dining, and costs — plus how luxury rail compares to a private chauffeured palace tour.
+            A side-by-side comparison of cabins, routes, dining, and costs: plus how luxury rail compares to a private chauffeured palace tour.
           </p>
         </motion.div>
       </header>
@@ -155,8 +154,8 @@ const LuxuryTrains = () => {
               <div className="comparison-grid-2">
                 <div className="comparison-card winner">
                   <div className="comparison-header">
-                    <span className="comparison-tag">Best for Tradition & Classic Route</span>
                     <h3 className="comparison-title">Palace on Wheels</h3>
+                    <span className="comparison-tag">Best for Tradition & Classic Route</span>
                   </div>
                   <ul className="comparison-list">
                     <li><Check size={16} /> Authentic vintage coaches modeled after royal saloons</li>
@@ -164,15 +163,15 @@ const LuxuryTrains = () => {
                     <li><Check size={16} /> Renowned Khidmatgar (personal butler) service</li>
                     <li><Check size={16} /> World-famous heritage status and nostalgia</li>
                   </ul>
-                  <p style={{ fontSize: '0.88rem', color: '#666', margin: 0 }}>
+                  <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', margin: 0 }}>
                     <strong>Ideal for:</strong> First-time visitors to India who want the classic Rajasthan royal circuit with maximum historical atmosphere.
                   </p>
                 </div>
 
                 <div className="comparison-card">
                   <div className="comparison-header">
-                    <span className="comparison-tag">Best for Space & Extended Route</span>
                     <h3 className="comparison-title">Royal Rajasthan on Wheels</h3>
+                    <span className="comparison-tag">Best for Space & Extended Route</span>
                   </div>
                   <ul className="comparison-list">
                     <li><Check size={16} /> Larger cabins with contemporary luxury suites</li>
@@ -180,7 +179,7 @@ const LuxuryTrains = () => {
                     <li><Check size={16} /> Extends beyond Rajasthan to Varanasi & Khajuraho</li>
                     <li><Check size={16} /> Enhanced soundproofing and suspension</li>
                   </ul>
-                  <p style={{ fontSize: '0.88rem', color: '#666', margin: 0 }}>
+                  <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', margin: 0 }}>
                     <strong>Ideal for:</strong> Travelers who prioritize cabin comfort, spa indulgence, and want to see the spiritual ghats of the Ganges on the same rail voyage.
                   </p>
                 </div>
@@ -193,7 +192,7 @@ const LuxuryTrains = () => {
 
               <div className="guide-callout">
                 <h4>Why Many Discerning Travelers Prefer Private Chauffeuring:</h4>
-                <ul style={{ paddingLeft: '1.2rem', marginTop: '0.5rem', color: '#444' }}>
+                <ul style={{ paddingLeft: '1.2rem', marginTop: '0.5rem', color: 'var(--color-text-deep)' }}>
                   <li style={{ marginBottom: '0.4rem' }}>
                     <strong>Sleep in Real Palaces:</strong> On a train, you sleep on rail tracks in motion. On a chauffeured tour, you sleep in former royal suites at <em>Taj Lake Palace Udaipur</em> or <em>Rambagh Palace Jaipur</em>.
                   </li>
@@ -267,13 +266,10 @@ const LuxuryTrains = () => {
               </div>
 
               <div className="sidebar-card">
-                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)' }}>
-                  Alternative Route
-                </span>
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: '0.6rem', marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
                   10-Day Royal Circuit
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: '#666', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
                   See the complete day-by-day palace driving itinerary covering Jaipur, Jodhpur, and Udaipur.
                 </p>
                 <Link to="/10-day-luxury-rajasthan-itinerary" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -282,13 +278,10 @@ const LuxuryTrains = () => {
               </div>
 
               <div className="sidebar-card">
-                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)' }}>
-                  Cost Breakdown
-                </span>
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: '0.6rem', marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
                   Tour Cost Per Person
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: '#666', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
                   Transparent price breakdown for palace hotels, private chauffeur, and excursions.
                 </p>
                 <Link to="/luxury-rajasthan-tour-cost" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -310,8 +303,8 @@ const LuxuryTrains = () => {
             <Link to="/rajasthan-palace-hotel-itinerary" className="related-card">
               <img src="/images/jaipur/DSC_0038-01.jpeg" alt="Palace Hotels Rajasthan" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Palace Stays</span>
                 <h3 className="related-card-title">Stay Like Royalty: The Best Palace Hotels</h3>
+                <span className="related-card-tag">Palace Stays</span>
                 <p className="related-card-desc">Taj Lake Palace, Rambagh, and Umaid Bhawan ranked and reviewed.</p>
                 <span className="related-card-link">Read Guide <ArrowRight size={15} /></span>
               </div>
@@ -320,8 +313,8 @@ const LuxuryTrains = () => {
             <Link to="/10-day-luxury-rajasthan-itinerary" className="related-card">
               <img src="/images/jaipur/DSC_8425-01-02.jpeg" alt="10 Day Luxury Rajasthan Itinerary" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Itineraries</span>
                 <h3 className="related-card-title">10 Day Luxury Rajasthan Itinerary</h3>
+                <span className="related-card-tag">Itineraries</span>
                 <p className="related-card-desc">Full circuit blueprint with palace stays, desert camps, and timings.</p>
                 <span className="related-card-link">Explore Route <ArrowRight size={15} /></span>
               </div>
@@ -330,8 +323,8 @@ const LuxuryTrains = () => {
             <Link to="/best-time-to-visit-rajasthan" className="related-card">
               <img src="/images/jodhpur-fort.webp" alt="Best Time to Visit" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Seasonal Planning</span>
                 <h3 className="related-card-title">Best Time to Visit Rajasthan for Luxury Travel</h3>
+                <span className="related-card-tag">Seasonal Planning</span>
                 <p className="related-card-desc">Month-by-month weather, festivals, and palace hotel rate guide.</p>
                 <span className="related-card-link">View Seasons <ArrowRight size={15} /></span>
               </div>

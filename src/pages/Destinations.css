@@ -1,5 +1,4 @@
 .destinations-page {
-  padding-top: var(--header-height);
   min-height: 100vh;
   background-color: var(--color-background);
 }
@@ -7,7 +6,7 @@
 .destinations-header {
   position: relative;
   min-height: 60vh;
-  padding: 4rem 1rem;
+  padding: 8rem 1rem 4rem;
   display: flex;
   align-items: center;
   justify-content: center;

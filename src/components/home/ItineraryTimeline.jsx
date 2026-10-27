@@ -25,10 +25,9 @@ const ItineraryTimeline = () => {
     <section className="section itinerary-section sr-smooth-reveal">
       <div className="container">
         <div className="section-header text-center">
-          <span className="section-subtitle">India's Tourism Circuit</span>
-          <h2>Golden Triangle</h2>
-          <p style={{ marginTop: '1rem', color: 'var(--color-text-secondary)' }}>
-            Best Time to Visit: October to March offers cool, pleasant weather ideal for sightseeing.
+          <h2>The Golden Triangle Route</h2>
+          <p className="section-description">
+            India's iconic cultural circuit through Delhi, Agra, and Jaipur. Ideal for travel from October to March.
           </p>
         </div>
 

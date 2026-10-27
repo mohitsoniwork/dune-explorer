@@ -102,10 +102,9 @@ const Faq = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <span className="faq-label">Help &amp; Support</span>
           <h1>Frequently Asked Questions</h1>
           <p className="faq-tagline">
-            Everything you need to know before your journey. Can't find an answer? We're one message away.
+            Essential travel details before your journey. Reach out anytime for bespoke inquiries.
           </p>
         </motion.div>
       </header>

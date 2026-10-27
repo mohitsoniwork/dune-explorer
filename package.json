@@ -10,6 +10,7 @@
     "prebuild": "npm run generate:images",
     "build": "vite build",
     "lint": "eslint .",
+    "lint:slop": "node .agents/skills/hallmark/scripts/sloplint.mjs index.html src",
     "preview": "vite preview"
   },
   "dependencies": {

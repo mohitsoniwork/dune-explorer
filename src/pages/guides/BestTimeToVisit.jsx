@@ -154,7 +154,6 @@ const BestTimeToVisit = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
         >
-          <span className="guide-badge">Seasonal Travel Insights</span>
           <h1>Best Time to Visit Rajasthan for Luxury Travel</h1>
           <p className="guide-hero-sub">
             A comprehensive month-by-month guide covering climate, royal festivals, luxury palace rates, and wildlife safari seasons.
@@ -186,7 +185,7 @@ const BestTimeToVisit = () => {
             {/* Article Body */}
             <article className="guide-article">
               <p className="guide-lead">
-                Rajasthan is a land of extremes — from sun-drenched desert dunes to breezy lakefront palaces. Choosing the right month ensures you experience regal forts in comfortable weather, catch vibrant cultural festivals, and secure the finest palace suites at prime value.
+                Rajasthan is a land of extremes, from sun-drenched desert dunes to breezy lakefront palaces. Choosing the right month ensures you experience regal forts in comfortable weather, catch vibrant cultural festivals, and secure the finest palace suites at prime value.
               </p>
 
               <h2>Rajasthan Travel Seasons at a Glance</h2>
@@ -207,7 +206,7 @@ const BestTimeToVisit = () => {
 
               <h2>Month-by-Month Luxury Guide: Weather, Events & Vibe</h2>
               <p>
-                Here is a month-by-month analysis to help you synchronize your travel dates with Rajasthan's best experiences:
+                Here is a month-by-month analysis to help you synchronize your travel dates with Rajasthan’s best experiences:
               </p>
 
               <div className="month-cards-list">
@@ -238,7 +237,7 @@ const BestTimeToVisit = () => {
                 </p>
               </div>
 
-              <div className="guide-callout" style={{ borderLeftColor: '#2f6f4f' }}>
+              <div className="guide-callout" style={{ borderLeftColor: 'var(--color-forest)' }}>
                 <h4>2. For Tiger Safaris in Ranthambore (November to May)</h4>
                 <p>
                   Park reopens October 1st. Mild weather runs November to February. Highest photographic sighting frequency happens March to May when heat draws tigers to prominent water holes.
@@ -256,7 +255,7 @@ const BestTimeToVisit = () => {
               <p>
                 Because Rajasthan hosts some of the most celebrated palace hotels in the world, inventory is finite. For stays between November and February, reserving <strong>4 to 6 months in advance</strong> is strongly advised to guarantee your preferred suite categories at iconic properties like:
               </p>
-              <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem', color: '#444' }}>
+              <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem', color: 'var(--color-text-deep)' }}>
                 <li><strong>Taj Lake Palace & Oberoi Udaivilas</strong> (Udaipur)</li>
                 <li><strong>Rambagh Palace & The Oberoi Rajvilas</strong> (Jaipur)</li>
                 <li><strong>Umaid Bhawan Palace & Raas Haveli</strong> (Jodhpur)</li>
@@ -323,13 +322,13 @@ const BestTimeToVisit = () => {
 
               {/* Related Pricing Guide */}
               <div className="sidebar-card">
-                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)' }}>
-                  Cost Breakdown
-                </span>
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: '0.6rem', marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
                   Rajasthan Tour Cost Per Person
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: '#666', marginBottom: '1rem' }}>
+                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)', marginBottom: '0.6rem' }}>
+                  Cost Breakdown
+                </span>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
                   Explore how hotel rates, private chauffeurs, and royal experiences price out per person.
                 </p>
                 <Link to="/luxury-rajasthan-tour-cost" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -351,8 +350,8 @@ const BestTimeToVisit = () => {
             <Link to="/luxury-rajasthan-tour-cost" className="related-card">
               <img src="/images/jaipur/DSC_0038-01.jpeg" alt="Rajasthan Tour Cost" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Pricing Guide</span>
                 <h3 className="related-card-title">How Much Does a Luxury Rajasthan Tour Cost?</h3>
+                <span className="related-card-tag">Pricing Guide</span>
                 <p className="related-card-desc">Detailed price ranges for heritage hotels, private drivers, guides, and luxury safaris.</p>
                 <span className="related-card-link">Read Pricing Guide <ArrowRight size={15} /></span>
               </div>
@@ -361,8 +360,8 @@ const BestTimeToVisit = () => {
             <Link to="/destinations" className="related-card">
               <img src="/images/jaipur/DSC_5623-01.jpeg" alt="Jaipur Pink City" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Destinations</span>
                 <h3 className="related-card-title">Curated Cities & Fortresses</h3>
+                <span className="related-card-tag">Destinations</span>
                 <p className="related-card-desc">Explore Jaipur, Udaipur, Jodhpur, Jaisalmer, and Pushkar with insider access.</p>
                 <span className="related-card-link">View Destinations <ArrowRight size={15} /></span>
               </div>
@@ -371,8 +370,8 @@ const BestTimeToVisit = () => {
             <Link to="/plan-journey" className="related-card">
               <img src="/images/jaisalmer-dunes.jpg" alt="Plan Your Journey" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Custom Itineraries</span>
                 <h3 className="related-card-title">Design Your Bespoke Royal Tour</h3>
+                <span className="related-card-tag">Custom Itineraries</span>
                 <p className="related-card-desc">Fill in our quick travel planner to receive a personalized day-by-day proposal.</p>
                 <span className="related-card-link">Start Planning <ArrowRight size={15} /></span>
               </div>

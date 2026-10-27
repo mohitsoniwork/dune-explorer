@@ -39,10 +39,9 @@ const PrivacyPolicy = () => {
           <div className="policy-contact">
             <p><strong>Dune Explorer</strong></p>
             <p>Aditya Vikram Singh</p>
-            <p>Founder</p>
-            <p>Khatipura, Jaipur, Rajasthan, India</p>
-            <p>📞 +91 63750 60566</p>
-            <p>📧 info@duneexplorer.com</p>
+            <p><strong>Address:</strong> Khatipura, Jaipur, Rajasthan, India</p>
+            <p><strong>Direct:</strong> +91 63750 60566</p>
+            <p><strong>Email:</strong> info@duneexplorer.com</p>
           </div>
         </div>
       </div>

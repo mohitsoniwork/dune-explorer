@@ -138,10 +138,6 @@ const GuidesHub = () => {
             transition={{ duration: 0.8 }}
             className="guides-hub-hero-content"
           >
-            <div className="guides-hub-badge">
-              <Sparkles size={16} />
-              <span>Dune Explorer Editorial</span>
-            </div>
             <h1>Luxury Rajasthan Travel Guides</h1>
             <p className="guides-hub-hero-desc">
               Curated itineraries, transparent cost guides, palace hotel comparisons, and insider advice from our destination specialists to help you plan your royal Indian journey.

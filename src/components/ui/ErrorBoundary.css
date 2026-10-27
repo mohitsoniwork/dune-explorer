@@ -1,5 +1,7 @@
+/* Hallmark · v2.0.0 · theme: editorial · genre: editorial */
+
 .error-boundary {
-  min-height: 60vh;
+  min-height: 60dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,19 +14,20 @@
 }
 
 .error-boundary-icon {
-  color: var(--color-camel, #8c5a10);
+  color: var(--color-camel);
   margin-bottom: 1.25rem;
 }
 
 .error-boundary h1 {
-  font-family: var(--font-heading, 'Playfair Display', serif);
-  font-size: var(--fs-h2, clamp(2rem, 4vw, 3.25rem));
-  color: var(--color-dark, #1a1a1a);
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  color: var(--color-dark);
   margin-bottom: 0.75rem;
+  text-wrap: balance;
 }
 
 .error-boundary p {
-  color: var(--color-text-secondary, #4a4a4a);
+  color: var(--color-text-body);
   margin-bottom: 2rem;
   line-height: 1.7;
 }

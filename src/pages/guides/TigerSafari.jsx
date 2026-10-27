@@ -95,10 +95,9 @@ const TigerSafari = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
         >
-          <span className="guide-badge">Wildlife & Safari Blueprint</span>
           <h1>Luxury Ranthambore Tiger Safari Tour: Lodges, Zones and Best Seasons</h1>
           <p className="guide-hero-sub">
-            How to craft the ultimate royal wilderness experience — comparing world-renowned luxury lodges, park zone strategies, and private 4x4 game drives.
+            How to craft the ultimate royal wilderness experience: comparing world-renowned luxury lodges, park zone strategies, and private 4x4 game drives.
           </p>
         </motion.div>
       </header>
@@ -126,7 +125,7 @@ const TigerSafari = () => {
           <div className="guide-layout">
             <article className="guide-article">
               <p className="guide-lead">
-                Ranthambore National Park is one of the world's most dramatic wildlife sanctuaries — where wild Royal Bengal Tigers roam amidst ancient 10th-century fort ruins, banyan trees, and tranquil crocodile-filled lakes. Combining wildlife adventure with five-star luxury tented hospitality makes this a centerpiece of any Rajasthan journey.
+                Ranthambore National Park is one of the world's most dramatic wildlife sanctuaries, where wild Royal Bengal Tigers roam amidst ancient 10th-century fort ruins, banyan trees, and tranquil crocodile-filled lakes. Combining wildlife adventure with five-star luxury tented hospitality makes this a centerpiece of any Rajasthan journey.
               </p>
 
               <h2>Top Luxury Tented Lodges in Ranthambore</h2>
@@ -145,7 +144,7 @@ const TigerSafari = () => {
                       <div className="property-price-hint">
                         {lodge.tag} · <span style={{ color: 'var(--color-sand)' }}>{lodge.price}</span>
                       </div>
-                      <p style={{ fontSize: '0.94rem', color: '#444', lineHeight: 1.65 }}>
+                      <p style={{ fontSize: '0.94rem', color: 'var(--color-text-deep)', lineHeight: 1.65 }}>
                         {lodge.description}
                       </p>
 
@@ -166,11 +165,11 @@ const TigerSafari = () => {
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.2rem', margin: '1.5rem 0' }}>
                 {zoneGuide.map((z, idx) => (
-                  <div key={idx} style={{ background: '#fff', border: '1px solid rgba(141, 90, 43, 0.16)', borderRadius: '10px', padding: '1.4rem' }}>
+                  <div key={idx} style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.4rem' }}>
                     <h4 style={{ color: 'var(--color-maroon)', marginBottom: '0.4rem', fontSize: '1.1rem' }}>
                       {z.zone}
                     </h4>
-                    <p style={{ fontSize: '0.9rem', color: '#555', margin: 0, lineHeight: 1.6 }}>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--color-text-dim)', margin: 0, lineHeight: 1.6 }}>
                       {z.desc}
                     </p>
                   </div>
@@ -243,13 +242,10 @@ const TigerSafari = () => {
               </div>
 
               <div className="sidebar-card">
-                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)' }}>
-                  Circuit Route
-                </span>
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: '0.6rem', marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
                   10-Day Royal Route
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: '#666', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
                   See how Ranthambore connects between Jaipur and the southern palace circuit.
                 </p>
                 <Link to="/10-day-luxury-rajasthan-itinerary" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -258,13 +254,10 @@ const TigerSafari = () => {
               </div>
 
               <div className="sidebar-card">
-                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)' }}>
-                  Best Seasons
-                </span>
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: '0.6rem', marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
                   Best Time to Visit
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: '#666', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
                   Check climate and national park opening months across Rajasthan.
                 </p>
                 <Link to="/best-time-to-visit-rajasthan" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -286,8 +279,8 @@ const TigerSafari = () => {
             <Link to="/rajasthan-palace-hotel-itinerary" className="related-card">
               <img src="/images/jaipur/DSC_0038-01.jpeg" alt="Palace Hotels Rajasthan" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Palace Stays</span>
                 <h3 className="related-card-title">Stay Like Royalty: Best Palace Hotels</h3>
+                <span className="related-card-tag">Palace Stays</span>
                 <p className="related-card-desc">Taj Lake Palace, Rambagh, and Umaid Bhawan ranked and reviewed.</p>
                 <span className="related-card-link">Explore Palaces <ArrowRight size={15} /></span>
               </div>
@@ -296,8 +289,8 @@ const TigerSafari = () => {
             <Link to="/luxury-jaisalmer-desert-camps" className="related-card">
               <img src="/images/jaisalmer-dunes.jpg" alt="Desert Camps" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Desert Glamping</span>
                 <h3 className="related-card-title">Luxury Jaisalmer Desert Camp Stay</h3>
+                <span className="related-card-tag">Desert Glamping</span>
                 <p className="related-card-desc">Secluded dunes, luxury canvas suites, and starlit banquets.</p>
                 <span className="related-card-link">Explore Camps <ArrowRight size={15} /></span>
               </div>
@@ -306,8 +299,8 @@ const TigerSafari = () => {
             <Link to="/luxury-rajasthan-tour-cost" className="related-card">
               <img src="/images/jaipur/DSC_5623-01.jpeg" alt="Tour Costs" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Pricing Guide</span>
                 <h3 className="related-card-title">Rajasthan Tour Cost Per Person</h3>
+                <span className="related-card-tag">Pricing Guide</span>
                 <p className="related-card-desc">Detailed price ranges for palace hotels, safaris, and private drivers.</p>
                 <span className="related-card-link">View Pricing <ArrowRight size={15} /></span>
               </div>

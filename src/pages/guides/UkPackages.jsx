@@ -128,10 +128,9 @@ const UkPackages = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
         >
-          <span className="guide-badge">International Travel Guide</span>
           <h1>Luxury Rajasthan Tour Packages: What Is Included</h1>
           <p className="guide-hero-sub">
-            The complete handbook for international travelers planning a royal Indian escape — comparing package tiers, flights, on-ground inclusions, and transparent USD pricing.
+            The complete handbook for international travelers planning a royal Indian escape: comparing package tiers, flights, on-ground inclusions, and transparent USD pricing.
           </p>
         </motion.div>
       </header>
@@ -159,7 +158,7 @@ const UkPackages = () => {
           <div className="guide-layout">
             <article className="guide-article">
               <p className="guide-lead">
-                For travelers from around the world, Rajasthan represents the quintessential royal escape. With comfortable direct flights and seamless connections, you can experience golden desert sunshine, magnificent hilltop fortresses, and world-renowned palace hospitality.
+                For travelers from around the world, Rajasthan represents the quintessential royal escape. With comfortable direct flights and reliable flight connections, you can experience golden desert sunshine, magnificent hilltop fortresses, and world-renowned palace hospitality.
               </p>
 
               <h2>Curated Luxury Package Tiers in USD ($)</h2>
@@ -175,7 +174,7 @@ const UkPackages = () => {
                     <div style={{ fontSize: '0.85rem', color: 'var(--color-sand)', fontWeight: 600, marginBottom: '0.4rem' }}>
                       {pkg.duration}
                     </div>
-                    <p style={{ fontSize: '0.84rem', color: '#666', marginBottom: '0.8rem' }}>
+                    <p style={{ fontSize: '0.84rem', color: 'var(--color-text-dim)', marginBottom: '0.8rem' }}>
                       <strong>Route:</strong> {pkg.route}
                     </p>
                     <div className="tier-price-box">
@@ -204,7 +203,7 @@ const UkPackages = () => {
               <h2>What Is Included in Your Dune Explorer Land Package?</h2>
               <div className="guide-callout">
                 <h4>Comprehensive & Transparent: Zero Hidden Surprises</h4>
-                <ul style={{ paddingLeft: '1.2rem', marginTop: '0.5rem', color: '#444' }}>
+                <ul style={{ paddingLeft: '1.2rem', marginTop: '0.5rem', color: 'var(--color-text-deep)' }}>
                   <li style={{ marginBottom: '0.4rem' }}>
                     <strong>Handpicked 5-Star & Heritage Palace Hotels:</strong> Double occupancy with full daily gourmet breakfast.
                   </li>
@@ -230,13 +229,13 @@ const UkPackages = () => {
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', margin: '1.5rem 0' }}>
                 {flightGuidance.map((f, idx) => (
-                  <div key={idx} style={{ background: '#fff', border: '1px solid rgba(141, 90, 43, 0.16)', borderRadius: '10px', padding: '1.2rem' }}>
+                  <div key={idx} style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.2rem' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
                       <strong style={{ color: 'var(--color-dark)', fontSize: '1rem' }}>{f.airline}</strong>
                       <span style={{ fontSize: '0.85rem', color: 'var(--color-sand)', fontWeight: 600 }}>{f.flightTime}</span>
                     </div>
                     <div style={{ fontSize: '0.88rem', color: 'var(--color-maroon)', marginTop: '0.2rem' }}>{f.route}</div>
-                    <p style={{ fontSize: '0.88rem', color: '#555', marginTop: '0.5rem', marginBottom: 0 }}>{f.tip}</p>
+                    <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginTop: '0.5rem', marginBottom: 0 }}>{f.tip}</p>
                   </div>
                 ))}
               </div>
@@ -299,13 +298,10 @@ const UkPackages = () => {
               </div>
 
               <div className="sidebar-card">
-                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)' }}>
-                  Detailed Breakdown
-                </span>
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: '0.6rem', marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
                   Tour Cost Per Person
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: '#666', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
                   Explore how palace hotels, private chauffeur transport, and guides calculate into daily costs.
                 </p>
                 <Link to="/luxury-rajasthan-tour-cost" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -314,13 +310,10 @@ const UkPackages = () => {
               </div>
 
               <div className="sidebar-card">
-                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)' }}>
-                  Transport Guide
-                </span>
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: '0.6rem', marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
                   Private Driver & Guide Info
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: '#666', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
                   Learn about our Toyota Crysta fleet standards, English-speaking chauffeurs, and safety.
                 </p>
                 <Link to="/private-rajasthan-tour-driver-guide" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -342,8 +335,8 @@ const UkPackages = () => {
             <Link to="/10-day-luxury-rajasthan-itinerary" className="related-card">
               <img src="/images/jaipur/DSC_8425-01-02.jpeg" alt="10 Day Luxury Rajasthan Itinerary" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Itineraries</span>
                 <h3 className="related-card-title">10 Day Luxury Rajasthan Itinerary</h3>
+                <span className="related-card-tag">Itineraries</span>
                 <p className="related-card-desc">Full circuit blueprint with palace stays, desert camps, and timings.</p>
                 <span className="related-card-link">View Route <ArrowRight size={15} /></span>
               </div>
@@ -352,8 +345,8 @@ const UkPackages = () => {
             <Link to="/best-time-to-visit-rajasthan" className="related-card">
               <img src="/images/jodhpur-fort.webp" alt="Best Time to Visit" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Seasonal Planning</span>
                 <h3 className="related-card-title">Best Time to Visit Rajasthan for Luxury Travel</h3>
+                <span className="related-card-tag">Seasonal Planning</span>
                 <p className="related-card-desc">Month-by-month temperature, festival, and palace hotel rate guide.</p>
                 <span className="related-card-link">Explore Seasons <ArrowRight size={15} /></span>
               </div>
@@ -362,8 +355,8 @@ const UkPackages = () => {
             <Link to="/rajasthan-luxury-honeymoon" className="related-card">
               <img src="/images/jaipur/DSC_0038-01.jpeg" alt="Rajasthan Honeymoon Tour" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Honeymoons</span>
                 <h3 className="related-card-title">Rajasthan Honeymoon Luxury Tour</h3>
+                <span className="related-card-tag">Honeymoons</span>
                 <p className="related-card-desc">Romantic palaces, private lake dinners, and sunset champagne cruises.</p>
                 <span className="related-card-link">Romantic Escapes <ArrowRight size={15} /></span>
               </div>

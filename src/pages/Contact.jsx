@@ -62,8 +62,7 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <span className="contact-label">Contact Us</span>
-          <h1>Let's Plan Your Rajasthan Journey</h1>
+          <h1>Let’s Plan Your Rajasthan Journey</h1>
           <p className="contact-tagline">
             Reach out and our travel experts will craft a journey as unique as you.
           </p>
@@ -113,10 +112,9 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="section-subtitle">Send an Inquiry</span>
               <h2>Tell Us About Your Dream Trip</h2>
               <p>
-                Share your preferences — destinations, travel dates, interests — and our experts will
+                Share your preferences including destinations, travel dates, and interests, and our experts will
                 get back to you with a personalised itinerary. We usually respond within 24 hours.
               </p>
             </motion.div>

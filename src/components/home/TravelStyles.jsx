@@ -60,7 +60,7 @@ const TravelStyles = () => {
                   <div className="style-icon">{style.icon}</div>
                   <h3>{style.title}</h3>
                   <p>{style.desc}</p>
-                  <span className="style-link">Explore →</span>
+                  <span className="style-link">Explore style</span>
                 </Link>
               </TiltCard>
             </motion.div>

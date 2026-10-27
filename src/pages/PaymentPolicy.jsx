@@ -18,7 +18,7 @@ const PaymentPolicy = () => {
         <h1>Booking &amp; Cancellation Policy</h1>
         <div className="policy-content">
           <p>
-            At Dune Explorer, we believe in providing a seamless and transparent booking experience. Please read our booking and cancellation policy carefully before confirming your journey.
+            At Dune Explorer, we believe in providing a clear, transparent, and dependable booking experience. Please read our booking and cancellation policy carefully before confirming your journey.
           </p>
 
           <h2>Booking Policy</h2>
@@ -62,11 +62,11 @@ const PaymentPolicy = () => {
                 <td>95% refund (5% cancellation fee applies)</td>
               </tr>
               <tr>
-                <td>15–29 days before arrival</td>
+                <td>15 to 29 days before arrival</td>
                 <td>70% refund</td>
               </tr>
               <tr>
-                <td>7–14 days before arrival</td>
+                <td>7 to 14 days before arrival</td>
                 <td>40% refund</td>
               </tr>
               <tr>
@@ -86,7 +86,7 @@ const PaymentPolicy = () => {
           <p>
             If your reservation has been made through an online travel agency, travel advisor, or any third-party booking platform, the cancellation and refund policy of the respective provider may apply.
           </p>
-          <p>Where Dune Explorer's policy is applicable, the following refund schedule will be followed:</p>
+          <p>Where Dune Explorer’s policy is applicable, the following refund schedule will be followed:</p>
 
           <table className="policy-table">
             <thead>
@@ -101,11 +101,11 @@ const PaymentPolicy = () => {
                 <td>80% refund</td>
               </tr>
               <tr>
-                <td>59–28 days before arrival</td>
+                <td>59 to 28 days before arrival</td>
                 <td>60% refund</td>
               </tr>
               <tr>
-                <td>27–15 days before arrival</td>
+                <td>27 to 15 days before arrival</td>
                 <td>30% refund</td>
               </tr>
               <tr>
@@ -116,7 +116,7 @@ const PaymentPolicy = () => {
           </table>
 
           <p>
-            Refunds for third-party bookings are subject to the respective booking partner's processing timelines and terms. Dune Explorer cannot guarantee refund timelines where payments have been collected by a third-party platform.
+            Refunds for third-party bookings are subject to the respective booking partner’s processing timelines and terms. Dune Explorer cannot guarantee refund timelines where payments have been collected by a third-party platform.
           </p>
 
           <hr className="policy-divider" />
@@ -138,8 +138,8 @@ const PaymentPolicy = () => {
           </p>
           <div className="policy-contact">
             <p><strong>Dune Explorer</strong></p>
-            <p>📧 info@duneexplorer.com</p>
-            <p>📞 +91 63750 60566</p>
+            <p><strong>Email:</strong> info@duneexplorer.com</p>
+            <p><strong>Direct:</strong> +91 63750 60566</p>
           </div>
         </div>
       </div>

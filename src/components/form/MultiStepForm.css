@@ -35,8 +35,9 @@
   font-size: 0.875rem;
   color: var(--color-camel);
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 0.5rem;
+  letter-spacing: 0.08em;
+  margin-top: 0.5rem;
+  font-weight: 500;
 }
 
 .form-header h2 {

@@ -143,10 +143,9 @@ const LuxuryTourCost = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
         >
-          <span className="guide-badge">2026 Travel Pricing Guide</span>
           <h1>How Much Does a Luxury Rajasthan Tour Cost Per Person?</h1>
           <p className="guide-hero-sub">
-            A transparent cost breakdown for discerning travelers worldwide — from iconic palace hotels to private chauffeurs and royal experiences.
+            A transparent cost breakdown for discerning travelers worldwide: from iconic palace hotels to private chauffeurs and royal experiences.
           </p>
         </motion.div>
       </header>
@@ -189,7 +188,7 @@ const LuxuryTourCost = () => {
                   <div key={idx} className={`tier-card ${tier.featured ? 'featured' : ''}`}>
                     <span className="tier-badge">{tier.badge}</span>
                     <h3 className="tier-title">{tier.name}</h3>
-                    <p style={{ fontSize: '0.88rem', color: '#666', marginBottom: '0.5rem' }}>
+                    <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '0.5rem' }}>
                       {tier.description}
                     </p>
                     <div className="tier-price-box">
@@ -258,21 +257,21 @@ const LuxuryTourCost = () => {
 
               <h2>Key Factors That Influence Your Tour Cost</h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.2rem', margin: '1.5rem 0' }}>
-                <div style={{ background: '#fff', border: '1px solid rgba(141, 90, 43, 0.15)', borderRadius: '10px', padding: '1.2rem' }}>
+                <div style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.2rem' }}>
                   <h4 style={{ color: 'var(--color-maroon)', marginBottom: '0.4rem' }}>1. Season of Travel</h4>
-                  <p style={{ fontSize: '0.9rem', margin: 0, color: '#555' }}>
+                  <p style={{ fontSize: '0.9rem', margin: 0, color: 'var(--color-text-dim)' }}>
                     Mid-October to March commands peak rates. Traveling in late September or April offers dramatic hotel savings up to 35%.
                   </p>
                 </div>
-                <div style={{ background: '#fff', border: '1px solid rgba(141, 90, 43, 0.15)', borderRadius: '10px', padding: '1.2rem' }}>
+                <div style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.2rem' }}>
                   <h4 style={{ color: 'var(--color-maroon)', marginBottom: '0.4rem' }}>2. Palace Category</h4>
-                  <p style={{ fontSize: '0.9rem', margin: 0, color: '#555' }}>
+                  <p style={{ fontSize: '0.9rem', margin: 0, color: 'var(--color-text-dim)' }}>
                     Mixing 3 nights in an iconic Taj or Oberoi palace with 6 nights in boutique royal fortresses optimizes both charm and value.
                   </p>
                 </div>
-                <div style={{ background: '#fff', border: '1px solid rgba(141, 90, 43, 0.15)', borderRadius: '10px', padding: '1.2rem' }}>
+                <div style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.2rem' }}>
                   <h4 style={{ color: 'var(--color-maroon)', marginBottom: '0.4rem' }}>3. Group Size</h4>
-                  <p style={{ fontSize: '0.9rem', margin: 0, color: '#555' }}>
+                  <p style={{ fontSize: '0.9rem', margin: 0, color: 'var(--color-text-dim)' }}>
                     Private chauffeur and guide costs remain fixed whether you are 2 or 4 people, reducing per-person cost for families or friends.
                   </p>
                 </div>
@@ -350,13 +349,10 @@ const LuxuryTourCost = () => {
 
               {/* Related Guide Link */}
               <div className="sidebar-card">
-                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)' }}>
-                  Next Reading
-                </span>
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: '0.6rem', marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
                   Best Time to Visit Rajasthan
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: '#666', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
                   Learn how hotel rates and weather fluctuate month by month across the royal state.
                 </p>
                 <Link to="/best-time-to-visit-rajasthan" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -374,7 +370,7 @@ const LuxuryTourCost = () => {
           <h2 style={{ textAlign: 'center', fontSize: 'clamp(1.8rem, 3vw, 2.4rem)' }}>
             Plan Your Rajasthan Luxury Experience
           </h2>
-          <p style={{ textAlign: 'center', color: '#6e6456', maxWidth: 640, margin: '0.5rem auto 2rem' }}>
+          <p style={{ textAlign: 'center', color: 'var(--color-text-dim)', maxWidth: 640, margin: '0.5rem auto 2rem' }}>
             Explore curated itineraries, destination guides, and authentic cultural experiences designed by Dune Explorer.
           </p>
 
@@ -382,8 +378,8 @@ const LuxuryTourCost = () => {
             <Link to="/best-time-to-visit-rajasthan" className="related-card">
               <img src="/images/jodhpur-fort.webp" alt="Jodhpur Fort Rajasthan" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Seasonal Planning</span>
                 <h3 className="related-card-title">Best Time to Visit Rajasthan for Luxury Travel</h3>
+                <span className="related-card-tag">Seasonal Planning</span>
                 <p className="related-card-desc">Month-by-month guide to weather, festivals, palace rates, and tiger safaris.</p>
                 <span className="related-card-link">Explore Guide <ArrowRight size={15} /></span>
               </div>
@@ -392,8 +388,8 @@ const LuxuryTourCost = () => {
             <Link to="/destinations" className="related-card">
               <img src="/images/jaipur/DSC_8153-01.jpeg" alt="Jaipur Palace and Forts" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Destinations</span>
                 <h3 className="related-card-title">Royal Cities: Jaipur, Jodhpur & Udaipur</h3>
+                <span className="related-card-tag">Destinations</span>
                 <p className="related-card-desc">Discover the forts, royal lakes, and desert bastions that define regal Rajasthan.</p>
                 <span className="related-card-link">View Destinations <ArrowRight size={15} /></span>
               </div>
@@ -402,8 +398,8 @@ const LuxuryTourCost = () => {
             <Link to="/experiences" className="related-card">
               <img src="/images/jaisalmer-dunes.jpg" alt="Thar Desert Jaisalmer" className="related-card-img" />
               <div className="related-card-body">
-                <span className="related-card-tag">Experiences</span>
                 <h3 className="related-card-title">Signature Desert & Heritage Journeys</h3>
+                <span className="related-card-tag">Experiences</span>
                 <p className="related-card-desc">Private camel treks, royal dining in ancient courtyards, and local artisan walks.</p>
                 <span className="related-card-link">View Experiences <ArrowRight size={15} /></span>
               </div>

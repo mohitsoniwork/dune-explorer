@@ -149,7 +149,7 @@ const MultiStepForm = () => {
 
           {isDuplicate && (
             <div className="duplicate-banner">
-              Welcome back! We've updated your previous inquiry with the latest details.
+              Welcome back! We’ve updated your previous inquiry with the latest details.
             </div>
           )}
 
@@ -172,7 +172,7 @@ const MultiStepForm = () => {
       {isSubmitting && (
         <div className="submit-loading" role="status">
           <Loader size={40} className="spinner" aria-hidden="true" />
-          <p>Sending your inquiry...</p>
+          <p>Sending your inquiry…</p>
         </div>
       )}
 
@@ -181,13 +181,13 @@ const MultiStepForm = () => {
       </div>
 
       <div className="form-header">
-        <span className="step-indicator">Step {step} of {totalSteps}</span>
         <h2>
           {step === 1 && "Let's Get to Know You"}
           {step === 2 && "Tell Us About Your Trip"}
           {step === 3 && "What Are Your Preferences?"}
           {step === 4 && "Any Special Requests?"}
         </h2>
+        <span className="step-indicator">Step {step} of {totalSteps}</span>
       </div>
 
       <form onSubmit={handleSubmit} className="form-content">

@@ -1,13 +1,15 @@
+/* Hallmark · v2.0.0 · theme: editorial · genre: editorial */
+
 .footer {
   background-color: var(--color-bg-dark);
   color: var(--color-marble);
   padding-top: var(--spacing-xl);
-  border-top: 1px solid rgba(217, 164, 65, 0.25);
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .footer-container {
   display: grid;
-  grid-template-columns: 1.5fr 2fr 1fr;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 2fr) minmax(0, 1fr);
   gap: var(--spacing-lg);
   margin-bottom: var(--spacing-lg);
 }
@@ -46,6 +48,19 @@
 .footer-socials a:hover {
   color: var(--color-gold);
   transform: translateY(-2px);
+}
+
+.footer-socials a:focus-visible,
+.footer-column a:focus-visible,
+.whatsapp-btn:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.footer-socials a:active,
+.footer-column a:active,
+.whatsapp-btn:active {
+  transform: scale(0.98);
 }
 
 .footer-links {
@@ -89,19 +104,24 @@
 .whatsapp-btn {
   margin-top: var(--spacing-sm);
   gap: 0.5rem;
-  border-color: #25d366;
-  color: #25d366;
+  border-color: var(--color-whatsapp);
+  color: var(--color-whatsapp);
 }
 
 .whatsapp-btn:hover {
-  background-color: #25d366;
-  border-color: #25d366;
+  background-color: var(--color-whatsapp);
+  border-color: var(--color-whatsapp);
   color: var(--color-dark);
+}
+
+.whatsapp-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .footer-bottom {
   padding: var(--spacing-md) 0;
-  border-top: 1px solid rgba(253, 251, 212, 0.1);
+  border-top: 1px solid var(--color-border-dark-subtle);
   color: var(--color-marble);
   opacity: 0.8;
   font-size: var(--fs-small);
@@ -109,7 +129,7 @@
 
 @media (max-width: 900px) {
   .footer-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--spacing-md);
   }
 
@@ -123,5 +143,14 @@
   .footer-links {
     flex-direction: column;
     gap: var(--spacing-md);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-socials a,
+  .footer-column a,
+  .whatsapp-btn {
+    transition: none;
+    transform: none;
   }
 }

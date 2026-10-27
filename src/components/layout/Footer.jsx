@@ -42,7 +42,10 @@ const Footer = () => {
           <div className="footer-column">
             <h3>Guides</h3>
             <Link to="/guides">All Travel Guides Hub</Link>
+            <Link to="/luxury-rajasthan-tour-packages-usa">US Tour Packages</Link>
             <Link to="/luxury-rajasthan-tour-packages-uk">UK Tour Packages</Link>
+            <Link to="/luxury-rajasthan-tour-packages-australia">Australia Packages</Link>
+            <Link to="/luxury-rajasthan-tour-packages-japan">Japan Packages</Link>
             <Link to="/10-day-luxury-rajasthan-itinerary">10-Day Luxury Route</Link>
             <Link to="/rajasthan-palace-hotel-itinerary">Palace Hotels Guide</Link>
             <Link to="/luxury-jaisalmer-desert-camps">Desert Camps Guide</Link>

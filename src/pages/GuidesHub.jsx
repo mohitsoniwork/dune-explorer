@@ -106,6 +106,36 @@ export const guidesData = [
     highlights: ['Heathrow to Delhi direct connections', 'VIP expedited airport arrival', 'Dedicated 24/7 UK-friendly concierge'],
     image: '/images/Jaisalmer/pexels-harsh-kukadiya-244412142-37415378.jpg',
   },
+  {
+    slug: 'luxury-rajasthan-tour-packages-usa',
+    title: 'Luxury Rajasthan Tour Packages for US Travelers',
+    category: 'Occasions',
+    badge: 'US & North America',
+    readTime: '9 min read',
+    summary: 'Bespoke planning for American luxury travelers: non-stop flights from NYC/SFO/Chicago, 5-star palace suites, private chauffeured SUVs, and transparent USD pricing.',
+    highlights: ['Direct non-stop flights from US hubs', 'Taj & Oberoi royal palace suites', 'Dedicated 24/7 on-ground concierge'],
+    image: '/images/jaipur/DSC_5623-01.jpeg',
+  },
+  {
+    slug: 'luxury-rajasthan-tour-packages-australia',
+    title: 'Luxury Rajasthan Tour Packages for Australian Travelers',
+    category: 'Occasions',
+    badge: 'Australia & Pacific',
+    readTime: '9 min read',
+    summary: 'Curated royal escapes for guests from Sydney, Melbourne, and Brisbane: direct non-stop flights, desert glamping in Jaisalmer, and private tiger safaris.',
+    highlights: ['Direct flights from Sydney & Melbourne', 'Luxury desert glamping & private dunes', 'Ranthambore private tiger safaris'],
+    image: '/images/jaipur/DSC_0038-01.jpeg',
+  },
+  {
+    slug: 'luxury-rajasthan-tour-packages-japan',
+    title: 'Luxury Rajasthan Tour Packages for Japanese Travelers',
+    category: 'Occasions',
+    badge: 'Japan & East Asia',
+    readTime: '9 min read',
+    summary: 'Thoughtful royal journeys tailored for travelers from Tokyo and Osaka: direct flights from Haneda, serene palace heritage, and immaculate punctuality.',
+    highlights: ['Direct non-stop flights from Tokyo Haneda', 'Immaculate private chauffeur luxury', 'Pristine palace stays & mild dining'],
+    image: '/images/Udaipur/pexels-chetan-jha-624961868-17397822.jpg',
+  },
 ];
 
 const categories = ['All Guides', 'Itinerary', 'Palace Stays', 'Costs & Planning', 'Desert & Glamping', 'Wildlife & Safari', 'Occasions'];

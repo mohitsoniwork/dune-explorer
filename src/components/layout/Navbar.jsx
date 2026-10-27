@@ -84,6 +84,9 @@ const transparentHeroRoutes = [
   '/palace-on-wheels-vs-royal-rajasthan',
   '/private-rajasthan-tour-driver-guide',
   '/luxury-rajasthan-tour-packages-uk',
+  '/luxury-rajasthan-tour-packages-usa',
+  '/luxury-rajasthan-tour-packages-australia',
+  '/luxury-rajasthan-tour-packages-japan',
 ];
 
 const Navbar = () => {

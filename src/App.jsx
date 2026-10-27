@@ -34,6 +34,9 @@ const DesertCamps = lazy(() => import('./pages/guides/DesertCamps'));
 const TigerSafari = lazy(() => import('./pages/guides/TigerSafari'));
 const HoneymoonTour = lazy(() => import('./pages/guides/HoneymoonTour'));
 const UkPackages = lazy(() => import('./pages/guides/UkPackages'));
+const UsPackages = lazy(() => import('./pages/guides/UsPackages'));
+const AustraliaPackages = lazy(() => import('./pages/guides/AustraliaPackages'));
+const JapanPackages = lazy(() => import('./pages/guides/JapanPackages'));
 const GuidesHub = lazy(() => import('./pages/GuidesHub'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
@@ -61,6 +64,9 @@ function AnimatedRoutes() {
         <Route path="/luxury-ranthambore-tiger-safari" element={<TigerSafari />} />
         <Route path="/rajasthan-luxury-honeymoon" element={<HoneymoonTour />} />
         <Route path="/luxury-rajasthan-tour-packages-uk" element={<UkPackages />} />
+        <Route path="/luxury-rajasthan-tour-packages-usa" element={<UsPackages />} />
+        <Route path="/luxury-rajasthan-tour-packages-australia" element={<AustraliaPackages />} />
+        <Route path="/luxury-rajasthan-tour-packages-japan" element={<JapanPackages />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/payment-policy" element={<PaymentPolicy />} />

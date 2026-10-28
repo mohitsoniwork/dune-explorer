@@ -9,6 +9,7 @@
     "dev": "concurrently \"vite\" \"node server.js\"",
     "prebuild": "npm run generate:images",
     "build": "vite build",
+    "postbuild": "node scripts/prerender-routes.mjs",
     "lint": "eslint .",
     "lint:slop": "node .agents/skills/hallmark/scripts/sloplint.mjs index.html src",
     "preview": "vite preview"

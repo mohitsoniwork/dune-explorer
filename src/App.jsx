@@ -80,12 +80,50 @@ function AnimatedRoutes() {
 }
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-  const timerRef = useRef(null);
+  const [isLoading, setIsLoading] = useState(() => {
+    if (typeof window === 'undefined') return true;
+    try {
+      const searchParams = new URLSearchParams(window.location.search);
+      if (searchParams.has('loader') || searchParams.has('preview-loader')) {
+        return true;
+      }
+      return !sessionStorage.getItem('dune_has_loaded');
+    } catch {
+      return true;
+    }
+  });
+
+  const safetyTimerRef = useRef(null);
+
+  const handlePreloaderComplete = () => {
+    setIsLoading(false);
+    try {
+      sessionStorage.setItem('dune_has_loaded', 'true');
+    } catch {
+      // Ignore private browsing storage restriction
+    }
+  };
 
   useEffect(() => {
-    timerRef.current = setTimeout(() => setIsLoading(false), 1600);
-    
+    // Expose convenient test helper in the window console
+    if (typeof window !== 'undefined') {
+      window.replayDuneLoader = () => {
+        try {
+          sessionStorage.removeItem('dune_has_loaded');
+        } catch {
+          // ignore
+        }
+        window.location.reload();
+      };
+    }
+
+    // Safety fallback: dismiss after 5.5s maximum if anything ever stalls
+    if (isLoading) {
+      safetyTimerRef.current = setTimeout(() => {
+        handlePreloaderComplete();
+      }, 5500);
+    }
+
     // Initialize ScrollReveal for smooth, elegant animations
     import('scrollreveal').then((module) => {
       const ScrollReveal = module.default;
@@ -103,12 +141,14 @@ function App() {
       sr.reveal('.testimonial-form-wrapper', { origin: 'bottom', distance: '60px', duration: 1200 });
     });
 
-    return () => clearTimeout(timerRef.current);
-  }, []);
+    return () => {
+      if (safetyTimerRef.current) clearTimeout(safetyTimerRef.current);
+    };
+  }, [isLoading]);
 
   return (
     <Router>
-      <Preloader isLoading={isLoading} />
+      <Preloader isLoading={isLoading} onComplete={handlePreloaderComplete} />
       <SkipLink />
       <ScrollToTop />
       <ErrorBoundary>

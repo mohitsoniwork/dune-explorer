@@ -3,6 +3,12 @@
 .why-choose-us {
   background-color: var(--color-bg-dark);
   color: var(--color-ivory);
+  overflow: hidden;
+}
+
+.why-image-container {
+  position: relative;
+  width: 100%;
 }
 
 .why-choose-us .section-title {

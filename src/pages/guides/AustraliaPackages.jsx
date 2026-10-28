@@ -158,7 +158,7 @@ const AustraliaPackages = () => {
           <div className="guide-layout">
             <article className="guide-article">
               <p className="guide-lead">
-                For Australian travelers seeking an extraordinary cultural contrast, Rajasthan offers an immersive world of royal history, desert wonder, and warm hospitality. Direct flights from Sydney and Melbourne place you within easy reach of magnificent hilltop forts, candlelit lake palaces, and private tiger safaris, all experienced with private chauffeur service and 5-star palace hospitality.
+                For Australian travelers seeking an extraordinary cultural contrast, Rajasthan offers an immersive world of royal history, desert wonder, and warm hospitality. Curated directly on the ground by <Link to="/" style={{ color: 'var(--color-sand)', fontWeight: 600 }}>Dune Explorer</Link>, direct flights from Sydney and Melbourne place you within easy reach of <Link to="/rajasthan-palace-hotel-itinerary" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>magnificent lake palaces</Link>, <Link to="/luxury-ranthambore-tiger-safari" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>private Bengal tiger safaris</Link>, and <Link to="/luxury-jaisalmer-desert-camps" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>Thar Desert glamping</Link>, all experienced with <Link to="/private-rajasthan-tour-driver-guide" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>chauffeured luxury SUVs</Link>.
               </p>
 
               <h2>Curated Luxury Package Tiers in USD ($)</h2>
@@ -240,7 +240,30 @@ const AustraliaPackages = () => {
                 ))}
               </div>
 
-              {/* FAQ Section */}
+              <h2>Explore Other Regional &amp; International Guides</h2>
+              <p>
+                Browse our curated regional guides on <Link to="/" style={{ color: 'var(--color-sand)', fontWeight: 600 }}>Dune Explorer</Link>:
+              </p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.85rem', margin: '1.5rem 0' }}>
+                <Link to="/luxury-rajasthan-tour-packages-usa" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  US Luxury Tour Packages &rarr;
+                </Link>
+                <Link to="/luxury-rajasthan-tour-packages-uk" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  UK &amp; European Packages &rarr;
+                </Link>
+                <Link to="/luxury-rajasthan-tour-packages-japan" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  Japanese Traveler Packages &rarr;
+                </Link>
+                <Link to="/10-day-luxury-rajasthan-itinerary" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  10-Day Classic Royal Route &rarr;
+                </Link>
+                <Link to="/best-time-to-visit-rajasthan" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  Best Time to Visit Rajasthan &rarr;
+                </Link>
+                <Link to="/guides" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  All Rajasthan Guides Hub &rarr;
+                </Link>
+              </div>
               <div className="guide-faq-section">
                 <h2>Frequently Asked Questions for Australian Travelers</h2>
                 <div style={{ marginTop: '1.5rem' }}>

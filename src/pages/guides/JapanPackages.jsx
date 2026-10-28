@@ -158,7 +158,7 @@ const JapanPackages = () => {
           <div className="guide-layout">
             <article className="guide-article">
               <p className="guide-lead">
-                Rajasthan captivates travelers with its timeless royal dignity, intricate architectural details, and poetic desert landscapes. For guests arriving from Japan, our private journeys blend India’s warm tradition of hospitality with impeccable punctuality, private chauffeur luxury, and handpicked palace accommodations across Jaipur, Jodhpur, and Udaipur.
+                Rajasthan captivates travelers with its timeless royal dignity, intricate architectural details, and poetic desert landscapes. Curated by the specialists at <Link to="/" style={{ color: 'var(--color-sand)', fontWeight: 600 }}>Dune Explorer</Link>, our private journeys blend India’s warm hospitality with immaculate punctuality, <Link to="/private-rajasthan-tour-driver-guide" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>private chauffeured luxury SUVs</Link>, and handpicked <Link to="/rajasthan-palace-hotel-itinerary" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>5-star palace accommodations</Link> across <Link to="/experience/1" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>Jaipur</Link>, Jodhpur, and <Link to="/experience/2" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>Udaipur</Link>.
               </p>
 
               <h2>Curated Luxury Package Tiers in USD ($)</h2>
@@ -249,6 +249,31 @@ const JapanPackages = () => {
                 <li><strong>New Year Holidays (Shogatsu):</strong> Peak travel period for Japanese holidaymakers; early reservation of palace suites is highly recommended.</li>
                 <li><strong>Spring (February &amp; March):</strong> Mild temperatures, blooming palace courtyards, and vibrant royal cultural festivals.</li>
               </ul>
+
+              <h2>Explore Other Regional &amp; International Guides</h2>
+              <p>
+                Browse our curated itineraries and regional planning guides on <Link to="/" style={{ color: 'var(--color-sand)', fontWeight: 600 }}>Dune Explorer</Link>:
+              </p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.85rem', margin: '1.5rem 0' }}>
+                <Link to="/luxury-rajasthan-tour-packages-usa" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  US Luxury Tour Packages &rarr;
+                </Link>
+                <Link to="/luxury-rajasthan-tour-packages-uk" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  UK &amp; European Packages &rarr;
+                </Link>
+                <Link to="/luxury-rajasthan-tour-packages-australia" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  Australia Guest Packages &rarr;
+                </Link>
+                <Link to="/10-day-luxury-rajasthan-itinerary" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  10-Day Classic Royal Route &rarr;
+                </Link>
+                <Link to="/palace-on-wheels-vs-royal-rajasthan" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  Luxury Heritage Trains Guide &rarr;
+                </Link>
+                <Link to="/guides" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  All Rajasthan Guides Hub &rarr;
+                </Link>
+              </div>
 
               {/* FAQ Section */}
               <div className="guide-faq-section">

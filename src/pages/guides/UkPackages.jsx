@@ -158,7 +158,7 @@ const UkPackages = () => {
           <div className="guide-layout">
             <article className="guide-article">
               <p className="guide-lead">
-                For travelers from around the world, Rajasthan represents the quintessential royal escape. With comfortable direct flights and reliable flight connections, you can experience golden desert sunshine, magnificent hilltop fortresses, and world-renowned palace hospitality.
+                For travelers from the UK and Europe, Rajasthan represents the quintessential royal escape. Curated directly on the ground by <Link to="/" style={{ color: 'var(--color-sand)', fontWeight: 600 }}>Dune Explorer</Link>, our bespoke routes connect direct flights into Delhi with <Link to="/rajasthan-palace-hotel-itinerary" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>legendary palace hotels</Link>, <Link to="/luxury-jaisalmer-desert-camps" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>Thar Desert glamping</Link>, and <Link to="/private-rajasthan-tour-driver-guide" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>private chauffeur-driven travel</Link>.
               </p>
 
               <h2>Curated Luxury Package Tiers in USD ($)</h2>
@@ -200,6 +200,31 @@ const UkPackages = () => {
                 ))}
               </div>
 
+              <h2>Explore Other Regional &amp; International Guides</h2>
+              <p>
+                Plan your itinerary with our curated resources on <Link to="/" style={{ color: 'var(--color-sand)', fontWeight: 600 }}>Dune Explorer</Link>:
+              </p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.85rem', margin: '1.5rem 0' }}>
+                <Link to="/luxury-rajasthan-tour-packages-usa" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  US Luxury Tour Packages &rarr;
+                </Link>
+                <Link to="/luxury-rajasthan-tour-packages-australia" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  Australia Guest Packages &rarr;
+                </Link>
+                <Link to="/luxury-rajasthan-tour-packages-japan" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  Japan Luxury Packages &rarr;
+                </Link>
+                <Link to="/10-day-luxury-rajasthan-itinerary" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  10-Day Classic Royal Route &rarr;
+                </Link>
+                <Link to="/luxury-rajasthan-tour-cost" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  Tour Cost &amp; Price Breakdown &rarr;
+                </Link>
+                <Link to="/guides" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  All Rajasthan Guides Hub &rarr;
+                </Link>
+              </div>
+
               <h2>What Is Included in Your Dune Explorer Land Package?</h2>
               <div className="guide-callout">
                 <h4>Comprehensive & Transparent: Zero Hidden Surprises</h4>
@@ -238,6 +263,31 @@ const UkPackages = () => {
                     <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginTop: '0.5rem', marginBottom: 0 }}>{f.tip}</p>
                   </div>
                 ))}
+              </div>
+
+              <h2>Explore Other Regional &amp; International Guides</h2>
+              <p>
+                Plan your itinerary with our curated resources on <Link to="/" style={{ color: 'var(--color-sand)', fontWeight: 600 }}>Dune Explorer</Link>:
+              </p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.85rem', margin: '1.5rem 0' }}>
+                <Link to="/luxury-rajasthan-tour-packages-usa" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  US Luxury Tour Packages &rarr;
+                </Link>
+                <Link to="/luxury-rajasthan-tour-packages-australia" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  Australia Guest Packages &rarr;
+                </Link>
+                <Link to="/luxury-rajasthan-tour-packages-japan" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  Japan Luxury Packages &rarr;
+                </Link>
+                <Link to="/10-day-luxury-rajasthan-itinerary" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  10-Day Classic Royal Route &rarr;
+                </Link>
+                <Link to="/luxury-rajasthan-tour-cost" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  Tour Cost &amp; Price Breakdown &rarr;
+                </Link>
+                <Link to="/guides" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  All Rajasthan Guides Hub &rarr;
+                </Link>
               </div>
 
               {/* FAQ Section */}

@@ -200,10 +200,50 @@ for (const r of routes) {
   const metaTags = `\n    <link rel="canonical" href="${url}" />\n    <meta property="og:url" content="${url}" />\n  </head>`;
   html = html.replace('</head>', metaTags);
 
+  // Generate crawlable internal links mesh for Googlebot
+  const internalLinks = routes
+    .filter((route) => route.path !== r.path)
+    .map((route) => {
+      const linkUrl = route.path ? `https://duneexplorer.com/${route.path}` : 'https://duneexplorer.com/';
+      const cleanTitle = route.title.split('|')[0].trim();
+      return `<li><a href="${linkUrl}">${cleanTitle}</a></li>`;
+    })
+    .join('\n          ');
+
+  const shellContent = `
+    <header style="padding: 1.5rem; background: #171410; color: #FFFDF0;">
+      <a href="https://duneexplorer.com/" style="color: #D9A441; font-size: 1.5rem; text-decoration: none; font-weight: bold;">Dune Explorer</a>
+      <nav style="margin-top: 0.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="https://duneexplorer.com/" style="color: #FFFDF0; text-decoration: none;">Home</a>
+        <a href="https://duneexplorer.com/destinations" style="color: #FFFDF0; text-decoration: none;">Destinations</a>
+        <a href="https://duneexplorer.com/experiences" style="color: #FFFDF0; text-decoration: none;">Experiences</a>
+        <a href="https://duneexplorer.com/guides" style="color: #FFFDF0; text-decoration: none;">Travel Guides</a>
+        <a href="https://duneexplorer.com/about" style="color: #FFFDF0; text-decoration: none;">About Us</a>
+        <a href="https://duneexplorer.com/contact" style="color: #FFFDF0; text-decoration: none;">Contact</a>
+        <a href="https://duneexplorer.com/plan-journey" style="color: #D9A441; text-decoration: none; font-weight: bold;">Plan Journey</a>
+      </nav>
+    </header>
+    <main style="max-width: 960px; margin: 2rem auto; padding: 0 1.5rem; font-family: sans-serif; color: #3C3A33;">
+      <h1 style="color: #1A1A1A;">${r.title}</h1>
+      <p style="font-size: 1.1rem; line-height: 1.6;">${r.description}</p>
+      <section style="margin-top: 2.5rem; border-top: 1px solid #e2dbd0; padding-top: 1.5rem;">
+        <h2 style="color: #1A1A1A; font-size: 1.3rem;">Explore All Rajasthan Luxury Travel Guides &amp; Itineraries</h2>
+        <ul style="line-height: 2; margin-top: 1rem;">
+          ${internalLinks}
+        </ul>
+      </section>
+    </main>
+    <footer style="padding: 2rem 1.5rem; background: #171410; color: #D9A441; text-align: center; margin-top: 3rem;">
+      <p>&copy; 2026 Dune Explorer. Luxury Rajasthan Tours &amp; Tailored Holidays.</p>
+    </footer>`;
+
+  // Inject semantic crawlable shell inside #root for search engine bots
+  html = html.replace('<div id="root"></div>', `<div id="root">${shellContent}</div>`);
+
   if (!r.path) {
     // Write root index.html
     fs.writeFileSync(path.join(distDir, 'index.html'), html, 'utf-8');
-    console.log(`[prerender] Updated root index.html with canonical: ${url}`);
+    console.log(`[prerender] Updated root index.html with crawlable shell and canonical: ${url}`);
   } else {
     // Write subpage index.html
     const targetDir = path.join(distDir, r.path);
@@ -211,8 +251,8 @@ for (const r of routes) {
       fs.mkdirSync(targetDir, { recursive: true });
     }
     fs.writeFileSync(path.join(targetDir, 'index.html'), html, 'utf-8');
-    console.log(`[prerender] Generated static HTML shell: ${r.path}/index.html (canonical: ${url})`);
+    console.log(`[prerender] Generated static HTML shell with crawlable internal links: ${r.path}/index.html`);
   }
 }
 
-console.log(`\n[prerender] Successfully generated static HTML shells for all ${routes.length} routes.`);
+console.log(`\n[prerender] Successfully generated static crawlable HTML shells for all ${routes.length} routes.`);

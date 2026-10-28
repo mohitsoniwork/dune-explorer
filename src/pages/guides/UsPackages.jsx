@@ -158,7 +158,7 @@ const UsPackages = () => {
           <div className="guide-layout">
             <article className="guide-article">
               <p className="guide-lead">
-                For American travelers, India’s royal state of Rajasthan is the ultimate journey into living history. From the pink stone courtyards of Jaipur and the romantic floating palaces of Udaipur to the golden sand dunes of the Thar Desert, our bespoke packages eliminate all travel friction with dedicated private chauffeurs, world-class heritage stays, and licensed regional historians.
+                For American travelers, India’s royal state of Rajasthan is the ultimate journey into living history. Curated by the destination team at <Link to="/" style={{ color: 'var(--color-sand)', fontWeight: 600 }}>Dune Explorer</Link>, our bespoke routes connect the pink stone courtyards of <Link to="/experience/1" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>Jaipur</Link> and the romantic floating palaces of <Link to="/experience/2" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>Udaipur</Link> to the rolling dunes of <Link to="/luxury-jaisalmer-desert-camps" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>Jaisalmer and the Thar Desert</Link>. Every journey eliminates travel friction with <Link to="/private-rajasthan-tour-driver-guide" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>dedicated private chauffeurs</Link>, <Link to="/rajasthan-palace-hotel-itinerary" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>iconic 5-star palace hotels</Link>, and licensed regional historians.
               </p>
 
               <h2>Curated Luxury Package Tiers in USD ($)</h2>
@@ -242,13 +242,38 @@ const UsPackages = () => {
 
               <h2>Best Travel Windows for US Guests</h2>
               <p>
-                The prime touring season in Rajasthan runs from <strong>October through March</strong>, when desert temperatures are pleasantly warm during the day (72°F to 82°F) and crisp at night. Popular booking windows for American travelers include:
+                The prime touring season in Rajasthan runs from <strong>October through March</strong>, when desert temperatures are pleasantly warm during the day (72°F to 82°F) and crisp at night. For month-by-month temperature details and festival calendars, read our dedicated <Link to="/best-time-to-visit-rajasthan" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>Best Time to Visit Rajasthan guide</Link>. Popular booking windows for American travelers include:
               </p>
               <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem', color: 'var(--color-text-deep)' }}>
-                <li><strong>Thanksgiving Week (Late November):</strong> Ideal for a condensed 9 to 10-day Golden Triangle and palace retreat.</li>
-                <li><strong>Christmas &amp; New Year Holidays:</strong> High festive demand across luxury palace hotels; booking 4 to 6 months in advance is essential.</li>
-                <li><strong>February &amp; March (Spring Season):</strong> Flawless sunny weather, blooming palace gardens, and the vibrant festival of Holi.</li>
+                <li><strong>Thanksgiving Week (Late November):</strong> Ideal for a condensed 9 to 10-day Golden Triangle and palace retreat, matching our <Link to="/10-day-luxury-rajasthan-itinerary" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>10-Day Classic Luxury Route</Link>.</li>
+                <li><strong>Christmas &amp; New Year Holidays:</strong> High festive demand across luxury palace hotels; booking our <Link to="/rajasthan-palace-hotel-itinerary" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>Palace Hotels Itinerary</Link> 4 to 6 months in advance is essential.</li>
+                <li><strong>February &amp; March (Spring Season):</strong> Flawless sunny weather, blooming palace gardens, and prime wildlife conditions for a <Link to="/luxury-ranthambore-tiger-safari" style={{ color: 'var(--color-sand)', textDecoration: 'underline' }}>Ranthambore Tiger Safari</Link>.</li>
               </ul>
+
+              <h2>Explore Other Regional &amp; International Guides</h2>
+              <p>
+                Browse our complete collection of bespoke itineraries and destination resources on <Link to="/" style={{ color: 'var(--color-sand)', fontWeight: 600 }}>Dune Explorer</Link>:
+              </p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.85rem', margin: '1.5rem 0' }}>
+                <Link to="/luxury-rajasthan-tour-packages-uk" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  UK &amp; European Packages &rarr;
+                </Link>
+                <Link to="/luxury-rajasthan-tour-packages-australia" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  Australian Guest Packages &rarr;
+                </Link>
+                <Link to="/luxury-rajasthan-tour-packages-japan" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  Japanese Traveler Packages &rarr;
+                </Link>
+                <Link to="/luxury-rajasthan-tour-cost" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  Tour Cost &amp; Price Tiers &rarr;
+                </Link>
+                <Link to="/guides" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  All Rajasthan Travel Guides &rarr;
+                </Link>
+                <Link to="/destinations" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
+                  All Royal Destinations &rarr;
+                </Link>
+              </div>
 
               {/* FAQ Section */}
               <div className="guide-faq-section">

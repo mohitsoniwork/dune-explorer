@@ -176,7 +176,7 @@ const GuidesHub = () => {
           >
             <h1>Luxury Rajasthan Travel Guides</h1>
             <p className="guides-hub-hero-desc">
-              Curated itineraries, transparent cost guides, palace hotel comparisons, and insider advice from our destination specialists to help you plan your royal Indian journey.
+              Curated itineraries, palace hotel insights, and insider advice for royal Indian journeys.
             </p>
           </motion.div>
         </div>

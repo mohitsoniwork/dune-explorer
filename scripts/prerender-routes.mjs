@@ -196,9 +196,104 @@ for (const r of routes) {
   html = html.replace(/<meta name="twitter:title" content=".*?" \/>/i, `<meta name="twitter:title" content="${r.title}" />`);
   html = html.replace(/<meta name="twitter:description" content=".*?" \/>/i, `<meta name="twitter:description" content="${r.description}" />`);
 
-  // Inject exact self-canonical and og:url tag before </head>
-  const metaTags = `\n    <link rel="canonical" href="${url}" />\n    <meta property="og:url" content="${url}" />\n  </head>`;
-  html = html.replace('</head>', metaTags);
+  // Update canonical and og:url
+  if (html.includes('<link rel="canonical"')) {
+    html = html.replace(/<link rel="canonical" href=".*?" \/>/i, `<link rel="canonical" href="${url}" />`);
+  } else {
+    html = html.replace('</head>', `\n    <link rel="canonical" href="${url}" />\n  </head>`);
+  }
+
+  if (html.includes('<meta property="og:url"')) {
+    html = html.replace(/<meta property="og:url" content=".*?" \/>/i, `<meta property="og:url" content="${url}" />`);
+  } else {
+    html = html.replace('</head>', `\n    <meta property="og:url" content="${url}" />\n  </head>`);
+  }
+
+  // Inject BreadcrumbList & Specific Schema.org JSON-LD for sub-routes
+  if (r.path) {
+    const cleanTitle = r.title.split('|')[0].trim();
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://duneexplorer.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": cleanTitle,
+          "item": url
+        }
+      ]
+    };
+
+    let pageSchema = null;
+    if (r.path === 'faq') {
+      pageSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is included in a luxury Rajasthan tour package?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our bespoke packages include luxury palace hotel accommodation (Taj Lake Palace, Rambagh Palace, etc.), private chauffeured luxury AC vehicles (Toyota Innova Crysta), government-licensed heritage historians and guides, monument fast-track entry, and 24/7 dedicated concierge assistance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When is the best time to visit Rajasthan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The prime season for luxury travel in Rajasthan is between October and March, offering warm sunny days and cool pleasant evenings perfect for fort exploration and desert safaris."
+            }
+          }
+        ]
+      };
+    } else if (r.path.includes('itinerary') || r.path.includes('packages') || r.path.includes('safari') || r.path.includes('camps') || r.path.includes('honeymoon')) {
+      pageSchema = {
+        "@context": "https://schema.org",
+        "@type": "TouristTrip",
+        "name": cleanTitle,
+        "description": r.description,
+        "touristType": ["Luxury Travelers", "Couples", "Honeymooners", "Cultural Explorers"],
+        "provider": {
+          "@type": "TravelAgency",
+          "name": "Dune Explorer",
+          "url": "https://duneexplorer.com"
+        }
+      };
+    } else {
+      pageSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": cleanTitle,
+        "description": r.description,
+        "author": {
+          "@type": "Organization",
+          "name": "Dune Explorer Specialists",
+          "url": "https://duneexplorer.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Dune Explorer",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://duneexplorer.com/logo.png"
+          }
+        },
+        "mainEntityOfPage": url
+      };
+    }
+
+    const subpageSchemas = `\n    <script type="application/ld+json">\n    ${JSON.stringify(breadcrumbSchema, null, 2)}\n    </script>\n    <script type="application/ld+json">\n    ${JSON.stringify(pageSchema, null, 2)}\n    </script>\n  </head>`;
+    html = html.replace('</head>', subpageSchemas);
+  }
 
   // Generate crawlable internal links mesh for Googlebot
   const internalLinks = routes

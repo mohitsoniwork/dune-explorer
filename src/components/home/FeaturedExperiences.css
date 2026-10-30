@@ -1,3 +1,5 @@
+/* Hallmark · v2.0.0 · theme: editorial · genre: editorial */
+
 .experiences-section {
   background-color: var(--color-light);
   overflow: hidden;
@@ -19,7 +21,7 @@
 /* Staggered vertical cadence on tablet & desktop */
 @media (min-width: 769px) {
   .experience-col-1 {
-    margin-top: 22px;
+    margin-top: 24px;
   }
 }
 
@@ -30,10 +32,10 @@
 }
 
 .experience-card {
-  background-color: white;
+  background-color: var(--color-ivory);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
   transition: var(--transition-smooth);
   height: 100%;
 }
@@ -74,9 +76,8 @@
   background-color: var(--color-dark);
   color: var(--color-ivory);
   padding: 0.25rem 0.75rem;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: var(--fs-micro);
+  font-weight: 500;
   border-radius: 4px;
 }
 
@@ -89,9 +90,8 @@
 
 .experience-type {
   color: var(--color-camel);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: var(--fs-small);
+  font-weight: 500;
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -138,7 +138,7 @@
 
 @media (max-width: 768px) {
   .experiences-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--spacing-md);
     padding: 0.5rem 0;
   }

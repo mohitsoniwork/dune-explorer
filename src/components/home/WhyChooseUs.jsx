@@ -143,7 +143,8 @@ const WhyChooseUs = () => {
                 src="/images/jodhpur-fort.webp"
                 alt="Mehrangarh Fort rising over the Blue City of Jodhpur"
                 className="why-image"
-                loading="lazy"
+                loading="eager"
+                fetchPriority="high"
               />
             </motion.div>
           </div>

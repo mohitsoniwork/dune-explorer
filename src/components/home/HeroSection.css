@@ -51,7 +51,7 @@
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(253, 251, 212, 0.35) 55%,
+    rgba(255, 241, 241, 0.35) 55%,
     var(--color-beige) 100%
   );
   z-index: 2;
@@ -63,8 +63,8 @@
   right: -10%;
   bottom: -6%;
   height: 34%;
-  background: radial-gradient(ellipse 55% 90% at 25% 100%, rgba(217, 164, 65, 0.55), transparent 70%),
-    radial-gradient(ellipse 45% 80% at 70% 100%, rgba(217, 164, 65, 0.45), transparent 70%);
+  background: radial-gradient(ellipse 55% 90% at 25% 100%, rgba(187, 135, 96, 0.55), transparent 70%),
+    radial-gradient(ellipse 45% 80% at 70% 100%, rgba(187, 135, 96, 0.45), transparent 70%);
   filter: blur(2px);
   z-index: 1;
   will-change: transform;

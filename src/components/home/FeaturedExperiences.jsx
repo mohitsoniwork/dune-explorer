@@ -63,7 +63,7 @@ const FeaturedExperiences = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
           >
-            Curated private journeys through Rajasthan's palaces, dunes, and wilderness.
+            Curated private journeys through Rajasthan’s palaces, dunes, and wilderness.
           </motion.p>
         </div>
 
@@ -107,7 +107,8 @@ const FeaturedExperiences = () => {
                           src={exp.heroImage}
                           alt={exp.title}
                           className="experience-image"
-                          loading="lazy"
+                          loading={index === 0 ? "eager" : "lazy"}
+                          fetchPriority={index === 0 ? "high" : "auto"}
                         />
                         <div className="experience-badge">{exp.duration}</div>
                       </div>

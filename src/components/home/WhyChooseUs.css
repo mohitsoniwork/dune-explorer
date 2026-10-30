@@ -84,7 +84,6 @@
   color: var(--color-gold);
   font-size: var(--fs-micro);
   font-weight: 500;
-  letter-spacing: 0.04em;
   transition: var(--transition-smooth);
 }
 
@@ -135,6 +134,17 @@
 
   .why-image-wrapper {
     order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-image-wrapper::before {
+    display: none;
+  }
+
+  .why-image {
+    min-height: 280px;
+    max-height: 360px;
   }
 }
 

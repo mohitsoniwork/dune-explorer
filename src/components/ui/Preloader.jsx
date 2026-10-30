@@ -211,7 +211,7 @@ const Preloader = ({ isLoading, onComplete }) => {
                         <span className="preloader-caption-total">
                           0{LOADER_DESTINATIONS.length}
                         </span>
-                        <span className="preloader-caption-dash">—</span>
+                        <span className="preloader-caption-dash">·</span>
                         <span className="preloader-caption-city">
                           {currentDestination.name}
                         </span>

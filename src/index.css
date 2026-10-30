@@ -1,33 +1,39 @@
 /* Hallmark · v2.0.0 · theme: editorial · genre: editorial */
 
 :root {
-  /* Color Palette - Spiced Chai, beige-forward with AA-safe accents */
-  --color-beige: #FDFBD4;
-  --color-ivory: #FFFDF0;
-  --color-marble: #F7F6F1;
-  --color-light: #FDFBD4;
-  --color-cream: #F4F0CE;
-  --color-sand: #8D5A2B;
-  --color-maroon: #6E4A1F;
-  --color-camel: #8C5A10;   /* AA-safe (5.6:1) on beige */
-  --color-gold: #D9A441;    /* display gold for dark sections */
+  /* Color Palette - Royal Rajasthan Jaipur Rose & Terracotta */
+  --color-beige: #FFF1F1;
+  --color-ivory: #FFF1F1;
+  --color-marble: #FFF1F1;
+  --color-light: #FFF1F1;
+  --color-cream: #FFDADA;
+  --color-sand: #BB8760;
+  --color-maroon: #4F0E0E;
+  --color-camel: #BB8760;
+  --color-gold: #BB8760;
   --color-dark: #1A1A1A;
-  --color-bg-dark: #171410; /* warm near-black dark section */
+  --color-bg-dark: #171410; /* warm near-black dark section - preserved */
   --color-bg-dark-2: #221C12;
   --color-text-body: #3C3A33;
   --color-text-muted: #666666;
-  --color-focus-ring: rgba(140, 90, 16, 0.25);
+  --color-focus-ring: rgba(79, 14, 14, 0.25);
   --color-whatsapp: #25D366;
-  --color-border-subtle: rgba(217, 164, 65, 0.25);
-  --color-border-card: rgba(140, 90, 16, 0.15);
-  --color-border-card-subtle: rgba(140, 90, 16, 0.12);
-  --color-border-card-strong: rgba(140, 90, 16, 0.25);
-  --color-border-dark-subtle: rgba(253, 251, 212, 0.1);
+  --color-border-subtle: rgba(187, 135, 96, 0.28);
+  --color-border-card: rgba(79, 14, 14, 0.12);
+  --color-border-card-subtle: rgba(79, 14, 14, 0.08);
+  --color-border-card-strong: rgba(79, 14, 14, 0.22);
+  --color-border-dark-subtle: rgba(255, 241, 241, 0.12);
   --color-overlay-dark: rgba(23, 20, 16, 0.65);
   --color-text-dim: #635B4F;
   --color-text-deep: #4B453D;
   --color-forest: #2F6F4F;
   --color-ocean: #4A7C8C;
+
+  /* 3D Tactile Button Tokens */
+  --btn-3d-primary-edge: #350909;
+  --btn-3d-primary-shadow: rgba(79, 14, 14, 0.28);
+  --btn-3d-light-edge: rgba(187, 135, 96, 0.35);
+  --btn-3d-light-shadow: rgba(79, 14, 14, 0.12);
 
   /* Typography */
   --font-heading: 'Playfair Display', serif;
@@ -181,7 +187,6 @@ textarea:focus-visible {
 .section-subtitle {
   color: var(--color-camel);
   font-family: var(--font-body);
-  letter-spacing: 0.5px;
   font-size: var(--fs-small);
   font-weight: 600;
 }
@@ -201,7 +206,7 @@ textarea:focus-visible {
   text-align: center;
 }
 
-/* Buttons */
+/* Buttons with 3D tactile elevation and mechanical click */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -210,56 +215,90 @@ textarea:focus-visible {
   padding: 0.95rem 2rem;
   font-family: var(--font-body);
   font-weight: 600;
-  letter-spacing: 0.5px;
   border: 1px solid transparent;
   cursor: pointer;
   border-radius: 999px;
-  transition: var(--transition-smooth);
+  transition: transform 0.16s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.16s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.16s ease, color 0.16s ease;
   background: transparent;
   font-size: 0.85rem;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  will-change: transform, box-shadow;
 }
 
 .btn-primary {
-  background-color: var(--color-camel);
+  background-color: var(--color-maroon);
   color: var(--color-ivory);
+  box-shadow: 0 4px 0 var(--btn-3d-primary-edge), 0 8px 18px var(--btn-3d-primary-shadow);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-dark);
+  background-color: var(--color-maroon);
+  filter: brightness(1.18);
+  color: var(--color-ivory);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 6px 0 var(--btn-3d-primary-edge), 0 12px 24px var(--btn-3d-primary-shadow);
+}
+
+.btn-primary:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--btn-3d-primary-edge), 0 3px 6px var(--btn-3d-primary-shadow);
 }
 
 .btn-outline {
-  border: 1px solid var(--color-dark);
+  background-color: var(--color-ivory);
+  border: 1px solid var(--color-border-card);
   color: var(--color-dark);
+  box-shadow: 0 4px 0 var(--btn-3d-light-edge), 0 8px 16px var(--btn-3d-light-shadow);
 }
 
 .btn-outline:hover {
-  background-color: var(--color-dark);
-  color: var(--color-ivory);
+  background-color: var(--color-cream);
+  color: var(--color-maroon);
   transform: translateY(-2px);
+  box-shadow: 0 6px 0 var(--btn-3d-light-edge), 0 12px 22px var(--btn-3d-light-shadow);
+}
+
+.btn-outline:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--btn-3d-light-edge), 0 3px 6px var(--btn-3d-light-shadow);
 }
 
 .btn-light {
-  border: 1px solid var(--color-ivory);
-  color: var(--color-ivory);
+  background-color: var(--color-ivory);
+  border: 1px solid var(--color-border-card-subtle);
+  color: var(--color-dark);
+  box-shadow: 0 4px 0 var(--btn-3d-light-edge), 0 8px 18px var(--btn-3d-light-shadow);
 }
 
 .btn-light:hover {
-  background-color: var(--color-ivory);
-  color: var(--color-dark);
+  background-color: var(--color-cream);
+  color: var(--color-maroon);
   transform: translateY(-2px);
+  box-shadow: 0 6px 0 var(--btn-3d-light-edge), 0 12px 22px var(--btn-3d-light-shadow);
+}
+
+.btn-light:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--btn-3d-light-edge), 0 3px 6px var(--btn-3d-light-shadow);
 }
 
 .btn-dark-section {
   border: 1px solid var(--color-gold);
   color: var(--color-gold);
+  box-shadow: 0 4px 0 var(--color-border-subtle), 0 8px 18px var(--btn-3d-primary-shadow);
 }
 
 .btn-dark-section:hover {
   background-color: var(--color-gold);
   color: var(--color-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 var(--color-border-subtle), 0 12px 22px var(--btn-3d-primary-shadow);
+}
+
+.btn-dark-section:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--color-border-subtle), 0 3px 6px var(--btn-3d-primary-shadow);
 }
 
 /* Inputs & Forms */
@@ -269,11 +308,9 @@ textarea:focus-visible {
 
 .form-label {
   display: block;
-  font-size: var(--fs-micro);
-  font-weight: 600;
+  font-size: var(--fs-small);
+  font-weight: 500;
   margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
   color: var(--color-dark);
 }
 

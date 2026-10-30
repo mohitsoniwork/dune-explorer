@@ -1,18 +1,13 @@
 import { Link } from 'react-router-dom';
 
 const StickyMobileCta = () => (
-  <div className="sticky-mobile-cta">
+  <div className="sticky-mobile-cta" role="region" aria-label="Quick actions">
     <Link to="/plan-journey" className="btn btn-primary">
       Plan Your Journey
     </Link>
-    <a
-      href="https://wa.me/916375060566"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="btn btn-outline"
-    >
-      WhatsApp
-    </a>
+    <Link to="/contact" className="btn btn-outline">
+      Contact Us
+    </Link>
   </div>
 );
 

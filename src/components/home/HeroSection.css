@@ -51,7 +51,7 @@
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(255, 241, 241, 0.35) 55%,
+    var(--color-oxblood-dune) 55%,
     var(--color-beige) 100%
   );
   z-index: 2;

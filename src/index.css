@@ -1,37 +1,46 @@
 /* Hallmark · v2.0.0 · theme: editorial · genre: editorial */
 
 :root {
-  /* Color Palette - Royal Rajasthan Jaipur Rose & Terracotta */
-  --color-beige: #FFF1F1;
+  /* Color Palette - Royal Rajasthan Jaime Oxblood & Rose Interchange */
+  --color-beige: #4F0E0E; /* Interchanged: was light pink, now royal oxblood #4F0E0E */
   --color-ivory: #FFF1F1;
-  --color-marble: #FFF1F1;
-  --color-light: #FFF1F1;
-  --color-cream: #FFDADA;
+  --color-marble: #FFF1F1; /* Ivory for dark-section readability */
+  --color-light: #4F0E0E; /* Interchanged: was light pink, now royal oxblood #4F0E0E */
+  --color-cream: #4F0E0E; /* Interchanged: was light pink #FFDADA, now royal maroon #4F0E0E */
   --color-sand: #BB8760;
-  --color-maroon: #4F0E0E;
+  --color-maroon: #FFDADA; /* Interchanged: was royal maroon #4F0E0E, now light pink #FFDADA */
+  --color-oxblood: #4F0E0E;
+  --color-pink-soft: #FFDADA;
+  --color-pink-active: #F0C4C4;
   --color-camel: #BB8760;
   --color-gold: #BB8760;
   --color-dark: #1A1A1A;
   --color-bg-dark: #171410; /* warm near-black dark section - preserved */
   --color-bg-dark-2: #221C12;
-  --color-text-body: #3C3A33;
-  --color-text-muted: #666666;
+  --color-bg-light: rgba(255, 241, 241, 0.08);
+  --color-text-primary: #FFF1F1;
+  --color-text-secondary: #FFDADA;
+  --color-text-body: #F7EAEA;
+  --color-text-muted: #D9BEBE;
   --color-focus-ring: rgba(79, 14, 14, 0.25);
-  --color-whatsapp: #25D366;
-  --color-border-subtle: rgba(187, 135, 96, 0.28);
-  --color-border-card: rgba(79, 14, 14, 0.12);
-  --color-border-card-subtle: rgba(79, 14, 14, 0.08);
-  --color-border-card-strong: rgba(79, 14, 14, 0.22);
+  --color-oxblood-dune: rgba(79, 14, 14, 0.35);
+  --color-whatsapp: #1E6B47;
+  --color-whatsapp-edge: #144A31;
+  --color-border-subtle: rgba(187, 135, 96, 0.38);
+  --color-border-card: rgba(187, 135, 96, 0.45);
+  --color-border-card-subtle: rgba(187, 135, 96, 0.28);
+  --color-border-card-strong: var(--color-sand);
   --color-border-dark-subtle: rgba(255, 241, 241, 0.12);
+  --color-surface-tint: rgba(255, 241, 241, 0.5);
   --color-overlay-dark: rgba(23, 20, 16, 0.65);
   --color-text-dim: #635B4F;
   --color-text-deep: #4B453D;
   --color-forest: #2F6F4F;
   --color-ocean: #4A7C8C;
 
-  /* 3D Tactile Button Tokens */
-  --btn-3d-primary-edge: #350909;
-  --btn-3d-primary-shadow: rgba(79, 14, 14, 0.28);
+  /* 3D Tactile Button Tokens (calibrated for light pink primary button with maroon text) */
+  --btn-3d-primary-edge: #C89999;
+  --btn-3d-primary-shadow: rgba(79, 14, 14, 0.22);
   --btn-3d-light-edge: rgba(187, 135, 96, 0.35);
   --btn-3d-light-shadow: rgba(79, 14, 14, 0.12);
 
@@ -99,7 +108,7 @@ html.lenis body {
 body {
   font-family: var(--font-body);
   background-color: var(--color-light);
-  color: var(--color-dark);
+  color: var(--color-ivory);
   line-height: 1.7;
   font-size: var(--fs-body);
   -webkit-font-smoothing: antialiased;
@@ -111,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 600;
   line-height: 1.15;
-  color: var(--color-dark);
+  color: var(--color-ivory);
 }
 
 h1 { font-size: var(--fs-hero); }
@@ -192,7 +201,8 @@ textarea:focus-visible {
 }
 
 .section-description {
-  color: var(--color-text-muted);
+  color: var(--color-pink-soft);
+  opacity: 0.9;
   font-family: var(--font-body);
   font-size: var(--fs-body);
   max-width: 600px;
@@ -228,19 +238,19 @@ textarea:focus-visible {
 
 .btn-primary {
   background-color: var(--color-maroon);
-  color: var(--color-ivory);
+  color: var(--color-oxblood);
   box-shadow: 0 4px 0 var(--btn-3d-primary-edge), 0 8px 18px var(--btn-3d-primary-shadow);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-maroon);
-  filter: brightness(1.18);
-  color: var(--color-ivory);
+  background-color: var(--color-ivory);
+  color: var(--color-oxblood);
   transform: translateY(-2px);
   box-shadow: 0 6px 0 var(--btn-3d-primary-edge), 0 12px 24px var(--btn-3d-primary-shadow);
 }
 
 .btn-primary:active {
+  background-color: var(--color-pink-active);
   transform: translateY(3px);
   box-shadow: 0 1px 0 var(--btn-3d-primary-edge), 0 3px 6px var(--btn-3d-primary-shadow);
 }

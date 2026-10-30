@@ -70,7 +70,7 @@ const Footer = () => {
           <h3>Contact Us</h3>
           <p>Email: <a href="mailto:info@duneexplorer.com" style={{ color: 'inherit', textDecoration: 'none' }}>info@duneexplorer.com</a></p>
           <p>Phone: +91 63750 60566</p>
-          <a href="https://wa.me/916375060566" target="_blank" rel="noopener noreferrer" className="btn btn-outline whatsapp-btn">
+          <a href="https://wa.me/916375060566" target="_blank" rel="noopener noreferrer" className="btn whatsapp-btn">
             <MessageCircle size={18} aria-hidden="true" /> Chat on WhatsApp
           </a>
         </div>

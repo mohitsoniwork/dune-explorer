@@ -11,8 +11,10 @@ const PlanJourney = () => {
   return (
     <div className="section container" style={{ paddingTop: 'var(--header-height)', paddingBottom: '80px', minHeight: '80vh' }}>
       <div className="text-center" style={{ marginBottom: '3rem' }}>
-        <h1 style={{ fontSize: '3rem', color: 'var(--color-dark)' }}>Design Your Custom Rajasthan Tour</h1>
-        <p style={{ color: 'var(--color-camel)', letterSpacing: '2px', textTransform: 'uppercase' }}>
+        <h1 style={{ fontSize: 'clamp(2.2rem, 4vw, 3.25rem)', color: 'var(--color-ivory)', fontFamily: 'var(--font-heading)', textWrap: 'balance' }}>
+          Design Your Custom Rajasthan Tour
+        </h1>
+        <p style={{ color: 'var(--color-camel)', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem', marginTop: '0.75rem', fontWeight: 500 }}>
           Tell us your preferences and we'll craft the perfect Rajasthan experience
         </p>
       </div>

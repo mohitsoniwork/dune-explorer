@@ -1,3 +1,5 @@
+/* Hallmark · v2.0.0 · theme: editorial · genre: editorial */
+
 .stories-page {
   min-height: 100vh;
 }
@@ -76,14 +78,14 @@
 .stories-body p {
   font-size: 1.1rem;
   line-height: 1.95;
-  color: var(--color-text-secondary, #4a4a4a);
+  color: var(--color-ivory);
   margin-bottom: 1.75rem;
 }
 
 .stories-body p.stories-emphasis {
   font-weight: 600;
   font-style: italic;
-  color: var(--color-text-primary, #1a1a1a);
+  color: var(--color-sand);
   font-size: 1.15rem;
   text-align: center;
   margin: 2.5rem 0;
@@ -93,21 +95,21 @@
 .stories-quote {
   margin: 3rem 0;
   padding: 2rem 2.5rem;
-  border-left: 4px solid var(--color-accent, #d4a853);
-  background: var(--color-bg-light, #faf8f5);
+  border-left: 4px solid var(--color-camel);
+  background: var(--color-border-dark-subtle);
   border-radius: 0 12px 12px 0;
   font-size: 1.15rem;
   font-style: italic;
   line-height: 1.8;
-  color: var(--color-text-primary, #1a1a1a);
+  color: var(--color-ivory);
   font-weight: 500;
 }
 
 .stories-quote-final {
   text-align: center;
   border-left: none;
-  border-top: 2px solid var(--color-accent, #d4a853);
-  border-bottom: 2px solid var(--color-accent, #d4a853);
+  border-top: 2px solid var(--color-camel);
+  border-bottom: 2px solid var(--color-camel);
   border-radius: 0;
   padding: 2.5rem 2rem;
 }
@@ -116,7 +118,7 @@
 .stories-closing {
   padding: 4rem 1rem 5rem;
   text-align: center;
-  background: var(--color-bg-light, #faf8f5);
+  background: var(--color-border-dark-subtle);
 }
 
 .stories-closing-content {
@@ -127,13 +129,13 @@
 .stories-closing-content > p {
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--color-text-primary, #1a1a1a);
+  color: var(--color-ivory);
   margin-bottom: 1rem;
 }
 
 .stories-closing-cta {
   font-size: 1.05rem;
-  color: var(--color-text-secondary, #4a4a4a);
+  color: var(--color-pink-soft);
   line-height: 1.7;
   margin-bottom: 2rem;
 }
@@ -146,13 +148,13 @@
 
 .stories-closing-brand strong {
   font-size: 1.4rem;
-  color: var(--color-text-primary, #1a1a1a);
+  color: var(--color-ivory);
 }
 
 .stories-closing-brand span {
   font-size: 1rem;
   font-style: italic;
-  color: var(--color-accent, #d4a853);
+  color: var(--color-sand);
 }
 
 /* Responsive */

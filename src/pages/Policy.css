@@ -17,7 +17,7 @@
 
 .policy-container h1 {
   font-family: var(--font-heading);
-  color: var(--color-maroon);
+  color: var(--color-dark);
   font-size: 2.5rem;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
@@ -37,7 +37,7 @@
 .policy-content h3, 
 .policy-content h4 {
   font-family: var(--font-heading);
-  color: var(--color-maroon);
+  color: var(--color-dark);
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   overflow-wrap: break-word;
@@ -98,8 +98,8 @@
 }
 
 .policy-table thead {
-  background: var(--color-maroon);
-  color: var(--color-cream);
+  background: var(--color-oxblood);
+  color: var(--color-ivory);
 }
 
 .policy-table th {
@@ -115,7 +115,7 @@
 }
 
 .policy-table tbody tr:nth-child(even) {
-  background: var(--color-cream);
+  background: var(--color-surface-tint);
 }
 
 .policy-table tbody tr:last-child td {

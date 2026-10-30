@@ -78,14 +78,14 @@
 .style-detail-body p {
   font-size: 1.1rem;
   line-height: 1.9;
-  color: var(--color-text-secondary, #4a4a4a);
+  color: var(--color-ivory);
   margin-bottom: 1.75rem;
 }
 
 .style-detail-body p.style-detail-closing {
   font-style: italic;
   font-weight: 500;
-  color: var(--color-text-primary, #1a1a1a);
+  color: var(--color-sand);
 }
 
 /* CTA */

@@ -56,7 +56,7 @@
 
 .guides-hub-hero-desc {
   font-size: 1.05rem;
-  color: var(--color-cream);
+  color: var(--color-maroon);
   line-height: 1.65;
   max-width: 680px;
   margin: 0 auto;
@@ -98,8 +98,8 @@
 
 .guides-filter-btn {
   background: transparent;
-  border: 1px solid var(--color-border-card);
-  color: var(--color-dark);
+  border: 1px solid var(--color-border-dark-subtle);
+  color: var(--color-ivory);
   padding: 0.55rem 1.15rem;
   border-radius: 9999px;
   font-size: 0.85rem;
@@ -112,7 +112,8 @@
 
 .guides-filter-btn:hover {
   border-color: var(--color-sand);
-  background: var(--color-cream);
+  background: var(--color-border-dark-subtle);
+  color: var(--color-ivory);
 }
 
 .guides-filter-btn.active {
@@ -156,7 +157,7 @@
 
 .guide-card {
   background: var(--color-ivory);
-  border: 1px solid var(--color-border-card-subtle);
+  border: 1.5px solid var(--color-sand);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
@@ -212,7 +213,7 @@
   top: 1rem;
   left: 1rem;
   background: var(--color-dark);
-  color: var(--color-cream);
+  color: var(--color-maroon);
   font-size: 0.75rem;
   font-weight: 500;
   padding: 0.3rem 0.75rem;
@@ -327,7 +328,7 @@
 
 .guide-card-link:hover {
   gap: 0.75rem;
-  color: var(--color-maroon);
+  color: var(--color-gold);
 }
 
 .guide-card-link:focus-visible {
@@ -342,7 +343,7 @@
 
 .guides-hub-cta-card {
   background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-dark-2) 100%);
-  color: var(--color-cream);
+  color: var(--color-ivory);
   border-radius: var(--radius);
   padding: 3rem 2rem;
   text-align: center;
@@ -375,7 +376,8 @@
 }
 
 .guides-hub-cta-card p {
-  color: var(--color-cream);
+  color: var(--color-ivory);
+  opacity: 0.9;
   font-size: 1.02rem;
   max-width: 650px;
   margin: 0 auto 1.8rem;

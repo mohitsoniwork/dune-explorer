@@ -1,7 +1,8 @@
 .multistep-form-container {
-  background: white;
+  background: var(--color-ivory);
+  border: 1.5px solid var(--color-sand);
   border-radius: 12px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
   padding: var(--spacing-lg);
   max-width: 800px;
   margin: 0 auto;

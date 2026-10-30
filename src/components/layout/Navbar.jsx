@@ -1,69 +1,41 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, ArrowRight, Compass, Sparkles } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import './Navbar.css';
 
+const destinationsList = [
+  { to: '/destinations#jaipur', label: 'Jaipur' },
+  { to: '/destinations#udaipur', label: 'Udaipur' },
+  { to: '/destinations#jodhpur', label: 'Jodhpur' },
+  { to: '/destinations#jaisalmer', label: 'Jaisalmer' },
+  { to: '/destinations#ranthambore', label: 'Ranthambore' },
+  { to: '/destinations#pushkar', label: 'Pushkar' },
+  { to: '/destinations', label: 'All Destinations', isAll: true },
+];
+
+const experiencesList = [
+  { to: '/experience/1', label: 'Royal Jaipur' },
+  { to: '/experience/2', label: 'Jaisalmer Safari' },
+  { to: '/experience/3', label: 'Udaipur Luxury' },
+  { to: '/styles/desert', label: 'Desert Adventures' },
+  { to: '/styles/wildlife', label: 'Wildlife & Safari' },
+  { to: '/styles/heritage', label: 'Heritage & Palaces' },
+  { to: '/styles/luxury', label: 'Luxury Escapes' },
+  { to: '/experiences', label: 'All Experiences', isAll: true },
+];
+
 const guidesList = [
-  {
-    to: '/10-day-luxury-rajasthan-itinerary',
-    label: '10-Day Classic Itinerary',
-    tag: 'Flagship',
-    desc: 'Delhi, Agra, Jaipur, Jodhpur & Udaipur',
-  },
-  {
-    to: '/rajasthan-palace-hotel-itinerary',
-    label: 'Palace Hotels & Stays',
-    tag: 'Palaces',
-    desc: 'Taj Lake Palace, Rambagh & Umaid Bhawan',
-  },
-  {
-    to: '/luxury-rajasthan-tour-cost',
-    label: 'Luxury Tour Cost Guide',
-    tag: 'Pricing',
-    desc: 'Price tiers, driver costs & VIP tickets',
-  },
-  {
-    to: '/best-time-to-visit-rajasthan',
-    label: 'Best Time to Visit',
-    tag: 'Seasons',
-    desc: 'Climate, wildlife seasons & festivals',
-  },
-  {
-    to: '/luxury-jaisalmer-desert-camps',
-    label: 'Thar Desert Luxury Camps',
-    tag: 'Glamping',
-    desc: 'SUJÁN The Serai & private dune camps',
-  },
-  {
-    to: '/luxury-ranthambore-tiger-safari',
-    label: 'Ranthambore Tiger Safari',
-    tag: 'Wildlife',
-    desc: 'Private 4x4 Gypsy & Aman-i-Khás',
-  },
-  {
-    to: '/rajasthan-luxury-honeymoon',
-    label: 'Royal Honeymoon Tour',
-    tag: 'Romance',
-    desc: 'Candlelit lakes, palaces & desert stars',
-  },
-  {
-    to: '/palace-on-wheels-vs-royal-rajasthan',
-    label: 'Palace on Wheels & Trains',
-    tag: 'Rail',
-    desc: 'Heritage train suites & routes compared',
-  },
-  {
-    to: '/private-rajasthan-tour-driver-guide',
-    label: 'Private Chauffeur Guide',
-    tag: 'Chauffeur',
-    desc: 'Vetted drivers, fleet & road etiquette',
-  },
-  {
-    to: '/luxury-rajasthan-tour-packages-uk',
-    label: 'UK & Overseas Packages',
-    tag: 'Global',
-    desc: 'Direct flights, visas & VIP arrival',
-  },
+  { to: '/10-day-luxury-rajasthan-itinerary', label: '10-Day Classic Itinerary' },
+  { to: '/rajasthan-palace-hotel-itinerary', label: 'Palace Hotels & Stays' },
+  { to: '/luxury-rajasthan-tour-cost', label: 'Tour Cost Guide' },
+  { to: '/best-time-to-visit-rajasthan', label: 'Best Time to Visit' },
+  { to: '/luxury-jaisalmer-desert-camps', label: 'Desert Luxury Camps' },
+  { to: '/luxury-ranthambore-tiger-safari', label: 'Tiger Safari Guide' },
+  { to: '/rajasthan-luxury-honeymoon', label: 'Royal Honeymoon' },
+  { to: '/palace-on-wheels-vs-royal-rajasthan', label: 'Luxury Trains' },
+  { to: '/private-rajasthan-tour-driver-guide', label: 'Private Chauffeur' },
+  { to: '/luxury-rajasthan-tour-packages-uk', label: 'International Tours' },
+  { to: '/guides', label: 'All Travel Guides', isAll: true },
 ];
 
 const transparentHeroRoutes = [
@@ -92,10 +64,19 @@ const transparentHeroRoutes = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  const [isDestinationsOpen, setIsDestinationsOpen] = useState(false);
+  const [mobileDestinationsOpen, setMobileDestinationsOpen] = useState(false);
+  const destinationsTimeoutRef = useRef(null);
+
+  const [isExperiencesOpen, setIsExperiencesOpen] = useState(false);
+  const [mobileExperiencesOpen, setMobileExperiencesOpen] = useState(false);
+  const experiencesTimeoutRef = useRef(null);
+
   const [isGuidesOpen, setIsGuidesOpen] = useState(false);
   const [mobileGuidesOpen, setMobileGuidesOpen] = useState(false);
-
   const guidesTimeoutRef = useRef(null);
+
   const location = useLocation();
   const [prevPath, setPrevPath] = useState(location.pathname);
 
@@ -103,6 +84,10 @@ const Navbar = () => {
   if (location.pathname !== prevPath) {
     setPrevPath(location.pathname);
     setIsOpen(false);
+    setIsDestinationsOpen(false);
+    setMobileDestinationsOpen(false);
+    setIsExperiencesOpen(false);
+    setMobileExperiencesOpen(false);
     setIsGuidesOpen(false);
     setMobileGuidesOpen(false);
   }
@@ -116,14 +101,48 @@ const Navbar = () => {
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
+    if (isOpen) {
+      document.body.classList.add('mobile-nav-open');
+    } else {
+      document.body.classList.remove('mobile-nav-open');
+    }
     return () => {
       document.body.style.overflow = '';
+      document.body.classList.remove('mobile-nav-open');
     };
   }, [isOpen]);
+
+  const handleDestinationsMouseEnter = () => {
+    if (destinationsTimeoutRef.current) clearTimeout(destinationsTimeoutRef.current);
+    setIsDestinationsOpen(true);
+    setIsExperiencesOpen(false);
+    setIsGuidesOpen(false);
+  };
+
+  const handleDestinationsMouseLeave = () => {
+    destinationsTimeoutRef.current = setTimeout(() => {
+      setIsDestinationsOpen(false);
+    }, 180);
+  };
+
+  const handleExperiencesMouseEnter = () => {
+    if (experiencesTimeoutRef.current) clearTimeout(experiencesTimeoutRef.current);
+    setIsExperiencesOpen(true);
+    setIsDestinationsOpen(false);
+    setIsGuidesOpen(false);
+  };
+
+  const handleExperiencesMouseLeave = () => {
+    experiencesTimeoutRef.current = setTimeout(() => {
+      setIsExperiencesOpen(false);
+    }, 180);
+  };
 
   const handleGuidesMouseEnter = () => {
     if (guidesTimeoutRef.current) clearTimeout(guidesTimeoutRef.current);
     setIsGuidesOpen(true);
+    setIsDestinationsOpen(false);
+    setIsExperiencesOpen(false);
   };
 
   const handleGuidesMouseLeave = () => {
@@ -139,6 +158,11 @@ const Navbar = () => {
 
   // When on top of hero pages: transparent blended navbar. When scrolled: solid luxury dark navbar.
   const isTransparent = !isScrolled && hasHero && !isOpen;
+  const isDestinationsActive = location.pathname === '/destinations';
+  const isExperiencesActive =
+    location.pathname === '/experiences' ||
+    location.pathname.startsWith('/experience/') ||
+    location.pathname.startsWith('/styles/');
   const isGuidesActive =
     location.pathname === '/guides' ||
     guidesList.some((g) => location.pathname === g.to);
@@ -169,21 +193,131 @@ const Navbar = () => {
               Home
             </NavLink>
 
-            <NavLink
-              to="/destinations"
-              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-              onClick={() => setIsOpen(false)}
+            {/* Destinations Dropdown */}
+            <div
+              className={`nav-dropdown-item dropdown-destinations ${isDestinationsOpen ? 'dropdown-open' : ''} ${isDestinationsActive ? 'active' : ''}`}
+              onMouseEnter={handleDestinationsMouseEnter}
+              onMouseLeave={handleDestinationsMouseLeave}
             >
-              Destinations
-            </NavLink>
+              <div className="nav-dropdown-trigger-row">
+                <NavLink
+                  to="/destinations"
+                  className={({ isActive }) => `nav-link nav-link-dropdown ${isActive || isDestinationsActive ? 'active' : ''}`}
+                  onClick={() => {
+                    setIsOpen(false);
+                    setIsDestinationsOpen(false);
+                  }}
+                >
+                  Destinations
+                  <ChevronDown size={14} className={`dropdown-chevron ${isDestinationsOpen || mobileDestinationsOpen ? 'rotated' : ''}`} />
+                </NavLink>
 
-            <NavLink
-              to="/experiences"
-              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-              onClick={() => setIsOpen(false)}
+                <button
+                  type="button"
+                  className="mobile-dropdown-toggle-btn"
+                  aria-label="Toggle destinations menu"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setMobileDestinationsOpen(!mobileDestinationsOpen);
+                  }}
+                >
+                  <ChevronDown size={18} className={`chevron-mobile ${mobileDestinationsOpen ? 'rotated' : ''}`} />
+                </button>
+              </div>
+
+              {/* Desktop Sleek Dropdown */}
+              <div className={`nav-simple-dropdown ${isDestinationsOpen ? 'visible' : ''}`}>
+                <div className="nav-simple-menu-inner">
+                  {destinationsList.map((item) => (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      className={`nav-simple-item ${item.isAll ? 'nav-simple-all' : ''}`}
+                      onClick={() => setIsDestinationsOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile Drawer Submenu */}
+              <div className={`mobile-submenu ${mobileDestinationsOpen ? 'open' : ''}`}>
+                {destinationsList.map((item) => (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    className="mobile-submenu-item"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <span>{item.label}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Experiences Dropdown */}
+            <div
+              className={`nav-dropdown-item dropdown-experiences ${isExperiencesOpen ? 'dropdown-open' : ''} ${isExperiencesActive ? 'active' : ''}`}
+              onMouseEnter={handleExperiencesMouseEnter}
+              onMouseLeave={handleExperiencesMouseLeave}
             >
-              Experiences
-            </NavLink>
+              <div className="nav-dropdown-trigger-row">
+                <NavLink
+                  to="/experiences"
+                  className={({ isActive }) => `nav-link nav-link-dropdown ${isActive || isExperiencesActive ? 'active' : ''}`}
+                  onClick={() => {
+                    setIsOpen(false);
+                    setIsExperiencesOpen(false);
+                  }}
+                >
+                  Experiences
+                  <ChevronDown size={14} className={`dropdown-chevron ${isExperiencesOpen || mobileExperiencesOpen ? 'rotated' : ''}`} />
+                </NavLink>
+
+                <button
+                  type="button"
+                  className="mobile-dropdown-toggle-btn"
+                  aria-label="Toggle experiences menu"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setMobileExperiencesOpen(!mobileExperiencesOpen);
+                  }}
+                >
+                  <ChevronDown size={18} className={`chevron-mobile ${mobileExperiencesOpen ? 'rotated' : ''}`} />
+                </button>
+              </div>
+
+              {/* Desktop Sleek Dropdown */}
+              <div className={`nav-simple-dropdown ${isExperiencesOpen ? 'visible' : ''}`}>
+                <div className="nav-simple-menu-inner">
+                  {experiencesList.map((item) => (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      className={`nav-simple-item ${item.isAll ? 'nav-simple-all' : ''}`}
+                      onClick={() => setIsExperiencesOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile Drawer Submenu */}
+              <div className={`mobile-submenu ${mobileExperiencesOpen ? 'open' : ''}`}>
+                {experiencesList.map((item) => (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    className="mobile-submenu-item"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <span>{item.label}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
 
             <NavLink
               to="/stories"
@@ -195,7 +329,7 @@ const Navbar = () => {
 
             {/* Guides (2nd Last Position) with Dropdown */}
             <div
-              className={`nav-dropdown-item ${isGuidesOpen ? 'dropdown-open' : ''} ${isGuidesActive ? 'active' : ''}`}
+              className={`nav-dropdown-item dropdown-guides ${isGuidesOpen ? 'dropdown-open' : ''} ${isGuidesActive ? 'active' : ''}`}
               onMouseEnter={handleGuidesMouseEnter}
               onMouseLeave={handleGuidesMouseLeave}
             >
@@ -226,84 +360,24 @@ const Navbar = () => {
                 </button>
               </div>
 
-              {/* Desktop Mega Dropdown Menu */}
-              <div className={`nav-dropdown-menu ${isGuidesOpen ? 'visible' : ''}`}>
-                <div className="dropdown-menu-inner">
-                  <div className="dropdown-menu-header">
-                    <div className="dropdown-header-title">
-                      <Sparkles size={14} />
-                      <span>Luxury Rajasthan Travel Guides</span>
-                    </div>
+              {/* Desktop Sleek Dropdown */}
+              <div className={`nav-simple-dropdown ${isGuidesOpen ? 'visible' : ''}`}>
+                <div className="nav-simple-menu-inner">
+                  {guidesList.map((item) => (
                     <Link
-                      to="/guides"
-                      className="dropdown-view-all-link"
+                      key={item.to}
+                      to={item.to}
+                      className={`nav-simple-item ${item.isAll ? 'nav-simple-all' : ''}`}
                       onClick={() => setIsGuidesOpen(false)}
                     >
-                      Explore all guides
+                      {item.label}
                     </Link>
-                  </div>
-
-                  <div className="dropdown-grid">
-                    <div className="dropdown-column">
-                      <span className="dropdown-col-title">Itineraries & Palace Stays</span>
-                      {guidesList.slice(0, 5).map((guide) => (
-                        <Link
-                          key={guide.to}
-                          to={guide.to}
-                          className="dropdown-guide-item"
-                          onClick={() => setIsGuidesOpen(false)}
-                        >
-                          <div className="dropdown-guide-text">
-                            <span className="dropdown-guide-label">{guide.label}</span>
-                            <span className="dropdown-guide-desc">{guide.desc}</span>
-                          </div>
-                          <span className="dropdown-guide-tag">{guide.tag}</span>
-                        </Link>
-                      ))}
-                    </div>
-
-                    <div className="dropdown-column">
-                      <span className="dropdown-col-title">Safaris, Costs & Logistics</span>
-                      {guidesList.slice(5, 10).map((guide) => (
-                        <Link
-                          key={guide.to}
-                          to={guide.to}
-                          className="dropdown-guide-item"
-                          onClick={() => setIsGuidesOpen(false)}
-                        >
-                          <div className="dropdown-guide-text">
-                            <span className="dropdown-guide-label">{guide.label}</span>
-                            <span className="dropdown-guide-desc">{guide.desc}</span>
-                          </div>
-                          <span className="dropdown-guide-tag">{guide.tag}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="dropdown-footer-bar">
-                    <Link
-                      to="/guides"
-                      className="dropdown-footer-cta"
-                      onClick={() => setIsGuidesOpen(false)}
-                    >
-                      <span>Explore all 10 curated luxury guides & season itineraries</span>
-                      <ArrowRight size={14} />
-                    </Link>
-                  </div>
+                  ))}
                 </div>
               </div>
 
               {/* Mobile Drawer Submenu */}
               <div className={`mobile-submenu ${mobileGuidesOpen ? 'open' : ''}`}>
-                <Link
-                  to="/guides"
-                  className="mobile-submenu-all-link"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <Compass size={16} />
-                  <span>All Guides Hub</span>
-                </Link>
                 {guidesList.map((guide) => (
                   <Link
                     key={guide.to}
@@ -312,7 +386,6 @@ const Navbar = () => {
                     onClick={() => setIsOpen(false)}
                   >
                     <span>{guide.label}</span>
-                    <span className="mobile-item-tag">{guide.tag}</span>
                   </Link>
                 ))}
               </div>

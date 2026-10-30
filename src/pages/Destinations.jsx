@@ -1,12 +1,14 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { rajasthanOverview, destinationsList } from '../data/destinations';
 import { usePageMeta } from '../hooks/usePageMeta';
 import AutoImageSlider from '../components/ui/AutoImageSlider';
 import './Destinations.css';
 
 const Destinations = () => {
+  const location = useLocation();
+
   usePageMeta({
     title: 'Custom Golden Triangle Tour Packages & Heritage Stays | Dune Explorer',
     description:
@@ -14,8 +16,18 @@ const Destinations = () => {
   });
 
   useEffect(() => {
+    if (location.hash) {
+      const targetId = location.hash.replace('#', '');
+      const el = document.getElementById(targetId);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }, 80);
+        return;
+      }
+    }
     window.scrollTo(0, 0);
-  }, []);
+  }, [location.hash, location.pathname]);
 
   return (
     <div className="destinations-page">
@@ -44,6 +56,7 @@ const Destinations = () => {
               <motion.div 
                 className="destination-card" 
                 key={dest.id}
+                id={dest.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}

@@ -67,7 +67,7 @@
 }
 
 .testimonial-author span {
-  color: var(--color-beige);
+  color: var(--color-ivory);
   font-size: var(--fs-micro);
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -88,7 +88,7 @@
   border-radius: 50%;
   border: 1px solid rgba(253, 251, 212, 0.3);
   background: transparent;
-  color: var(--color-beige);
+  color: var(--color-ivory);
   cursor: pointer;
   display: flex;
   align-items: center;

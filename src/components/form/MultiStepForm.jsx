@@ -215,7 +215,6 @@ const MultiStepForm = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="your@email.com"
                     aria-invalid={errors.email ? 'true' : 'false'}
                     aria-describedby={errors.email ? 'form-email-error' : undefined}
                   />
@@ -236,7 +235,6 @@ const MultiStepForm = () => {
                     name="whatsapp"
                     value={formData.whatsapp}
                     onChange={handleInputChange}
-                    placeholder="+91 98765 43210"
                     aria-invalid={errors.whatsapp ? 'true' : 'false'}
                     aria-describedby={errors.whatsapp ? 'form-whatsapp-error' : undefined}
                   />
@@ -251,7 +249,7 @@ const MultiStepForm = () => {
               <div className="form-grid">
                 <div className="form-group">
                   <label className="form-label" htmlFor="form-travel-dates">Expected Travel Dates</label>
-                  <input type="text" className="form-control" id="form-travel-dates" placeholder="e.g. Nov 2026 or Exact Dates" name="travelDates" value={formData.travelDates} onChange={handleInputChange} />
+                  <input type="text" className="form-control" id="form-travel-dates" name="travelDates" value={formData.travelDates} onChange={handleInputChange} />
                 </div>
                 <div className="form-group">
                   <label className="form-label" htmlFor="form-travelers">Number of Travelers</label>
@@ -306,7 +304,6 @@ const MultiStepForm = () => {
                   className="form-control"
                   id="form-notes"
                   rows="6"
-                  placeholder="Tell us about special occasions, dietary requirements, or specific experiences you're looking forward to..."
                   name="notes"
                   value={formData.notes}
                   onChange={handleInputChange}

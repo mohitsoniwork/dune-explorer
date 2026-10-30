@@ -50,6 +50,10 @@
   outline-offset: 2px;
 }
 
+body.mobile-nav-open .sticky-mobile-cta {
+  display: none !important;
+}
+
 /* Sticky mobile CTAs - Transparent floating action buttons */
 .sticky-mobile-cta {
   position: fixed;
@@ -76,18 +80,19 @@
 
 .sticky-mobile-cta .btn-primary {
   background-color: var(--color-maroon);
-  color: var(--color-ivory);
+  color: var(--color-oxblood);
   box-shadow: 0 4px 0 var(--btn-3d-primary-edge), 0 8px 18px var(--btn-3d-primary-shadow);
 }
 
 .sticky-mobile-cta .btn-primary:hover {
-  background-color: var(--color-maroon);
-  filter: brightness(1.18);
+  background-color: var(--color-ivory);
+  color: var(--color-oxblood);
   transform: translateY(-2px);
   box-shadow: 0 6px 0 var(--btn-3d-primary-edge), 0 12px 24px var(--btn-3d-primary-shadow);
 }
 
 .sticky-mobile-cta .btn-primary:active {
+  background-color: var(--color-pink-active);
   transform: translateY(3px);
   box-shadow: 0 1px 0 var(--btn-3d-primary-edge), 0 3px 6px var(--btn-3d-primary-shadow);
 }

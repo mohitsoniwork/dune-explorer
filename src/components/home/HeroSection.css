@@ -79,15 +79,18 @@
 }
 
 .hero-subtitle {
-  display: block;
+  display: inline-block;
   font-family: var(--font-body);
   font-size: var(--fs-micro);
   font-weight: 600;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: var(--spacing-sm);
-  color: var(--color-gold);
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  background-color: var(--color-camel);
+  color: var(--color-ivory);
+  padding: 0.35rem 0.95rem;
+  border-radius: 2px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 .hero-title {

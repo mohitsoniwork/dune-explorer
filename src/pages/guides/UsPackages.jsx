@@ -255,23 +255,23 @@ const UsPackages = () => {
                 Browse our complete collection of bespoke itineraries and destination resources on <Link to="/" style={{ color: 'var(--color-sand)', fontWeight: 600 }}>Dune Explorer</Link>:
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.85rem', margin: '1.5rem 0' }}>
-                <Link to="/luxury-rajasthan-tour-packages-uk" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
-                  UK &amp; European Packages &rarr;
+                <Link to="/luxury-rajasthan-tour-packages-uk" className="guide-cross-link">
+                  <span>UK &amp; European Packages</span> &rarr;
                 </Link>
-                <Link to="/luxury-rajasthan-tour-packages-australia" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
-                  Australian Guest Packages &rarr;
+                <Link to="/luxury-rajasthan-tour-packages-australia" className="guide-cross-link">
+                  <span>Australian Guest Packages</span> &rarr;
                 </Link>
-                <Link to="/luxury-rajasthan-tour-packages-japan" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
-                  Japanese Traveler Packages &rarr;
+                <Link to="/luxury-rajasthan-tour-packages-japan" className="guide-cross-link">
+                  <span>Japanese Traveler Packages</span> &rarr;
                 </Link>
-                <Link to="/luxury-rajasthan-tour-cost" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
-                  Tour Cost &amp; Price Tiers &rarr;
+                <Link to="/luxury-rajasthan-tour-cost" className="guide-cross-link">
+                  <span>Tour Cost &amp; Price Tiers</span> &rarr;
                 </Link>
-                <Link to="/guides" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
-                  All Rajasthan Travel Guides &rarr;
+                <Link to="/guides" className="guide-cross-link">
+                  <span>All Rajasthan Travel Guides</span> &rarr;
                 </Link>
-                <Link to="/destinations" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
-                  All Royal Destinations &rarr;
+                <Link to="/destinations" className="guide-cross-link">
+                  <span>All Royal Destinations</span> &rarr;
                 </Link>
               </div>
 

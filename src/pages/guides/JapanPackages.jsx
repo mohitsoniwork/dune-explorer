@@ -255,23 +255,23 @@ const JapanPackages = () => {
                 Browse our curated itineraries and regional planning guides on <Link to="/" style={{ color: 'var(--color-sand)', fontWeight: 600 }}>Dune Explorer</Link>:
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.85rem', margin: '1.5rem 0' }}>
-                <Link to="/luxury-rajasthan-tour-packages-usa" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
-                  US Luxury Tour Packages &rarr;
+                <Link to="/luxury-rajasthan-tour-packages-usa" className="guide-cross-link">
+                  <span>US Luxury Tour Packages</span> &rarr;
                 </Link>
-                <Link to="/luxury-rajasthan-tour-packages-uk" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
-                  UK &amp; European Packages &rarr;
+                <Link to="/luxury-rajasthan-tour-packages-uk" className="guide-cross-link">
+                  <span>UK &amp; European Packages</span> &rarr;
                 </Link>
-                <Link to="/luxury-rajasthan-tour-packages-australia" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
-                  Australia Guest Packages &rarr;
+                <Link to="/luxury-rajasthan-tour-packages-australia" className="guide-cross-link">
+                  <span>Australia Guest Packages</span> &rarr;
                 </Link>
-                <Link to="/10-day-luxury-rajasthan-itinerary" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
-                  10-Day Classic Royal Route &rarr;
+                <Link to="/10-day-luxury-rajasthan-itinerary" className="guide-cross-link">
+                  <span>10-Day Classic Royal Route</span> &rarr;
                 </Link>
-                <Link to="/palace-on-wheels-vs-royal-rajasthan" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
-                  Luxury Heritage Trains Guide &rarr;
+                <Link to="/palace-on-wheels-vs-royal-rajasthan" className="guide-cross-link">
+                  <span>Luxury Heritage Trains Guide</span> &rarr;
                 </Link>
-                <Link to="/guides" style={{ padding: '0.9rem', background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '8px', textDecoration: 'none', color: 'var(--color-dark)', fontWeight: 500 }}>
-                  All Rajasthan Guides Hub &rarr;
+                <Link to="/guides" className="guide-cross-link">
+                  <span>All Rajasthan Guides Hub</span> &rarr;
                 </Link>
               </div>
 

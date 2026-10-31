@@ -683,6 +683,31 @@
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
+/* Cross Guide Navigation Links */
+.guide-cross-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.95rem 1.15rem;
+  background: #FAF5EE;
+  border: 1px solid rgba(187, 135, 96, 0.35);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--color-oxblood) !important;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(79, 14, 14, 0.04);
+}
+
+.guide-cross-link:hover {
+  background: #FFFFFF;
+  border-color: var(--color-sand);
+  color: #8A5A2B !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(79, 14, 14, 0.08);
+}
+
 .sidebar-whatsapp-btn:hover {
   background: var(--color-focus-ring);
   border-color: var(--color-gold);
@@ -725,9 +750,14 @@
 
 /* Related Guides Grid */
 .related-guides-section {
-  background: var(--color-cream);
+  background: #171410;
+  border-top: 1px solid rgba(187, 135, 96, 0.25);
   padding: 4rem 0;
   margin-top: 4rem;
+}
+
+.related-guides-section h2 {
+  color: #FFFDF0 !important;
 }
 
 .related-guides-grid {

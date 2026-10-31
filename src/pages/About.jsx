@@ -46,7 +46,8 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1>Beyond Travel, Into Experience</h1>
+          <h1 className="about-hero-title">Dune Explorer</h1>
+          <p className="about-hero-tagline">Beyond Travel, Into Experience</p>
         </motion.div>
       </header>
 

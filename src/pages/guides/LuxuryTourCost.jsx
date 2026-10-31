@@ -233,7 +233,7 @@ const LuxuryTourCost = () => {
                     {costBreakdownItems.map((item, index) => (
                       <tr key={index}>
                         <td><strong>{item.component}</strong></td>
-                        <td><span style={{ color: 'var(--color-maroon)', fontWeight: 600 }}>{item.share}</span></td>
+                        <td><span style={{ color: 'var(--color-oxblood)', fontWeight: 700 }}>{item.share}</span></td>
                         <td>{item.range}</td>
                         <td>{item.details}</td>
                       </tr>
@@ -257,21 +257,21 @@ const LuxuryTourCost = () => {
 
               <h2>Key Factors That Influence Your Tour Cost</h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.2rem', margin: '1.5rem 0' }}>
-                <div style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.2rem' }}>
-                  <h4 style={{ color: 'var(--color-maroon)', marginBottom: '0.4rem' }}>1. Season of Travel</h4>
-                  <p style={{ fontSize: '0.9rem', margin: 0, color: 'var(--color-text-dim)' }}>
+                <div style={{ background: '#FFFFFF', border: '1px solid rgba(187, 135, 96, 0.35)', borderRadius: '10px', padding: '1.2rem', boxShadow: '0 4px 16px rgba(79, 14, 14, 0.04)' }}>
+                  <h4 style={{ color: 'var(--color-oxblood)', marginBottom: '0.4rem', fontWeight: 700 }}>1. Season of Travel</h4>
+                  <p style={{ fontSize: '0.9rem', margin: 0, color: '#3A352D', lineHeight: 1.6 }}>
                     Mid-October to March commands peak rates. Traveling in late September or April offers dramatic hotel savings up to 35%.
                   </p>
                 </div>
-                <div style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.2rem' }}>
-                  <h4 style={{ color: 'var(--color-maroon)', marginBottom: '0.4rem' }}>2. Palace Category</h4>
-                  <p style={{ fontSize: '0.9rem', margin: 0, color: 'var(--color-text-dim)' }}>
+                <div style={{ background: '#FFFFFF', border: '1px solid rgba(187, 135, 96, 0.35)', borderRadius: '10px', padding: '1.2rem', boxShadow: '0 4px 16px rgba(79, 14, 14, 0.04)' }}>
+                  <h4 style={{ color: 'var(--color-oxblood)', marginBottom: '0.4rem', fontWeight: 700 }}>2. Palace Category</h4>
+                  <p style={{ fontSize: '0.9rem', margin: 0, color: '#3A352D', lineHeight: 1.6 }}>
                     Mixing 3 nights in an iconic Taj or Oberoi palace with 6 nights in boutique royal fortresses optimizes both charm and value.
                   </p>
                 </div>
-                <div style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.2rem' }}>
-                  <h4 style={{ color: 'var(--color-maroon)', marginBottom: '0.4rem' }}>3. Group Size</h4>
-                  <p style={{ fontSize: '0.9rem', margin: 0, color: 'var(--color-text-dim)' }}>
+                <div style={{ background: '#FFFFFF', border: '1px solid rgba(187, 135, 96, 0.35)', borderRadius: '10px', padding: '1.2rem', boxShadow: '0 4px 16px rgba(79, 14, 14, 0.04)' }}>
+                  <h4 style={{ color: 'var(--color-oxblood)', marginBottom: '0.4rem', fontWeight: 700 }}>3. Group Size</h4>
+                  <p style={{ fontSize: '0.9rem', margin: 0, color: '#3A352D', lineHeight: 1.6 }}>
                     Private chauffeur and guide costs remain fixed whether you are 2 or 4 people, reducing per-person cost for families or friends.
                   </p>
                 </div>

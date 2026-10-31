@@ -170,15 +170,15 @@ const TenDayItinerary = () => {
 
               <h2>The Route Overview: Golden Triangle to Lake Palaces</h2>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', margin: '1.2rem 0 1.8rem' }}>
-                <span className="pill" style={{ background: 'var(--color-cream)', color: 'var(--color-maroon)' }}>Jaipur (2 Nights)</span>
-                <span style={{ alignSelf: 'center', color: 'var(--color-text-dim)' }}>&rarr;</span>
-                <span className="pill" style={{ background: 'var(--color-cream)', color: 'var(--color-maroon)' }}>Jodhpur (2 Nights)</span>
-                <span style={{ alignSelf: 'center', color: 'var(--color-text-dim)' }}>&rarr;</span>
-                <span className="pill" style={{ background: 'var(--color-cream)', color: 'var(--color-maroon)' }}>Jaisalmer Desert (2 Nights)</span>
-                <span style={{ alignSelf: 'center', color: 'var(--color-text-dim)' }}>&rarr;</span>
-                <span className="pill" style={{ background: 'var(--color-cream)', color: 'var(--color-maroon)' }}>Ranakpur (1 Night)</span>
-                <span style={{ alignSelf: 'center', color: 'var(--color-text-dim)' }}>&rarr;</span>
-                <span className="pill" style={{ background: 'var(--color-cream)', color: 'var(--color-maroon)' }}>Udaipur (2 Nights)</span>
+                <span className="pill" style={{ background: 'rgba(79, 14, 14, 0.08)', color: 'var(--color-oxblood)', border: '1px solid rgba(79, 14, 14, 0.2)', fontWeight: 600 }}>Jaipur (2 Nights)</span>
+                <span style={{ alignSelf: 'center', color: '#8A5A2B', fontWeight: 700 }}>&rarr;</span>
+                <span className="pill" style={{ background: 'rgba(79, 14, 14, 0.08)', color: 'var(--color-oxblood)', border: '1px solid rgba(79, 14, 14, 0.2)', fontWeight: 600 }}>Jodhpur (2 Nights)</span>
+                <span style={{ alignSelf: 'center', color: '#8A5A2B', fontWeight: 700 }}>&rarr;</span>
+                <span className="pill" style={{ background: 'rgba(79, 14, 14, 0.08)', color: 'var(--color-oxblood)', border: '1px solid rgba(79, 14, 14, 0.2)', fontWeight: 600 }}>Jaisalmer Desert (2 Nights)</span>
+                <span style={{ alignSelf: 'center', color: '#8A5A2B', fontWeight: 700 }}>&rarr;</span>
+                <span className="pill" style={{ background: 'rgba(79, 14, 14, 0.08)', color: 'var(--color-oxblood)', border: '1px solid rgba(79, 14, 14, 0.2)', fontWeight: 600 }}>Ranakpur (1 Night)</span>
+                <span style={{ alignSelf: 'center', color: '#8A5A2B', fontWeight: 700 }}>&rarr;</span>
+                <span className="pill" style={{ background: 'rgba(79, 14, 14, 0.08)', color: 'var(--color-oxblood)', border: '1px solid rgba(79, 14, 14, 0.2)', fontWeight: 600 }}>Udaipur (2 Nights)</span>
               </div>
 
               <h2>Day-by-Day Detailed Itinerary</h2>

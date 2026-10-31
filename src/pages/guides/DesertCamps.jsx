@@ -168,32 +168,32 @@ const DesertCamps = () => {
 
               <h2>Signature Experiences to Include in Your Desert Stay</h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.2rem', margin: '1.5rem 0' }}>
-                <div style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.2rem' }}>
-                  <h4 style={{ color: 'var(--color-maroon)', marginBottom: '0.4rem', fontSize: '1.05rem' }}>
-                    <Sun size={15} style={{ verticalAlign: 'middle', marginRight: 4, color: 'var(--color-sand)' }} />
+                <div style={{ background: '#FFFFFF', border: '1px solid rgba(187, 135, 96, 0.35)', borderRadius: '10px', padding: '1.2rem', boxShadow: '0 4px 16px rgba(79, 14, 14, 0.04)' }}>
+                  <h4 style={{ color: 'var(--color-oxblood)', marginBottom: '0.4rem', fontSize: '1.05rem', fontWeight: 700 }}>
+                    <Sun size={15} style={{ verticalAlign: 'middle', marginRight: 4, color: '#8A5A2B' }} />
                     Private Camel Trek
                   </h4>
-                  <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', margin: 0 }}>
+                  <p style={{ fontSize: '0.88rem', color: '#3A352D', margin: 0, lineHeight: 1.6 }}>
                     Ride gentle, beautifully draped camels into isolated dunes away from tourist tracks as the evening sun turns the sands deep ochre.
                   </p>
                 </div>
 
-                <div style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.2rem' }}>
-                  <h4 style={{ color: 'var(--color-maroon)', marginBottom: '0.4rem', fontSize: '1.05rem' }}>
-                    <Sparkles size={15} style={{ verticalAlign: 'middle', marginRight: 4, color: 'var(--color-sand)' }} />
+                <div style={{ background: '#FFFFFF', border: '1px solid rgba(187, 135, 96, 0.35)', borderRadius: '10px', padding: '1.2rem', boxShadow: '0 4px 16px rgba(79, 14, 14, 0.04)' }}>
+                  <h4 style={{ color: 'var(--color-oxblood)', marginBottom: '0.4rem', fontSize: '1.05rem', fontWeight: 700 }}>
+                    <Sparkles size={15} style={{ verticalAlign: 'middle', marginRight: 4, color: '#8A5A2B' }} />
                     Dune Crest Dinner
                   </h4>
-                  <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', margin: 0 }}>
+                  <p style={{ fontSize: '0.88rem', color: '#3A352D', margin: 0, lineHeight: 1.6 }}>
                     A private table surrounded by hundreds of glowing hurricane lamps, served a multi-course Rajasthani feast prepared over hot embers.
                   </p>
                 </div>
 
-                <div style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.2rem' }}>
-                  <h4 style={{ color: 'var(--color-maroon)', marginBottom: '0.4rem', fontSize: '1.05rem' }}>
-                    <Moon size={15} style={{ verticalAlign: 'middle', marginRight: 4, color: 'var(--color-sand)' }} />
+                <div style={{ background: '#FFFFFF', border: '1px solid rgba(187, 135, 96, 0.35)', borderRadius: '10px', padding: '1.2rem', boxShadow: '0 4px 16px rgba(79, 14, 14, 0.04)' }}>
+                  <h4 style={{ color: 'var(--color-oxblood)', marginBottom: '0.4rem', fontSize: '1.05rem', fontWeight: 700 }}>
+                    <Moon size={15} style={{ verticalAlign: 'middle', marginRight: 4, color: '#8A5A2B' }} />
                     Acoustic Folk Melodies
                   </h4>
-                  <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', margin: 0 }}>
+                  <p style={{ fontSize: '0.88rem', color: '#3A352D', margin: 0, lineHeight: 1.6 }}>
                     Listen to multi-generational Manganiyar musicians singing soulful desert folk ballads by the warmth of a crackling bonfire.
                   </p>
                 </div>

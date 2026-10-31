@@ -161,11 +161,11 @@ const PrivateDriverGuide = () => {
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.2rem', margin: '2rem 0' }}>
                 {benefitsList.map((item, idx) => (
-                  <div key={idx} style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.3rem' }}>
-                    <h4 style={{ color: 'var(--color-maroon)', marginBottom: '0.4rem', fontSize: '1.05rem' }}>
+                  <div key={idx} style={{ background: '#FFFFFF', border: '1px solid rgba(187, 135, 96, 0.35)', borderRadius: '10px', padding: '1.3rem', boxShadow: '0 4px 16px rgba(79, 14, 14, 0.04)' }}>
+                    <h4 style={{ color: 'var(--color-oxblood)', marginBottom: '0.4rem', fontSize: '1.05rem', fontWeight: 700 }}>
                       {item.title}
                     </h4>
-                    <p style={{ fontSize: '0.9rem', color: 'var(--color-text-dim)', margin: 0 }}>
+                    <p style={{ fontSize: '0.9rem', color: '#3A352D', margin: 0, lineHeight: 1.6 }}>
                       {item.desc}
                     </p>
                   </div>
@@ -185,7 +185,7 @@ const PrivateDriverGuide = () => {
                       <div className="fleet-vehicle-tag">{v.tag}</div>
                     </div>
                     <div className="fleet-card-body">
-                      <div style={{ fontSize: '0.86rem', color: 'var(--color-maroon)', fontWeight: 600, marginBottom: '0.8rem' }}>
+                      <div style={{ fontSize: '0.86rem', color: '#1E6B47', fontWeight: 700, marginBottom: '0.8rem' }}>
                         <Users size={14} style={{ verticalAlign: 'middle', marginRight: 4 }} />
                         {v.seats}
                       </div>

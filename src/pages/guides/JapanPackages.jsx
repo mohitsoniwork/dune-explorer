@@ -229,13 +229,13 @@ const JapanPackages = () => {
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', margin: '1.5rem 0' }}>
                 {flightGuidance.map((f, idx) => (
-                  <div key={idx} style={{ background: 'var(--color-cream)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.2rem' }}>
+                  <div key={idx} style={{ background: '#FAF5EE', border: '1px solid rgba(187, 135, 96, 0.35)', borderRadius: '10px', padding: '1.2rem', boxShadow: '0 4px 16px rgba(79, 14, 14, 0.04)' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
-                      <strong style={{ color: 'var(--color-dark)', fontSize: '1rem' }}>{f.airline}</strong>
-                      <span style={{ fontSize: '0.85rem', color: 'var(--color-sand)', fontWeight: 600 }}>{f.flightTime}</span>
+                      <strong style={{ color: 'var(--color-oxblood)', fontSize: '1rem', fontWeight: 700 }}>{f.airline}</strong>
+                      <span style={{ fontSize: '0.85rem', color: '#8A5A2B', fontWeight: 700 }}>{f.flightTime}</span>
                     </div>
-                    <div style={{ fontSize: '0.88rem', color: 'var(--color-maroon)', marginTop: '0.2rem' }}>{f.route}</div>
-                    <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginTop: '0.5rem', marginBottom: 0 }}>{f.tip}</p>
+                    <div style={{ fontSize: '0.88rem', color: '#1E6B47', fontWeight: 600, marginTop: '0.2rem' }}>{f.route}</div>
+                    <p style={{ fontSize: '0.88rem', color: '#3A352D', marginTop: '0.5rem', marginBottom: 0, lineHeight: 1.6 }}>{f.tip}</p>
                   </div>
                 ))}
               </div>

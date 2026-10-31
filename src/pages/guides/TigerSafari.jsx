@@ -165,11 +165,11 @@ const TigerSafari = () => {
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.2rem', margin: '1.5rem 0' }}>
                 {zoneGuide.map((z, idx) => (
-                  <div key={idx} style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.4rem' }}>
-                    <h4 style={{ color: 'var(--color-maroon)', marginBottom: '0.4rem', fontSize: '1.1rem' }}>
+                  <div key={idx} style={{ background: '#FFFFFF', border: '1px solid rgba(187, 135, 96, 0.35)', borderRadius: '10px', padding: '1.4rem', boxShadow: '0 4px 16px rgba(79, 14, 14, 0.04)' }}>
+                    <h4 style={{ color: 'var(--color-oxblood)', marginBottom: '0.4rem', fontSize: '1.1rem', fontWeight: 700 }}>
                       {z.zone}
                     </h4>
-                    <p style={{ fontSize: '0.9rem', color: 'var(--color-text-dim)', margin: 0, lineHeight: 1.6 }}>
+                    <p style={{ fontSize: '0.9rem', color: '#3A352D', margin: 0, lineHeight: 1.6 }}>
                       {z.desc}
                     </p>
                   </div>

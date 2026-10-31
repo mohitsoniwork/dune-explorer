@@ -164,9 +164,9 @@ const PalaceHotels = () => {
                         <span className="property-location"><MapPin size={14} style={{ verticalAlign: 'middle', marginRight: 3 }} />{palace.city}</span>
                       </div>
                       <div className="property-price-hint">
-                        {palace.tag} · <span style={{ color: 'var(--color-sand)' }}>{palace.price}</span>
+                        {palace.tag} · <span style={{ color: '#8A5A2B', fontWeight: 700 }}>{palace.price}</span>
                       </div>
-                      <p style={{ fontSize: '0.94rem', color: 'var(--color-text-deep)', lineHeight: 1.65 }}>
+                      <p style={{ fontSize: '0.94rem', color: '#3A352D', lineHeight: 1.65 }}>
                         {palace.description}
                       </p>
 
@@ -177,8 +177,8 @@ const PalaceHotels = () => {
                       </div>
 
                       <div className="guide-callout" style={{ margin: '1rem 0 0', padding: '0.9rem 1.1rem' }}>
-                        <strong style={{ color: 'var(--color-maroon)' }}>Insider Splurge Tip:</strong>{' '}
-                        <span style={{ fontSize: '0.9rem' }}>{palace.splurgeTip}</span>
+                        <strong style={{ color: 'var(--color-oxblood)' }}>Insider Splurge Tip:</strong>{' '}
+                        <span style={{ fontSize: '0.9rem', color: '#3A352D' }}>{palace.splurgeTip}</span>
                       </div>
                     </div>
                   </div>
@@ -192,12 +192,12 @@ const PalaceHotels = () => {
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '1.2rem', margin: '1.5rem 0' }}>
                 {boutiqueForts.map((fort, idx) => (
-                  <div key={idx} style={{ background: 'var(--color-ivory)', border: '1px solid var(--color-border-card)', borderRadius: '10px', padding: '1.3rem' }}>
-                    <h4 style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-dark)', marginBottom: '0.2rem' }}>
+                  <div key={idx} style={{ background: '#FFFFFF', border: '1px solid rgba(187, 135, 96, 0.35)', borderRadius: '10px', padding: '1.3rem', boxShadow: '0 4px 16px rgba(79, 14, 14, 0.04)' }}>
+                    <h4 style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-oxblood)', marginBottom: '0.2rem', fontWeight: 700 }}>
                       {fort.name}
                     </h4>
-                    <span style={{ fontSize: '0.8rem', color: 'var(--color-sand)', fontWeight: 600 }}>{fort.city} · {fort.price}</span>
-                    <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginTop: '0.6rem', marginBottom: 0 }}>
+                    <span style={{ fontSize: '0.82rem', color: '#8A5A2B', fontWeight: 700 }}>{fort.city} · {fort.price}</span>
+                    <p style={{ fontSize: '0.88rem', color: '#3A352D', marginTop: '0.6rem', marginBottom: 0, lineHeight: 1.6 }}>
                       {fort.desc}
                     </p>
                   </div>
@@ -302,25 +302,25 @@ const PalaceHotels = () => {
               </div>
 
               <div className="sidebar-card">
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem', color: 'var(--color-oxblood)', fontWeight: 700 }}>
                   Cost Breakdown Guide
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', color: '#3A352D', marginBottom: '1rem', lineHeight: 1.6 }}>
                   Explore how palace suite costs combine with private chauffeurs and guides.
                 </p>
-                <Link to="/luxury-rajasthan-tour-cost" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                <Link to="/luxury-rajasthan-tour-cost" style={{ color: '#8A5A2B', fontWeight: 700, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
                   View Tour Costs <ArrowRight size={15} />
                 </Link>
               </div>
 
               <div className="sidebar-card">
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
+                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem', color: 'var(--color-oxblood)', fontWeight: 700 }}>
                   10-Day Royal Route
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', color: '#3A352D', marginBottom: '1rem', lineHeight: 1.6 }}>
                   Follow the step-by-step route between Jaipur, Jodhpur, and Udaipur.
                 </p>
-                <Link to="/10-day-luxury-rajasthan-itinerary" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                <Link to="/10-day-luxury-rajasthan-itinerary" style={{ color: '#8A5A2B', fontWeight: 700, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
                   View 10-Day Itinerary <ArrowRight size={15} />
                 </Link>
               </div>

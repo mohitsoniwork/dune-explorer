@@ -195,7 +195,7 @@ const BestTimeToVisit = () => {
                     <span className="season-tag">{season.tag}</span>
                     <h3 className="season-title">{season.title}</h3>
                     <div className="season-months">{season.months}</div>
-                    <div style={{ fontSize: '0.85rem', color: 'var(--color-maroon)', fontWeight: 600, marginBottom: '0.6rem' }}>
+                    <div className="season-temp">
                       <Thermometer size={14} style={{ verticalAlign: 'middle', marginRight: 4 }} />
                       {season.temp}
                     </div>
@@ -255,7 +255,7 @@ const BestTimeToVisit = () => {
               <p>
                 Because Rajasthan hosts some of the most celebrated palace hotels in the world, inventory is finite. For stays between November and February, reserving <strong>4 to 6 months in advance</strong> is strongly advised to guarantee your preferred suite categories at iconic properties like:
               </p>
-              <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem', color: 'var(--color-text-deep)' }}>
+              <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem', color: '#3A352D', lineHeight: 1.8 }}>
                 <li><strong>Taj Lake Palace & Oberoi Udaivilas</strong> (Udaipur)</li>
                 <li><strong>Rambagh Palace & The Oberoi Rajvilas</strong> (Jaipur)</li>
                 <li><strong>Umaid Bhawan Palace & Raas Haveli</strong> (Jodhpur)</li>
@@ -322,16 +322,16 @@ const BestTimeToVisit = () => {
 
               {/* Related Pricing Guide */}
               <div className="sidebar-card">
-                <h4 style={{ fontFamily: 'var(--font-heading)', marginTop: 0, marginBottom: '0.4rem' }}>
+                <h4>
                   Rajasthan Tour Cost Per Person
                 </h4>
-                <span className="guide-badge" style={{ color: 'var(--color-sand)', background: 'rgba(141, 90, 43, 0.1)', borderColor: 'rgba(141, 90, 43, 0.2)', marginBottom: '0.6rem' }}>
+                <span className="guide-badge" style={{ color: '#8A5A2B', background: 'rgba(141, 90, 43, 0.12)', borderColor: 'rgba(141, 90, 43, 0.35)', marginBottom: '0.6rem', fontWeight: 700 }}>
                   Cost Breakdown
                 </span>
-                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-dim)', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', color: '#3A352D', marginBottom: '1rem', lineHeight: 1.6 }}>
                   Explore how hotel rates, private chauffeurs, and royal experiences price out per person.
                 </p>
-                <Link to="/luxury-rajasthan-tour-cost" style={{ color: 'var(--color-sand)', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                <Link to="/luxury-rajasthan-tour-cost" style={{ color: '#8A5A2B', fontWeight: 700, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
                   View Cost Breakdown <ArrowRight size={15} />
                 </Link>
               </div>

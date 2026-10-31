@@ -79,8 +79,8 @@
 
 /* Breadcrumb & Meta strip */
 .guide-meta-strip {
-  background: var(--color-cream);
-  border-bottom: 1px solid var(--color-border-card);
+  background: #171410;
+  border-bottom: 1px solid rgba(187, 135, 96, 0.25);
   padding: 0.9rem 0;
   font-size: var(--fs-small);
 }
@@ -101,12 +101,14 @@
 }
 
 .guide-breadcrumb a {
-  color: var(--color-maroon);
+  color: #FFFDF0;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .guide-breadcrumb a:hover {
+  color: var(--color-sand);
   text-decoration: underline;
 }
 
@@ -114,7 +116,7 @@
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  color: var(--color-text-dim);
+  color: #E2D3BE;
   font-size: 0.84rem;
 }
 
@@ -152,13 +154,22 @@
 }
 
 /* Article Typography */
+.guide-article h1,
+.guide-article h2,
+.guide-article h3,
+.guide-article h4,
+.guide-article h5,
+.guide-article h6 {
+  color: var(--color-oxblood);
+}
+
 .guide-article h2 {
   font-size: clamp(1.5rem, 2.5vw, 2.1rem);
-  color: var(--color-dark);
+  color: var(--color-oxblood);
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--color-border-subtle);
+  border-bottom: 2px solid rgba(187, 135, 96, 0.3);
   text-wrap: balance;
 }
 
@@ -168,27 +179,37 @@
 
 .guide-article h3 {
   font-size: 1.35rem;
-  color: var(--color-maroon);
+  color: var(--color-oxblood);
   margin-top: 1.8rem;
   margin-bottom: 0.6rem;
 }
 
+.guide-article h4 {
+  font-size: 1.15rem;
+  color: var(--color-oxblood);
+  margin-top: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
 .guide-article p {
-  color: var(--color-text-deep);
+  color: #3A352D;
   margin-bottom: 1.2rem;
   font-size: 1.03rem;
   line-height: 1.75;
 }
 
 .guide-lead {
-  font-size: 1.15rem !important;
-  color: var(--color-dark) !important;
+  font-size: 1.12rem !important;
+  color: #2A251D !important;
   font-weight: 400;
+  line-height: 1.7;
   border-left: 4px solid var(--color-sand);
   margin-bottom: 2rem !important;
-  background: var(--color-bg-subtle);
-  padding: 1rem 1.2rem;
+  background: #FAF5EE;
+  padding: 1.1rem 1.3rem;
   border-radius: 0 8px 8px 0;
+  border: 1px solid rgba(187, 135, 96, 0.25);
+  border-left-width: 4px;
 }
 
 /* Pricing Grid Cards */
@@ -254,7 +275,7 @@
 .tier-price-main {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--color-maroon);
+  color: var(--color-oxblood);
   font-family: var(--font-heading);
   font-variant-numeric: tabular-nums;
 }
@@ -262,7 +283,7 @@
 .tier-price-sub {
   display: block;
   font-size: 0.85rem;
-  color: var(--color-text-dim);
+  color: #5A5248;
   margin-top: 4px;
 }
 
@@ -275,7 +296,7 @@
 
 .tier-features li {
   font-size: 0.92rem;
-  color: var(--color-text-deep);
+  color: #3A352D;
   margin-bottom: 0.65rem;
   display: flex;
   align-items: flex-start;
@@ -292,8 +313,8 @@
 .guide-table-wrap {
   overflow-x: auto;
   margin: 2rem 0;
-  background: var(--color-ivory);
-  border: 1px solid var(--color-border-card);
+  background: #FFFFFF;
+  border: 1px solid rgba(187, 135, 96, 0.35);
   border-radius: var(--radius);
 }
 
@@ -305,19 +326,19 @@
 }
 
 .guide-table th {
-  background: var(--color-cream);
-  color: var(--color-maroon);
+  background: var(--color-oxblood);
+  color: #FFFDF0;
   padding: 1rem 1.2rem;
   font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: 600;
-  border-bottom: 1px solid var(--color-border-card);
+  border-bottom: 1px solid rgba(187, 135, 96, 0.3);
 }
 
 .guide-table td {
   padding: 1rem 1.2rem;
-  border-bottom: 1px solid var(--color-border-card-subtle);
-  color: var(--color-text-deep);
+  border-bottom: 1px solid rgba(187, 135, 96, 0.2);
+  color: #3A352D;
   vertical-align: top;
 }
 
@@ -338,17 +359,17 @@
 }
 
 .season-card {
-  background: var(--color-ivory);
-  border: 1px solid var(--color-border-card);
+  background: #FFFFFF;
+  border: 1px solid rgba(187, 135, 96, 0.35);
   border-radius: var(--radius);
-  padding: 1.4rem;
+  padding: 1.5rem;
   position: relative;
   border-top: 4px solid var(--color-sand);
+  box-shadow: 0 4px 16px rgba(79, 14, 14, 0.05);
 }
 
 .season-card.peak {
-  border-top-color: var(--color-forest);
-  background: var(--color-ivory);
+  border-top-color: #1E6B47;
 }
 
 .season-card.shoulder {
@@ -361,30 +382,42 @@
 
 .season-tag {
   display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: normal;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
   margin-bottom: 0.5rem;
-  color: var(--color-sand);
+  color: #8A5A2B;
 }
 
 .season-title {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: 1.28rem;
+  font-weight: 700;
+  color: var(--color-oxblood) !important;
   margin-bottom: 0.4rem;
 }
 
 .season-months {
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--color-text-dim);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #5A5248;
+  margin-bottom: 0.5rem;
+}
+
+.season-temp {
+  font-size: 0.86rem;
+  color: #1E6B47;
+  font-weight: 700;
   margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
 }
 
 .season-desc {
-  font-size: 0.9rem !important;
-  color: var(--color-text-deep) !important;
-  line-height: 1.5;
+  font-size: 0.92rem !important;
+  color: #3A352D !important;
+  line-height: 1.6;
   margin: 0 !important;
 }
 
@@ -397,13 +430,14 @@
 }
 
 .month-item-card {
-  background: var(--color-ivory);
-  border: 1px solid var(--color-border-card);
+  background: #FFFFFF;
+  border: 1px solid rgba(187, 135, 96, 0.3);
   border-radius: var(--radius);
   padding: 1.6rem;
   display: grid;
-  grid-template-columns: 140px 1fr;
+  grid-template-columns: 145px 1fr;
   gap: 1.6rem;
+  box-shadow: 0 4px 16px rgba(79, 14, 14, 0.04);
 }
 
 @media (max-width: 600px) {
@@ -419,71 +453,81 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: var(--color-cream);
+  background: #171410;
   border-radius: 10px;
-  padding: 1rem;
-  border: 1px solid var(--color-border-card-subtle);
+  padding: 1.1rem 0.8rem;
+  border: 1px solid rgba(187, 135, 96, 0.35);
 }
 
 .month-name {
   font-family: var(--font-heading);
   font-size: 1.35rem;
   font-weight: 700;
-  color: var(--color-maroon);
+  color: #FFFDF0;
 }
 
 .month-temp {
   font-size: 0.85rem;
-  color: var(--color-text-dim);
+  color: #D9A441;
+  font-weight: 600;
   margin-top: 4px;
 }
 
 .month-status-pill {
   font-size: 0.72rem;
-  padding: 4px 8px;
+  padding: 4px 10px;
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.4px;
   margin-top: 8px;
-  background: var(--color-ivory);
-  border: 1px solid var(--color-border-card);
+  background: rgba(187, 135, 96, 0.22);
+  border: 1px solid rgba(187, 135, 96, 0.6);
+  color: #F7E5D0;
 }
 
 .month-details-col h4 {
   font-size: 1.15rem;
-  color: var(--color-dark);
+  color: var(--color-oxblood) !important;
+  font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
 .month-details-col p {
-  font-size: 0.94rem !important;
-  line-height: 1.6;
+  font-size: 0.95rem !important;
+  color: #3A352D !important;
+  line-height: 1.65;
   margin-bottom: 0.6rem !important;
 }
 
 .month-highlights {
   font-size: 0.88rem;
-  color: var(--color-sand);
-  font-weight: 500;
+  color: #8A5A2B;
+  font-weight: 600;
 }
 
 /* Callout Box */
 .guide-callout {
-  background: var(--color-bg-subtle);
+  background: #FAF5EE;
   border-left: 4px solid var(--color-sand);
   border-radius: 0 var(--radius) var(--radius) 0;
   padding: 1.4rem 1.6rem;
   margin: 2rem 0;
+  border: 1px solid rgba(187, 135, 96, 0.25);
+  border-left-width: 4px;
 }
 
 .guide-callout h4 {
-  font-size: 1.1rem;
-  color: var(--color-maroon);
+  font-size: 1.12rem;
+  color: var(--color-oxblood) !important;
+  font-weight: 700;
   margin-bottom: 0.4rem;
 }
 
 .guide-callout p {
   margin: 0 !important;
   font-size: 0.96rem !important;
+  color: #3A352D !important;
+  line-height: 1.65;
 }
 
 /* FAQ Accordion */
@@ -492,8 +536,8 @@
 }
 
 .guide-faq-item {
-  background: var(--color-ivory);
-  border: 1px solid var(--color-border-card);
+  background: #FFFFFF;
+  border: 1px solid rgba(187, 135, 96, 0.3);
   border-radius: 10px;
   margin-bottom: 0.9rem;
   overflow: hidden;
@@ -510,14 +554,15 @@
   text-align: left;
   font-family: var(--font-heading);
   font-size: 1.1rem;
-  color: var(--color-dark);
+  font-weight: 700;
+  color: var(--color-oxblood);
   cursor: pointer;
   gap: 1rem;
   transition: background 0.2s ease;
 }
 
 .guide-faq-question:hover {
-  background: var(--color-bg-subtle);
+  background: #FAF5EE;
 }
 
 .guide-faq-question:focus-visible {
@@ -526,7 +571,7 @@
 }
 
 .guide-faq-question:active {
-  background: var(--color-cream);
+  background: #F2E8DC;
 }
 
 .guide-faq-icon {
@@ -541,7 +586,7 @@
 
 .guide-faq-answer {
   padding: 0 1.4rem 1.2rem;
-  color: var(--color-text-deep);
+  color: #3A352D;
   font-size: 0.96rem;
   line-height: 1.7;
 }
@@ -556,11 +601,27 @@
 }
 
 .sidebar-card {
-  background: var(--color-ivory);
-  border: 1px solid var(--color-border-card);
+  background: #FFFFFF;
+  border: 1px solid rgba(187, 135, 96, 0.35);
   border-radius: var(--radius);
   padding: 1.8rem 1.5rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 16px rgba(79, 14, 14, 0.05);
+}
+
+.sidebar-card h3,
+.sidebar-card h4 {
+  color: var(--color-oxblood) !important;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-card p {
+  color: #3A352D;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .sidebar-card.cta-card {
@@ -799,23 +860,25 @@
 
 .day-travel-time {
   font-size: 0.85rem;
-  color: var(--color-text-dim);
-  background: var(--color-cream);
+  color: #5A5248;
+  background: #FAF5EE;
   padding: 4px 12px;
   border-radius: 6px;
+  border: 1px solid rgba(187, 135, 96, 0.3);
   display: flex;
   align-items: center;
   gap: 4px;
 }
 
 .day-hotel-callout {
-  background: var(--color-bg-subtle);
+  background: #FAF5EE;
   border-left: 3px solid var(--color-sand);
   padding: 0.6rem 0.9rem;
   border-radius: 0 6px 6px 0;
   margin: 0.8rem 0 1rem;
   font-size: 0.92rem;
-  color: var(--color-maroon);
+  color: var(--color-oxblood);
+  font-weight: 500;
 }
 
 .day-hotel-callout strong {
@@ -830,7 +893,7 @@
 
 .day-activities-list li {
   font-size: 0.95rem;
-  color: var(--color-text-deep);
+  color: #3A352D;
   margin-bottom: 0.5rem;
   display: flex;
   align-items: flex-start;
@@ -852,8 +915,8 @@
 }
 
 .fleet-card {
-  background: var(--color-ivory);
-  border: 1px solid var(--color-border-card);
+  background: #FFFFFF;
+  border: 1px solid rgba(187, 135, 96, 0.3);
   border-radius: var(--radius);
   overflow: hidden;
   display: flex;
@@ -861,15 +924,16 @@
 }
 
 .fleet-card-header {
-  background: var(--color-cream);
+  background: #FAF5EE;
   padding: 1.2rem;
-  border-bottom: 1px solid var(--color-border-card);
+  border-bottom: 1px solid rgba(187, 135, 96, 0.3);
 }
 
 .fleet-vehicle-name {
   font-family: var(--font-heading);
   font-size: 1.2rem;
-  color: var(--color-maroon);
+  color: var(--color-oxblood);
+  font-weight: 700;
   margin-bottom: 0.2rem;
 }
 
@@ -1013,8 +1077,8 @@
 
 .property-price-hint {
   font-size: 0.9rem;
-  color: var(--color-maroon);
-  font-weight: 600;
+  color: var(--color-oxblood);
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
@@ -1027,11 +1091,12 @@
 
 .prop-pill {
   font-size: 0.78rem;
-  background: var(--color-cream);
-  color: var(--color-maroon);
+  background: rgba(79, 14, 14, 0.08);
+  color: var(--color-oxblood);
+  border: 1px solid rgba(79, 14, 14, 0.18);
   padding: 4px 12px;
   border-radius: 999px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @media (prefers-reduced-motion: reduce) {
